@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title>
+        College Info
+        </title>
+        <link type="text/css" rel="stylesheet" href=/static/css/colginfo.css>
+    </head>
+
+    <body>
+    <div id="container">
+        <div id="content">
+        <div class="wrapper">
+            <div class="colgselect">
+        <form action="#" method="post">
+
+
+
+                <div id="subcources">
+                <select id="foo1" class="dd">
+                    <option>Select Sub-Course Stream </option>
+                </select>
+                </div>
+
+                <div id="state">
+                <select id="foo2" class="dd">
+                    <option>All India </option>
+                </select>
+                </div>
+
+                <div id="city">
+                <select id="foo4" class="dd">
+                    <option>All City </option>
+                </select>
+                </div>
+
+
+
+                <div id="query1">
+
+
+
+                </div>
+
+                </form>
+        </div>
+                <div id="recent" class="wrapper">
+
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/jquery-2.1.1.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $("#foo").change(function() {
+                var field  = $("#foo").val();
+                var parts = field.split(" ");
+                console.log(parts);
+                console.log("value changed " + parts[0]);
+                url = "/dropdown2/" + parts[0];
+                $.get(url).success(function(data) {
+                    console.log(data);
+                    $("#foo1").html(data);
+                }  )
+            });
+
+            {% comment %}$("#foo1").change(function){
+
+
+            }{% endcomment %}
+        });
+
+
+
+    </script>
+    </body>
+
+</html>

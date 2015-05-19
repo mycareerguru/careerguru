@@ -1,0 +1,118 @@
+.container{
+ width: 1100px;
+    height: auto;
+    margin: auto;
+    
+}
+#wrapper{
+ width: 1045px;
+    height: auto;
+    margin: auto;
+}
+
+#top{
+ 
+    width:inherit;
+        height:250px;
+    color: black;
+font-family: Verdana, sans-serif;
+font-size: 13px;
+    
+    
+}
+
+#left{
+    width: 40%;
+    float: left;
+    
+
+    
+    
+    
+}
+
+#right{
+    width: 55%;
+    float: right;
+}
+
+.first-row{
+ width: inherit;
+    height: 330px;
+   
+    
+}
+
+.second-row{
+ width: inherit;
+    height: 280px;
+   
+    
+}
+
+.box{
+ height: 300px;
+    width:330px;
+    border: 2px solid #eee;
+}
+
+.box1{
+ height: 230px;
+    width:520px;
+    border: 2px solid #eee;
+}
+
+.box2{
+
+     height: 230px;
+    width:490px;
+    border: 2px solid #eee;
+
+}
+
+.seclist{
+    padding-left: 1em;
+text-indent: -1em;
+font-weight: bold;
+font-size: 18px;
+    margin-top: 5px;
+
+}
+
+.thirdlist{
+    text-indent: -0.9em;
+    padding-left:1.1em;
+    font-size: 14px;
+
+}
+
+.two{
+ margin:-304px 0 0 355px;
+}
+
+.three{
+ margin:-304px 0 0 710px;
+}
+
+.four{
+
+
+}
+
+.five{
+    margin:-234px 0 0 550px;
+
+
+}
+
+
+
+
+.title{
+    width: 120px;
+    height: 30px;
+    background: #fff;
+    margin: -40px 0 0 30px;
+    text-align: center;
+}
+

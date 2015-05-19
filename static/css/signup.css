@@ -1,0 +1,43 @@
+.signup_inner{
+    width:600px; 
+    height: 940px;
+    margin:80px auto;
+    text-align:left;
+    
+}
+
+.signup_container{
+    width:350px; 
+    margin:50px auto;
+    text-align:left;
+    background-color: #FFF;
+    padding:30px 100px 30px 80px;
+    border-radius: 4px;
+    border: 2px #1852fd;
+    box-shadow: 0 0 4px #1852fd;
+    color:#000;
+    text-shadow: none;
+    font-style: normal;
+    font-size: 1.1em;
+    
+}
+
+.signup_container input{
+ 
+    height: 20px;
+    float:right;
+    
+}
+
+
+.signup_container a{
+    color:#9ca;
+    font-family: cursive;
+}
+
+input[type="checkbox"]
+{
+    float: left;
+    margin-left: 170px;
+    
+}

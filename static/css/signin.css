@@ -1,0 +1,134 @@
+#wrapper {
+width: 1024px;
+height: auto;
+min-height: 418px;
+margin: 0 auto;
+position: relative;
+}
+
+.LoginContent {
+width: 90.72%;
+background: #FFFFFF;
+min-height: 554px;
+border: 15px solid #007D88;
+margin: 0 0 0 3.5%;
+margin-top: 100px;
+    padding: 30px;
+}
+
+p {
+font-size: 13px;
+clear: left;
+font-family: arial;
+line-height: 20px;
+}
+
+#signin{
+    width: 630px;
+margin: 0;
+padding: 1.1em 15px 0 20px;
+overflow: hidden;
+}
+
+#signin p em {
+    color: #f00;
+    font-style: normal;
+}
+
+#signinform fieldset{
+
+margin: 0;
+padding: 14px 0 2px;
+clear: both;
+border: none;
+border-top: 1px dotted #cedbe1;
+
+}
+label {
+margin: 0px 0px 11px 0px;
+padding: 7px 0 7px 0;
+font-weight: bold;
+color: #003957;
+width: 172px;
+float: left;
+clear: both;
+position: relative;
+}
+
+#signinform label em {
+position:absolute;
+top: 8px;
+right: 10px;
+color: #f00;
+font-style: normal;
+}
+
+
+
+.signintxt {
+width: 40%;
+margin: 2% 2% 2% 0;
+font-size: 1.2em;
+height: 35px;
+border: 1px solid #B4B6A8;
+border-radius: 5px;
+}
+
+.signintxt1 {
+width:40%;
+margin: 2% 2% 2% 0;
+font-size: 1.2em;
+
+border: 1px solid #B4B6A8;
+border-radius: 5px;
+}
+
+.radios{
+margin: -35px 10px 6px;
+padding: 0;
+float: left;
+font-size: 1em;
+}
+
+#signin ul.radios label {
+margin: 0;
+padding: 0;
+width: auto;
+font-weight: normal;
+float: none;
+color: #1c1c1c;
+display: inline;
+top: -2px;
+}
+
+ul{
+    list-style: none;
+}
+
+#note{
+    padding: 0 0 0 176px;
+    margin-top: -25px;
+    width:300px;
+float: left;
+}
+#note1{
+    padding: 0 0 0 176px;
+
+    width:300px;
+float: left;
+}
+
+.registerbtn{
+background-color: #007D88;
+border: medium none;
+border-radius: 3px;
+color: #FFFFFF;
+font-family: 'Arial';
+font-size: 1.05em;
+font-weight: bold;
+height: 40px;
+margin: 2% 0 2% 0;
+width: 100px;
+cursor: pointer;
+    margin-left: 160px;
+}

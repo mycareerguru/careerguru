@@ -1,0 +1,67 @@
+<html>
+<head>
+    <title>  </title>
+    <link rel="stylesheet" type="text/css" href="/static/css/signin.css">
+</head>
+<body>
+<div id="wrapper">
+    <div class="LoginContent">
+        <div>
+        <h2> Send us an email</h2>
+        <p> Use the form below to send us a message with any questions or feedback you have about the information on myfuture. Your contact details are optional, and any information provided will be kept strictly private in accordance with the myfuture.edu.au privacy statement.</p>
+
+        </div>
+
+        <div id="signin">
+            <div class="signinform">
+
+
+
+            </div>
+            <form method="post" action="/email/">{% csrf_token %}
+            <div>
+
+                <fieldset>
+                    <p>
+                    <label> Subject</label>
+                    <em>*</em>
+                    <input  type="text" maxlength="50" name="username" class="signintxt"> </p>
+                   <p> <label> Your feedback or question</label>
+                    <em>*</em>
+                    <textarea rows="6" cols="32" name="feedback" class="signintxt1" ></textarea>
+                        </p>
+                    <p><label> Your Name </label>
+                    <em>*</em>
+                    <input  type="text" maxlength="50" name="password2" class="signintxt"></p>
+
+                    <p><label> Mail Address</label>
+                    <em>*</em>
+                    <input  type="text" maxlength="50" name="password2" class="signintxt"></p>
+
+                    <p><label> Your Address</label>
+                    <em>*</em>
+                    <input  type="text" maxlength="50" name="password2" class="signintxt"></p>
+
+                     <p><label> contact number</label>
+                    <em>*</em>
+                    <input  type="number" maxlength="13" name="password2" class="signintxt"></p>
+
+                     <input type="submit"  value="Send >>" class="registerbtn">
+
+
+                </fieldset>
+
+
+
+
+
+
+            </div>
+    </form>
+
+        </div>
+</div>
+</div>
+
+</body>
+</html>

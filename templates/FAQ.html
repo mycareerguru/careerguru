@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>
+        FAQ
+        </title>
+        <link type="text/css" rel="stylesheet" href=/static/css/FAQ.css>
+    </head>
+
+    <body>
+    <div id="container">
+        <div id="content">
+        <div class="wrapper">
+        <form action="#" method="post">
+                <div id="title">
+                    <select id="foo" class="dd">
+
+                    <option  value="#">Select Course Stream </option>
+                    {%  for i in item %}
+
+                        <option>{{ i.id }} {{ i.name }}</option>
+
+                    {% endfor %}
+                </select>
+
+                <div id="subcources">
+                <select id="foo1" class="dd">
+                    <option>Select Sub-Course Stream </option>
+                </select>
+                </div>
+
+                </div>
+
+                <div id="query1">
+                <textarea id="query" placeholder="Write Your Query Here" rows="7" cols="67"> </textarea>
+
+
+                </div>
+                 <input type="submit"  value=" Submit " class="registerbtn">
+                </form>
+        </div>
+                <div id="recent" class="wrapper">
+
+                Recently added
+
+                </div>
+
+
+        </div>
+    </div>
+
+    <script src="/static/js/jquery-2.1.1.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $("#foo").change(function() {
+                var field  = $("#foo").val();
+                var parts = field.split(" ");
+                console.log(parts);
+                console.log("value changed " + parts[0]);
+                url = "/dropdown2/" + parts[0];
+                $.get(url).success(function(data) {
+                    console.log(data);
+                    $("#foo1").html(data);
+                }  )
+            });
+
+            {% comment %}$("#foo1").change(function){
+
+
+            }{% endcomment %}
+        });
+
+
+
+    </script>
+    </body>
+
+</html>

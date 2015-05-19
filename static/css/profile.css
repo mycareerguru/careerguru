@@ -1,0 +1,28 @@
+.container{
+    
+}
+
+.wrapper{
+width:960px;
+height: auto;
+margin:auto;
+}
+
+.content{
+    margin-top: 100px;
+    width: inherit;
+    height: auto;
+    border: solid 2px #eee;
+    
+   
+}
+
+.odd{
+    background-color: #fff;
+    padding: 3px;
+}
+
+.even{
+ background: #f4f4f4;   
+    padding: 3px;
+}

@@ -1,0 +1,155 @@
+<html>
+<head>
+    <title></title>
+
+    <link rel="stylesheet" type="text/css" href="/static/css/first.css">
+</head>
+
+<body>
+<div class="container">
+    <div id="wrapper">
+
+        <div id="top">
+            <div class="heading">
+
+            </div>
+
+            <div id="left">
+                <h2>What they do: </h2>
+                Construct, assemble, maintain, and repair stationary steam boilers and boiler house auxiliaries. Align
+                structures or plate sections to assemble boiler frame tanks or vats, following blueprints. Work involves
+                use of hand and power tools, plumb bobs, levels, wedges, dogs, or turnbuckles. Assist in testing
+                assembled vessels. Direct cleaning of boilers and boiler furnaces. Inspect and repair boiler fittings,
+                such as safety valves, regulators, automatic-control mechanisms, water columns, and auxiliary machines.
+            </div>
+
+            <div id="right">
+                <h2>On the job you would</h2>
+                <ul>
+                    <li> Examine boilers, pressure vessels, tanks, or vats to locate defects, such as leaks, weak spots,
+                        or defective sections, so that they can be repaired.
+                    </li>
+                    <li> Examine boilers, pressure vessels, tanks, or vats to locate defects, such as leaks, weak spots,
+                        or defective sections, so that they can be repaired.
+                    </li>
+                    <li> Examine boilers, pressure vessels, tanks, or vats to locate defects, such as leaks, weak spots,
+                        or defective sections, so that they can be repaired.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="first-row">
+            <div class="box one">
+                <div class="title">
+                    <h1 style="color:#570088"> Knowledge</h1>
+                </div>
+
+
+                <div id="one">
+                </div>
+                <button id="btnone">Load Data</button>
+            </div>
+            <div class="box two">
+                <div class="title">
+                    <h1 style="color:#B33800"> Skill</h1>
+                </div>
+
+                <div id="two">
+                    <h3>Basic Skill</h3>
+
+                    <h3>Problem Solving</h3>
+
+                </div>
+            </div>
+
+            <div class="box three">
+                <div class="title">
+                    <h1 style="color:#064597"> Ability</h1>
+                </div>
+
+                <div id="three">
+                    <h3>Hand and Finger Use</h3>
+
+                    <h3>Verbal</h3>
+
+                    <h3>Ideas and Logic</h3>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="second-row">
+            <div class="box1 four">
+                <div class="title">
+                    <h1 style="color:#9D3781"> Personality</h1>
+                </div>
+                <div id="four">
+                    <h3>Engineering and Technology</h3>
+
+                    <h3>Business</h3>
+
+                    <h3>Math and Science</h3>
+
+                    <h3>Arts and Humanities</h3>
+                </div>
+
+            </div>
+
+            <div class="box1 five">
+                <div class="title">
+                    <h1 style="color:#78AA68"> Technology</h1>
+                </div>
+
+                <div id="five">
+                    <h3>Data base use and query software</h3>
+
+                    <h3>Inventory management software</h3>
+
+                    <h3>Accounting Software</h3>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="first-row">
+            <div class="box one">
+                <div class="title">
+                    <h1 style="color:#286ABE"> Education</h1>
+                </div>
+
+
+            </div>
+            <div class="box two">
+                <div class="title">
+                    <h1 style="color:#007A6B"> Job Outlook</h1>
+                </div>
+            </div>
+
+            <div class="box three">
+                <div class="title">
+                    <h1 style="color:#007A6B"> Explore More</h1>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script type="text/javascript" src="/static/js/jquery-2.1.1.js"></script>
+<script type="text/javascript">
+   $(function () {
+       console.log("page loaded");
+       $("#btnone").click(function () {
+           console.log("button clicked");
+           $.ajax("/category/{{ tag_id }}/kn/").success(function (data) {
+               $("#one").html(data);
+           });
+       })
+   });
+</script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<html>
+<head>
+    <title>  </title>
+    <link rel="stylesheet" type="text/css" href="/static/css/signin.css">
+</head>
+<body>
+<div id="wrapper">
+    <div class="LoginContent">
+        <div>
+        <h2> Create a new account</h2>
+        <p> My career profile is a personalised career exploration tool that takes you through several activities to help you build a career profile, explore career suggestions, and create a career plan. Once you have completed either the Interests or Skills activity, My career profile will start to show you occupation suggestions based on your career profile. As you do more activities, the detail in your profile increases and the selection of occupations will match your career profile more closely.</p>
+        <p>As a Guest user you can explore My career profile and discover occupations that may interest you. However by creating an account, you will be registered and able to save your career profile to revisit at any time.</p>
+        </div>
+
+        <div id="signin">
+            <div class="signinform">
+
+<h3>
+            Your account details</h3>
+                <p>
+
+                    <em>*</em>
+                    "Required Fields"
+                </p>
+
+            </div>
+            <form method="post" action="/register/">{% csrf_token %}
+            <div>
+
+                <fieldset>
+                    <p>
+                    <label> Username </label>
+                    <em>*</em>
+                    <input  type="text" maxlength="50" name="username" class="signintxt">{{  form.username }} </p>
+                   <p> <label> Password </label>
+                    <em>*</em>
+                    <input  type="password" maxlength="50" name="password1" class="signintxt" > </p>
+                    <p><label> Confirm Password </label>
+                    <em>*</em>
+                    <input  type="password" maxlength="50" name="password2" class="signintxt"></p>
+
+                </fieldset>
+
+                 <fieldset>
+                    <p>
+                    <label> First Name </label>
+                    <em>*</em>
+                    <input  type="text" maxlength="50" name="firstname" class="signintxt" >{{  form.firstname }} </p>
+                   <p> <label> Last Name </label>
+                    <em>*</em>
+                    <input  type="text" maxlength="50" name="lastname"  class="signintxt" >{{  form.lastname }} </p>
+
+
+                </fieldset>
+
+                 <fieldset>
+                    <p>
+                    <label> Life Stage </label>
+                    <em>*</em>
+                    <ul id="lifestage" title="Your Life stage" class="radios">
+                            <li><input type="radio" name="stage" value="1"><label>A younger secondary student</label></li>
+                            <li><input type="radio" name="stage" value="2"><label>An older secondary student</label></li>
+                            <li><input type="radio" name="stage" value="3"><label>A recent school leaver (last 2-3years)</label></li>
+                            <li><input type="radio" name="stage" value="4"><label>A further education and training student</label></li>
+                            <li><input type="radio" name="stage" value="5"><label>An adult</label></li>
+                            <li><input type="radio" name="stage" value="6"><label>Not defined</label></li>
+
+                    </ul>
+
+
+                </fieldset>
+
+                 <fieldset>
+                    <p>
+                    <label> Email ID </label>
+
+                    <input  type="email" maxlength="50" name="email" class="signintxt" >{{  form.email }} </p>
+                     <div id="note">
+                     <p>
+                         If you forget your password, you can retrieve it by providing us with an email address. If you do not wish to give an email address then you may leave this section blank, but if you forget your password then you will lose access to your account.
+                     </p>
+                     </div>
+                </fieldset>
+                <fieldset>
+                <input type="submit"  value="Sign in >>" class="registerbtn">
+                    <input type="submit"  value=" Cancel " class="registerbtn">
+                    <div id="note1">
+                        <h4>Use of your information</h4>
+                        <p>My career profile collects your information to store your personal profile for your use in the future.</p>
+
+                    </div>
+                    </fieldset>
+            </div>
+    </form>
+
+        </div>
+</div>
+</div>
+
+</body>
+</html>

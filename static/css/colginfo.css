@@ -1,0 +1,90 @@
+#container{
+width: 1024px;
+height: auto;
+min-height: 418px;
+margin: 0 auto;
+position: relative;
+}
+
+#content {
+width: 90.72%;
+background: #FFFFFF;
+min-height: 554px;
+border: 15px solid #007D88;
+margin: 0 0 0 3.5%;
+margin-top: 100px;
+padding: 30px;
+
+}
+
+.wrapper {
+    border: 2px solid #007D88;
+    padding: 30px;
+    margin-top: 2px;
+
+}
+
+.dd{
+
+    border-radius: 5px;
+    margin: 3px;
+    padding: 3px;
+}
+
+.registerbtn{
+background-color: #007D88;
+border: medium none;
+border-radius: 3px;
+color: #FFFFFF;
+font-family: 'Arial';
+font-size: 1.05em;
+font-weight: bold;
+height: 40px;
+margin: 2% 0 0 0;
+width: 100px;
+cursor: pointer;
+margin-left: 360px;
+}
+
+#subcources{
+
+
+}
+
+#state{
+
+    margin: -31px 0 0 205px;
+    width:10%;
+}
+
+#city{
+    margin: -31px 0 0 300px;
+    width: 10%;
+}
+
+#query{
+
+    font-family: 'Arial';
+    margin-top: 35px;
+    border-radius: 5px;
+
+
+}
+
+
+.colgselect option {
+  background: #f5f6fa;
+  padding: 5px;
+  width: 23.4%;
+  float: left;
+  border-bottom: #d8d8d8 1px solid;
+  position: relative;
+    display:inline;
+}
+
+.colgselect {
+
+    width:100%;
+    height: 15%;
+}
+

@@ -1,0 +1,49 @@
+<html>
+<head>
+    <title> </title>
+
+    <link rel="stylesheet" type="text/css" href="/static/css/profile.css">
+</head>
+
+<body>
+<div class="container">
+    <div class="wrapper">
+
+        <div class="top">
+
+            </div>
+
+        <div class="content">
+            <div class="odd">
+
+
+<div>
+{% if slist %}
+    {% for t in slist %}
+   <div class="even">  <a href="/sec/{{ t.id }}/">{{ t.name }}</a> </div>
+    {%endfor%}
+{% else %}
+    no data found
+{% endif %}
+
+
+
+
+</div>
+
+                </div>
+
+
+
+
+        </div>
+
+        </div>
+
+
+
+
+    </div>
+</div>
+</body>
+</html>

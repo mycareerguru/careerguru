@@ -1,0 +1,97 @@
+<html>
+<head>
+     <link type="text/css" rel="stylesheet" href=/static/css/bootstrap.css>
+    <link type = text/css rel="stylesheet" href="/static/css/colgpage.css">
+</head>
+<body>
+
+    <div id="container">
+        <div id="content">
+        <div id="wrapper">
+        <div id="heading">
+        <h3>{{ colg_name }}</h3>
+
+        </div>
+        <div id="tb_menu">
+            <div class="m1">
+                <ul class="nav nav-tabs">
+                    <li role="presentation" id="overview" class="active"><a >Overview</a></li>
+                    <li role="presentation" id="courseoff"><a >Courses Offered</a></li>
+                    <li role="presentation" id="camp"><a >Campus Facility</a></li>
+                    <li role="presentation" id="review"><a >Review</a></li>
+                    <li role="presentation" id="ask"><a >Ask College</a></li>
+
+</ul>
+                </div>
+
+        </div>
+
+            <div id="content1">
+
+            </div>
+
+    </div>
+
+
+</div>
+</div>
+
+
+</body>
+
+<script src="/static/js/jquery-2.1.1.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $("#overview").click(function() {
+                $("#overview").addClass("active");
+                $("#courseoff,#camp,#review,#ask").removeClass("active");
+                url = "/overview/";
+                $.get(url).success(function(data) {
+                    console.log(data);
+                    $("#content1").html(data);
+                });
+            });
+
+            $("#courseoff").click(function() {
+                $("#courseoff").addClass("active");
+                $("#overview,#camp,#review,#ask").removeClass("active");
+                url = "/coursesoff/";
+                $.get(url).success(function(data) {
+                    console.log(data);
+                    $("#content1").html(data);
+                });
+            });
+
+            $("#camp").click(function() {
+                $("#camp").addClass("active");
+                $("#courseoff,#overview,#review,#ask").removeClass("active");
+                url = "/campfac/";
+                $.get(url).success(function(data) {
+                    console.log(data);
+                    $("#content1").html(data);
+                });
+            });
+
+            $("#review").click(function() {
+                $("#review").addClass("active");
+                $("#courseoff,#camp,#overview,#ask").removeClass("active");
+                url = "/review/";
+                $.get(url).success(function(data) {
+                    console.log(data);
+                    $("#content1").html(data);
+                });
+            });
+
+            $("#ask").click(function() {
+                $("#ask").addClass("active");
+                $("#courseoff,#camp,#review,#overview").removeClass("active");
+                url = "/askcolg/";
+                $.get(url).success(function(data) {
+                    console.log(data);
+                    $("#content1").html(data);
+                });
+            });
+        });
+
+</script>
+</html>

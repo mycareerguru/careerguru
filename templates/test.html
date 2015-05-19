@@ -1,0 +1,10 @@
+<ul>
+{%  for obj in carr %}
+    <li>{{ obj.0 }}</li>
+    <ul>
+    {%  for val in obj.1 %}
+        <li>{{  val }}</li>
+    {%  endfor %}
+    </ul>
+{%  endfor %}
+</ul>

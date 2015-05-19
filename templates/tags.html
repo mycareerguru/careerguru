@@ -1,0 +1,17 @@
+<html>
+<title>
+
+
+</title>
+
+<body>
+
+<h1>Tag</h1>
+{% for tag in tags %}
+<div>
+    <h2><a href="/get/{{ tag.id }}/">{{ tag.name }}</a></h2>
+</div>
+{% endfor %}
+
+</body>
+</html>

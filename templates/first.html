@@ -1,0 +1,186 @@
+<html>
+<head>
+    <title> </title>
+
+    <link rel="stylesheet" type="text/css" href="/static/css/first.css">
+</head>
+
+<body>
+<div class="container">
+    <div id="wrapper">
+
+        <div id="top">
+            <div class="heading">
+
+            </div>
+        <h2>Also called: </h2>
+        {%  for obj in carr.0 %}
+
+                            <ul>
+                                {%  for val in obj.1 %}
+                                    <li>{{  val }}</li>
+                                {%  endfor %}
+                            </ul>
+                        {%  endfor %}
+
+            <div id="left">
+                <h2>What they do: </h2>
+                    {%  for obj in carr.1 %}
+
+                            <ul>
+                                {%  for val in obj.1 %}
+                                    <li>{{  val }}</li>
+                                {%  endfor %}
+                            </ul>
+                        {%  endfor %}
+                  </div>
+
+            <div id="right">
+                <h2>On the job you would</h2>
+                <ul>
+                        {%  for obj in carr.2 %}
+
+
+                                {%  for val in obj.1 %}
+                                    <li>{{  val }}</li>
+                                {%  endfor %}
+
+                        {%  endfor %}
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="first-row">
+            <div class="box one">
+                <div class= "title">
+                    <h1 style="color:#570088"> Knowledge</h1>
+                </div>
+
+
+
+                <div id="one">
+                    <ul>
+                        {%  for obj in carr.3 %}
+                            <li class="seclist" style="color:#570088;">{{ obj.0 }}</li>
+                            <ul>
+                                {%  for val in obj.1 %}
+                                    <li>{{  val }}</li>
+                                {%  endfor %}
+                            </ul>
+                        {%  endfor %}
+                    </ul>
+                </div>
+            </div>
+            <div class="box two">
+                <div class= "title">
+                    <h1 style="color:#B33800"> Skill</h1>
+                </div>
+
+                <div id="two">
+                <ul style="padding-left: 25px;">
+                    {%  for obj in carr.4 %}
+                            <li  class="seclist" style="color:#B33800;">{{ obj.0 }}</li>
+                            <ul style="padding-left: 25px;">
+                                {%  for val in obj.1 %}
+                                    <li>{{  val }}</li>
+                                {%  endfor %}
+                            </ul>
+                        {%  endfor %}
+                </ul>
+                </div>
+            </div>
+
+            <div class="box three">
+                <div class= "title">
+                    <h1 style="color:#064597"> Ability</h1>
+                </div>
+
+                <div id="three">
+                    <ul>
+                    {%  for obj in carr.5 %}
+                            <li  class="seclist" style="color:#064597;">{{ obj.0 }}</li>
+                            <ul style="padding-left: 25px;">
+                                {%  for val in obj.1 %}
+                                    <li class="thirdlist">{{  val }}</li>
+                                {%  endfor %}
+                            </ul>
+                        {%  endfor %}
+                </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="second-row">
+            <div class="box1 four">
+                <div class= "title">
+                    <h1 style="color:#9D3781"> Personality</h1>
+                </div>
+                <div id="four">
+                    <ul>
+                    {%  for obj in carr.6 %}
+{#                            <li  class="seclist" style="color:#9D3781;;">{{ obj.0 }}</li>#}
+                            <ul>
+                                {%  for val in obj.1 %}
+                                    <li>{{  val }}</li>
+                                {%  endfor %}
+                            </ul>
+                        {%  endfor %}
+                </ul>
+                </div>
+
+            </div>
+
+            <div class="box2 five">
+                <div class= "title">
+                    <h1 style="color:#78AA68"> Technology</h1>
+                </div>
+
+                <div id="five">
+                    <ul>
+                    {%  for obj in carr.7 %}
+                            <li  class="seclist" style="color:#78AA68;">{{ obj.0 }}</li>
+                            <ul>
+                                {%  for val in obj.1 %}
+                                    <li>{{  val }}</li>
+                                {%  endfor %}
+                            </ul>
+                        {%  endfor %}
+                </ul>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="first-row">
+            <div class="box one">
+                <div class= "title">
+                    <h1 style="color:#286ABE"> Education</h1>
+                </div>
+                <div id = "ed">
+
+
+                    </div>
+
+            </div>
+            <div class="box two">
+                <div class= "title">
+                    <h1 style="color:#007A6B"> Job Outlook</h1>
+                </div>
+            </div>
+
+            <div class="box three">
+                <div class= "title">
+                    <h1 style="color:#007A6B"> Explore More</h1>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="/static/js/jquery-2.1.1.js"></script>
+<script type="text/javascript" src="/static/js/app.js"></script>
+</html>

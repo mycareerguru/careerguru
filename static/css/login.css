@@ -1,0 +1,130 @@
+
+#wrapper {
+width: 1024px;
+height: auto;
+min-height: 418px;
+margin: 0 auto;
+position: relative;
+}
+
+.LoginContent {
+width: 90.72%;
+background: #FFFFFF;
+min-height: 554px;
+border: 15px solid #eeeeee;
+margin: 0 0 0 3.5%;
+margin-top: 100px;
+}
+
+#left{
+width: 42%;
+margin: 0 0 0 2%;
+float: left;
+}
+
+
+#right{
+
+width: 42%;
+margin: 0 2% 0 0;
+float: right;
+}
+
+.registerbtn{
+background-color: #007D88;
+border: medium none;
+border-radius: 3px;
+color: #FFFFFF;
+float: right;
+font-family: 'Arial';
+font-size: 1.05em;
+font-weight: bold;
+height: 40px;
+margin: 0 0 5% 0;
+width: 100px;
+cursor: pointer;
+}
+
+
+.labelname {
+width: 100%;
+color: #636566;
+font-weight: bold;
+font-size: 1em;
+text-align: left;
+/* display: block; */
+margin: 0;
+}
+
+.logintxt {
+    width: 100%;
+    margin: 2% 2% 2% 0;
+    font-size: 1.2em;
+    height: 35px;
+    border: 1px solid #B4B6A8;
+    border-radius: 5px;
+}
+
+.forgotpsw{
+font-size: 0.9em;
+font-weight: bolder;
+text-decoration: underline;
+color: #007D88;
+float: left;
+display: block;
+margin: 1% 0 1% 0;
+width: 100%;
+}
+
+.rememberme{
+
+    float: right;
+height: 40px;
+line-height: 40px;
+color: #636466;
+margin: 0 2% 0 0;
+font-size: 0.95em;
+ padding-left: 15px;
+}
+
+.externallogin{
+background: #FFFFFF;
+margin: 5% 0 0 2%;
+border-top: 2px solid #E7E7E7;
+min-height: 80px;
+width: 96%;
+float: left;
+
+}
+input.extloginbtn {
+    margin: 0;
+    list-style: none;
+    width: 33px;
+height: 33px;
+font-weight: bold;
+cursor: pointer;
+border: medium none;
+border-radius: 5px;
+}
+
+.externalloginbtn{
+
+    margin: 0;
+    list-style: none;
+
+}
+
+ul li {
+     display: inline;
+}
+.btnfb{
+background: url("/static/img/facebook.png") 2px no-repeat;
+}
+
+input.btngoogle{
+background: url("/static/img/google_plus.png") 2px no-repeat;
+}
+
+input.btntwiter{
+background: url("/static/img/twitter.png") 2px no-repeat;
+}
