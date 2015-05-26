@@ -1,5 +1,5 @@
 from django.shortcuts import render, render_to_response
-from career.models import Tag,Subtag,CareerInfo,Faq,State,City, College
+from career.models import Tag,Subtag,CareerInfo,Faq,State,City, College, Facility
 from django.http.response import HttpResponse
 from itertools import groupby
 
@@ -73,8 +73,15 @@ def overview(request,colg_id=1):
 def coursesoff(request):
     return render(request,"courses_off.html")
 
-def campfac(request):
-    return render(request,"campfac.html")
+def campfac(request,colg_id=1):
+    o = College.objects.get(pk=colg_id)
+    x = Facility.objects.all(college=o)
+    return render(request,"campfac.html",{
+        'o':o,
+        'x':x
+
+
+    })
 
 def review(request):
     return render(request,"review.html")
@@ -134,7 +141,8 @@ def colgpage(request,colg_id=1):
         o = College.objects.get(pk=colg_id)
         name=o.name
         return render(request,"colgpage.html",{
-            'colg_name':name
+            'colg_name':name,
+            'o':o
 
         })
 
