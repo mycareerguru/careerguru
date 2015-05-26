@@ -107,6 +107,13 @@ def dropdown2(request, tag_id=1):
                                  'tags' : subtags})
 
 
+def city(request, state_id=1):
+    o = State.objects.get(pk=state_id)
+    city = City.objects.filter(state=o)
+    return  render_to_response("city.html", {
+                                 'city' : city})
+
+
 def recentfaq(request, tag_id=1):
     o = Subtag.objects.get(pk=tag_id)
     text = Faq.objects.filter(tag=o)
@@ -158,3 +165,12 @@ def dbtolist(data):
 
     carr = [[key, cmap[key]] for key in cmap]
     return carr
+
+
+def colgsearch(request):
+    return render_to_response("colg_search.html", {
+                                'item': Tag.objects.all(),
+                                'sub':Subtag.objects.all(),
+                                'state':State.objects.all(),
+                                'city':City.objects.all()
+                                    })
