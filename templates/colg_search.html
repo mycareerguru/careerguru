@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <title>
+        colg search
+        </title>
+        <link type="text/css" rel="stylesheet" href=/static/css/FAQ.css>
+    </head>
+
+    <body>
+    <div id="container">
+        <div id="content">
+        <div class="wrapper">
+        <form action="#" method="get">
+
+            <div id="title">
+    <select id="foo" class="dd">
+
+        <option value="#">Select Course Stream</option>
+        {% for i in item %}
+
+            <option>{{ i.id }} {{ i.name }}</option>
+
+        {% endfor %}
+    </select>
+
+    <div id="subcources">
+        <select id="foo1" class="dd">
+            <option>Select Sub-Course Stream</option>
+        </select>
+    </div>
+
+
+       <select id="state" class="dd">
+
+        <option value="#">All India</option>
+        {% for i in state %}
+
+            <option>{{ i.id }} {{ i.name }}</option>
+
+        {% endfor %}
+    </select>
+
+    <div id="city1">
+        <select id="city" class="dd">
+            <option>Select City</option>
+        </select>
+    </div>
+
+</div>
+                 <input type="submit"  value=" Submit " class="registerbtn">
+                </form>
+        </div>
+
+
+
+        </div>
+    </div>
+
+    <script src="/static/js/jquery-2.1.1.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $("#foo").change(function() {
+                var field  = $("#foo").val();
+                var parts = field.split(" ");
+                console.log(parts);
+                console.log("value changed " + parts[0]);
+                url = "/dropdown2/" + parts[0];
+                $.get(url).success(function(data) {
+                    console.log(data);
+                    $("#foo1").html(data);
+                }  )
+            });
+
+             $("#state").change(function() {
+                var field  = $("#state").val();
+                var parts = field.split(" ");
+                console.log(parts);
+                console.log("value changed " + parts[0]);
+                url = "/city/" + parts[0];
+                $.get(url).success(function(data) {
+                    console.log(data);
+                    $("#city").html(data);
+                }  )
+            });
+            {% comment %}$("#foo1").change(function){
+
+
+            }{% endcomment %}
+        });
+
+
+
+    </script>
+    </body>
+
+</html>

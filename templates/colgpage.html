@@ -45,7 +45,7 @@
             $("#overview").click(function() {
                 $("#overview").addClass("active");
                 $("#courseoff,#camp,#review,#ask").removeClass("active");
-                url = "/overview/";
+                url = "/overview/{{ o.id }}";
                 $.get(url).success(function(data) {
                     console.log(data);
                     $("#content1").html(data);
@@ -55,7 +55,7 @@
             $("#courseoff").click(function() {
                 $("#courseoff").addClass("active");
                 $("#overview,#camp,#review,#ask").removeClass("active");
-                url = "/coursesoff/";
+                url = "/coursesoff/{{ o.id }}";
                 $.get(url).success(function(data) {
                     console.log(data);
                     $("#content1").html(data);
@@ -65,7 +65,7 @@
             $("#camp").click(function() {
                 $("#camp").addClass("active");
                 $("#courseoff,#overview,#review,#ask").removeClass("active");
-                url = "/campfac/";
+                url = "/campfac/{{ o.id }}";
                 $.get(url).success(function(data) {
                     console.log(data);
                     $("#content1").html(data);
@@ -75,7 +75,7 @@
             $("#review").click(function() {
                 $("#review").addClass("active");
                 $("#courseoff,#camp,#overview,#ask").removeClass("active");
-                url = "/review/";
+                url = "/review/{{ o.id }}";
                 $.get(url).success(function(data) {
                     console.log(data);
                     $("#content1").html(data);
@@ -85,7 +85,7 @@
             $("#ask").click(function() {
                 $("#ask").addClass("active");
                 $("#courseoff,#camp,#review,#overview").removeClass("active");
-                url = "/askcolg/";
+                url = "/askcolg/{{ o.id }}";
                 $.get(url).success(function(data) {
                     console.log(data);
                     $("#content1").html(data);
