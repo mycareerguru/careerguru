@@ -4,8 +4,6 @@ from django.db import models
 from django.contrib import admin
 
 
-
-
 class Tag(models.Model):
     name = models.TextField()
 
@@ -67,25 +65,27 @@ class College(models.Model):
     est = models.TextField()
     about = models.TextField()
     subtag = models.ForeignKey(Subtag)
+    state = models.ForeignKey(State)
+    city = models.ForeignKey(City)
 
     def __unicode__(self):
-        return str(self.name) + " " + str(self.est) + " " + str(self.about) + " " + str(self.subtag)
+        return str(self.name)
 
 
-class Courses(models.Model):
-    bachelors = models.TextField()
-    masters = models.TextField()
-    college = models.ForeignKey(College)
+class Degree(models.Model):
+    name = models.TextField()
+
 
     def __unicode__(self):
-        return str(self.bachelors) + " " + str(self.masters) + " " + str(self.college)
+        return str(self.name)
 
 class Course_name(models.Model):
     name = models.TextField()
-    courses = models.ForeignKey(Courses)
+    degree = models.ForeignKey(Degree)
+    college= models.ForeignKey(College)
 
     def __unicode__(self):
-        return str(self.name) + " " + str(self.courses)
+        return str(self.name) + " " + str(self.degree)
 
 
 class Facility(models.Model):
@@ -107,4 +107,4 @@ class Faculty(models.Model):
     college = models.ForeignKey(College)
 
     def __unicode__(self):
-        return str(self.name) + " " + str(self.qualification) + " " + str(self.experiance) + " " + str(self.about) + " " + str(self.college)
+        return str(self.name) + " " + str(self.college)
