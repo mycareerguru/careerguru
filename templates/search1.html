@@ -1,0 +1,15 @@
+<html>
+<head>
+
+</head>
+<body>
+
+{% if slist %}
+    {% for t in slist %}
+   <a>{{ t.name }}</a>
+    {%endfor%}
+{% else %}
+        no data found
+{% endif %}
+</body>
+</html>
