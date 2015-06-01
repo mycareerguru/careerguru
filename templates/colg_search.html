@@ -10,12 +10,12 @@
     <div id="container">
         <div id="content">
         <div class="wrapper">
-        <form action="#" method="get">
+            <form action="/search1/" method="get">
 
             <div id="title">
-    <select id="foo" class="dd">
+    <select id="foo" class="dd" name="cs">
 
-        <option value="#">Select Course Stream</option>
+        <option >Select Course Stream</option>
         {% for i in item %}
 
             <option>{{ i.id }} {{ i.name }}</option>
@@ -24,13 +24,13 @@
     </select>
 
     <div id="subcources">
-        <select id="foo1" class="dd">
-            <option>Select Sub-Course Stream</option>
+        <select id="foo1" class="dd" name="scs">
+            <option value={{ sub.id }}>{{ sub.id }}Select Sub-Course Stream</option>
         </select>
     </div>
 
 
-       <select id="state" class="dd">
+       <select id="state" class="dd" name="state">
 
         <option value="#">All India</option>
         {% for i in state %}
@@ -41,7 +41,7 @@
     </select>
 
     <div id="city1">
-        <select id="city" class="dd">
+        <select id="city" class="dd" name="city">
             <option>Select City</option>
         </select>
     </div>

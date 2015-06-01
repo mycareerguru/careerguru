@@ -2,6 +2,8 @@ from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 
+
+
 class RegisterForm(UserCreationForm):
     username = forms.CharField(max_length=100)
     email = forms.EmailField(required=False)
@@ -52,3 +54,4 @@ class RegisterForm(UserCreationForm):
             return username
 
         raise forms.ValidationError("User already exists")
+
