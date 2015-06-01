@@ -52,19 +52,28 @@ def search(request):
 
 def search1(request):
 
-    cs=""
-    scs= ""
-    state=""
-    city=""
+
     slist = []
     colg = ""
-    if 'city' in request.GET:
-        city = request.GET['city']
-        x= College.objects.raw('SELECT * FROM career_college where city_id = 8 and state_id = 4 and about like "%engineering%"');
-    slist=x
+    # if 'city' in request.GET:
+    #     city = request.GET['city']
+    #     x= College.objects.raw('SELECT * FROM career_college where city_id = 8 and state_id = 4 and about like "%engineering%"');
+    # slist=x
 
-    return render_to_response("search1.html", {
-                                    'slist': slist})
+    city = request.GET['city']
+    state = request.GET['state']
+    scs = request.GET['scs']
+    query = 'SELECT * FROM career_college where city_id =' + str(city)
+    query += ' and state_id =' + str(state)
+    query += ' and subtag_id =' +  str(scs)
+    print(query)
+    x = College.objects.raw(query)
+    stag = list(x)
+    slist = set(stag)
+
+    return render_to_response('search1.html', {
+                                'slist': slist})
+
 
 def administration(request, subtag_id=1):
     return render_to_response("profile.html",{

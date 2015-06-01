@@ -18,14 +18,14 @@
         <option >Select Course Stream</option>
         {% for i in item %}
 
-            <option>{{ i.id }} {{ i.name }}</option>
+            <option value="{{ i.id}}">{{ i.id }} {{ i.name }}</option>
 
         {% endfor %}
     </select>
 
     <div id="subcources">
         <select id="foo1" class="dd" name="scs">
-            <option value={{ sub.id }}>{{ sub.id }}Select Sub-Course Stream</option>
+            <option>Select Sub-Course Stream</option>
         </select>
     </div>
 
@@ -35,7 +35,7 @@
         <option value="#">All India</option>
         {% for i in state %}
 
-            <option>{{ i.id }} {{ i.name }}</option>
+            <option value="{{ i.id }}"> {{ i.name }}</option>
 
         {% endfor %}
     </select>
