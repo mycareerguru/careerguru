@@ -6,7 +6,7 @@
 
 {% if slist %}
     {% for t in slist %}
-   <a>{{ t.name }}</a>
+  <li> <a href="colgpage/{{ t.id }}/">{{ t.name }}</a></li>
     {%endfor%}
 {% else %}
         no data found

@@ -11,7 +11,7 @@ urlpatterns = patterns('',
     url(r'^email/$','career.views.email'),
     url(r'^colginfo/$','career.views.colginfo'),
     url(r'^colgpage/$','career.views.colgpage'),
-    url(r'^colgpage/(?P<colg_id>\w+)/$','career.views.colgpage'),
+    url(r'^search1/colgpage/(?P<colg_id>\w+)/$','career.views.colgpage'),
    # url(r'^colgpage/(?P<colg_id>\w+)/$','career.views.overview'),
     url(r'^faq/$','career.views.faq'),
     url(r'^colgsearch/$','career.views.colgsearch'),
@@ -33,9 +33,10 @@ urlpatterns = patterns('',
     url(r'^city/(?P<state_id>\w+)/$','career.views.city'),
     url(r'^overview/(?P<colg_id>\w+)/$', 'career.views.overview'),
     url(r'^coursesoff/(?P<colg_id>\w+)$', 'career.views.coursesoff'),
-    url(r'^campfac/(?P<colg_id>\w+)/$', 'career.views.campfac'),
+    url(r'^campfac/(?P<college_id>\w+)/$', 'career.views.campfac'),
     url(r'^review/(?P<colg_id>\w+)$', 'career.views.review'),
     url(r'^askcolg/(?P<colg_id>\w+)$', 'career.views.askcolg'),
+
 
 
 )

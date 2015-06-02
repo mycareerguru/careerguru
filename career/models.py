@@ -96,7 +96,7 @@ class Facility(models.Model):
     college = models.ForeignKey(College)
 
     def __unicode__(self):
-        return str(self.hostel) + " " + str(self.laboratory) + " " + str(self.library) + " " + str(self.classroom) + " " + str(self.college)
+        return str(self.college)
 
 
 class Faculty(models.Model):
