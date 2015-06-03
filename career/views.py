@@ -221,3 +221,7 @@ def colgsearch(request):
         'state': State.objects.all(),
         'city': City.objects.all()
     })
+
+
+def itest(request):
+    return render(request,"itest.html")

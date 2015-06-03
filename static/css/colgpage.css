@@ -29,3 +29,27 @@ padding: 30px;
 
 
 }
+
+.registerbtn{
+background-color: #007D88;
+border: medium none;
+border-radius: 3px;
+color: #FFFFFF;
+float: right;
+font-family: 'Arial';
+font-size: 1.05em;
+font-weight: bold;
+height: 40px;
+margin: 0 0 5% 0;
+width: 100px;
+cursor: pointer;
+}
+
+#backbtn{
+    float:left;
+}
+
+#bottombtn{
+    margin-bottom: 0px;
+
+}

@@ -1,0 +1,91 @@
+<html>
+<head>
+     <link type="text/css" rel="stylesheet" href=/static/css/bootstrap.css>
+    <link type = text/css rel="stylesheet" href="/static/css/colgpage.css">
+</head>
+<body>
+
+    <div id="container">
+        <div id="content">
+        <div id="wrapper">
+        <div id="heading">
+        <h3>{{ colg_name }}</h3>
+
+        </div>
+
+
+            <div id="content1">
+                <h2>exam info </h2>
+                {{ o.about }}
+            </div>
+            <div id="bottombtn">
+    <input type="submit" name="btn_register" value="Next >>"  class="registerbtn">
+            <div id="backbtn">
+    <input type="submit" name="btn_register" value="<< Back"  class="registerbtn">
+                </div>
+                </div>
+    </div>
+
+
+</div>
+</div>
+
+
+</body>
+
+<script src="/static/js/jquery-2.1.1.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $("#overview").click(function() {
+                $("#overview").addClass("active");
+                $("#courseoff,#camp,#review,#ask").removeClass("active");
+                url = "/overview/{{ o.id }}";
+                $.get(url).success(function(data) {
+                    console.log(data);
+                    $("#content1").html(data);
+                });
+            });
+
+            $("#courseoff").click(function() {
+                $("#courseoff").addClass("active");
+                $("#overview,#camp,#review,#ask").removeClass("active");
+                url = "/coursesoff/{{ o.id }}";
+                $.get(url).success(function(data) {
+                    console.log(data);
+                    $("#content1").html(data);
+                });
+            });
+
+            $("#camp").click(function() {
+                $("#camp").addClass("active");
+                $("#courseoff,#overview,#review,#ask").removeClass("active");
+                url = "/campfac/{{ o.id }}";
+                $.get(url).success(function(data) {
+                    console.log(data);
+                    $("#content1").html(data);
+                });
+            });
+
+            $("#review").click(function() {
+                $("#review").addClass("active");
+                $("#courseoff,#camp,#overview,#ask").removeClass("active");
+                url = "/review/{{ o.id }}";
+                $.get(url).success(function(data) {
+                    console.log(data);
+                    $("#content1").html(data);
+                });
+            });
+
+            $("#ask").click(function() {
+                $("#ask").addClass("active");
+                $("#courseoff,#camp,#review,#overview").removeClass("active");
+                url = "/askcolg/{{ o.id }}";
+                $.get(url).success(function(data) {
+                    console.log(data);
+                    $("#content1").html(data);
+                });
+            });
+        });
+
+</script>
+</html>

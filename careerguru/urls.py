@@ -37,6 +37,8 @@ urlpatterns = patterns('',
     url(r'^review/(?P<colg_id>\w+)$', 'career.views.review'),
     url(r'^askcolg/(?P<colg_id>\w+)$', 'career.views.askcolg'),
 
+    url(r'^itest/$','career.views.itest'),
+
 
 
 )
