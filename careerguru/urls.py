@@ -38,7 +38,8 @@ urlpatterns = patterns('',
     url(r'^askcolg/(?P<colg_id>\w+)$', 'career.views.askcolg'),
 
     url(r'^itest/$','career.views.itest'),
-
+    url(r'^it1/$','career.views.it1'),
+    url(r'^it1/$','career.views.it2'),
 
 
 )

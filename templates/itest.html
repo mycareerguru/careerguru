@@ -5,7 +5,7 @@
 </head>
 <body>
 
-    <div id="container">
+    <div id="container" class="mycontainer">
         <div id="content">
         <div id="wrapper">
         <div id="heading">
@@ -15,13 +15,16 @@
 
 
             <div id="content1">
-                <h2>exam info </h2>
+                <p>exam info </p>
+                <p>The Interest Profiler can help you find out what your interests are and how they relate to the world of work. You can find out what you like to do.</p>
+                <p>The Interest Profiler helps you decide what kinds of careers you might want to explore.</p>
+                <p>On each screen, click the Next button at the bottom to continue. You can use the Back button at the bottom to re-read the instructions or change your answers.</p>
                 {{ o.about }}
             </div>
             <div id="bottombtn">
-    <input type="submit" name="btn_register" value="Next >>"  class="registerbtn">
+    <input type="submit" name="btn_register" value="Next >>" id="nextbtn" class="registerbtn">
             <div id="backbtn">
-    <input type="submit" name="btn_register" value="<< Back"  class="registerbtn">
+    <input type="submit" name="btn_register" value="<< Back"  id="backbtn1" class="registerbtn">
                 </div>
                 </div>
     </div>
@@ -36,55 +39,17 @@
 <script src="/static/js/jquery-2.1.1.js"></script>
     <script type="text/javascript">
         $(function() {
-            $("#overview").click(function() {
-                $("#overview").addClass("active");
-                $("#courseoff,#camp,#review,#ask").removeClass("active");
-                url = "/overview/{{ o.id }}";
+            $("#backbtn1").hide();
+            $("#nextbtn").click(function() {
+            $("#backbtn1").visible=true;
+                url = "/it1/";
                 $.get(url).success(function(data) {
                     console.log(data);
-                    $("#content1").html(data);
+                    $("#content1").html(data)
                 });
             });
 
-            $("#courseoff").click(function() {
-                $("#courseoff").addClass("active");
-                $("#overview,#camp,#review,#ask").removeClass("active");
-                url = "/coursesoff/{{ o.id }}";
-                $.get(url).success(function(data) {
-                    console.log(data);
-                    $("#content1").html(data);
-                });
-            });
 
-            $("#camp").click(function() {
-                $("#camp").addClass("active");
-                $("#courseoff,#overview,#review,#ask").removeClass("active");
-                url = "/campfac/{{ o.id }}";
-                $.get(url).success(function(data) {
-                    console.log(data);
-                    $("#content1").html(data);
-                });
-            });
-
-            $("#review").click(function() {
-                $("#review").addClass("active");
-                $("#courseoff,#camp,#overview,#ask").removeClass("active");
-                url = "/review/{{ o.id }}";
-                $.get(url).success(function(data) {
-                    console.log(data);
-                    $("#content1").html(data);
-                });
-            });
-
-            $("#ask").click(function() {
-                $("#ask").addClass("active");
-                $("#courseoff,#camp,#review,#overview").removeClass("active");
-                url = "/askcolg/{{ o.id }}";
-                $.get(url).success(function(data) {
-                    console.log(data);
-                    $("#content1").html(data);
-                });
-            });
         });
 
 </script>

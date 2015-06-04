@@ -49,39 +49,50 @@ def search(request):
 
 def search1(request):
     slist = []
-    colg = ""
-    # if 'city' in request.GET:
-    # city = request.GET['city']
-    #     x= College.objects.raw('SELECT * FROM career_college where city_id = 8 and state_id = 4 and about like "%engineering%"');
-    # slist=x
     if 'city' in request.GET and request.GET['city']:
         city = request.GET['city']
-        state = request.GET['state']
-        scs = request.GET['scs']
+
+        cs = request.GET['cs']
         query = 'SELECT * FROM career_college where city_id =' + str(city)
-        query += ' and state_id =' + str(state)
-        query += ' and subtag_id =' + str(scs)
+        query += ' and tag_id =' + str(cs)
         print(query)
         x = College.objects.raw(query)
         stag = list(x)
         slist = set(stag)
+
     elif 'state' in request.GET and request.GET['state']:
+
         state = request.GET['state']
-        scs = request.GET['scs']
+        cs = request.GET['cs']
         query = 'SELECT * FROM career_college where state_id =' + str(state)
-        query += ' and subtag_id =' + str(scs)
+        query += ' and tag_id =' + str(cs)
         print(query)
         x = College.objects.raw(query)
         stag = list(x)
         slist = set(stag)
 
     elif 'scs' in request.GET and request.GET['scs']:
+
         scs = request.GET['scs']
+        cs = request.GET['cs']
         query = 'SELECT * FROM career_college where subtag_id =' + str(scs)
+        query += ' and tag_id =' + str(cs)
         print(query)
         x = College.objects.raw(query)
         stag = list(x)
         slist = set(stag)
+
+    elif 'cs' in request.GET and request.GET['cs']:
+
+        cs = request.GET['cs']
+
+        query = 'SELECT * FROM career_college where tag_id =' + str(cs)
+
+        print(query)
+        x = College.objects.raw(query)
+        stag = list(x)
+        slist = set(stag)
+
     return render_to_response('search1.html', {
         'slist': slist
     })
@@ -219,9 +230,16 @@ def colgsearch(request):
         'item': Tag.objects.all(),
         'sub': Subtag.objects.all(),
         'state': State.objects.all(),
-        'city': City.objects.all()
+        'city': City.objects.all(),
+
     })
 
 
 def itest(request):
     return render(request,"itest.html")
+
+def it1(request):
+    return render(request,"it1.html")
+
+def it2(request):
+    return render(request,"it2.html")

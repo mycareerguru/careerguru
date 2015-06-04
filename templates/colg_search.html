@@ -15,7 +15,7 @@
             <div id="title">
     <select id="foo" class="dd" name="cs">
 
-        <option >Select Course Stream</option>
+        <option value="">Select Course Stream</option>
         {% for i in item %}
 
             <option value="{{ i.id}}">{{ i.id }} {{ i.name }}</option>
@@ -25,7 +25,8 @@
 
     <div id="subcources">
         <select id="foo1" class="dd" name="scs">
-            <option>Select Sub-Course Stream</option>
+            <option value="">Select Sub-Course Stream</option>
+
         </select>
     </div>
 
@@ -43,6 +44,11 @@
     <div id="city1">
         <select id="city" class="dd" name="city">
             <option value="">Select City</option>
+            {% for i in city%}
+
+            <option value="{{ i.id}}">{{ i.name }}</option>
+
+        {% endfor %}
         </select>
     </div>
 
