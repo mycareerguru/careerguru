@@ -37,20 +37,43 @@
 </body>
 
 <script src="/static/js/jquery-2.1.1.js"></script>
-    <script type="text/javascript">
-        $(function() {
-            $("#backbtn1").hide();
-            $("#nextbtn").click(function() {
-            $("#backbtn1").visible=true;
-                url = "/it1/";
-                $.get(url).success(function(data) {
-                    console.log(data);
-                    $("#content1").html(data)
+<script type="text/javascript">
+    $(function() {
+        $("#backbtn1").hide();
+        $("#nextbtn").click(function() {
+            $("#backbtn1").show();
+            url = "/it1/";
+            $.get(url).success(function (data) {
+                console.log(data);
+                $("#content1").html(data)
+                $("#nextbtn").click(function () {
+                    $("#backbtn1").show();
+                    url = "/it2/";
+                    $.get(url).success(function (data) {
+                        console.log(data);
+                        $("#content1").html(data)
+                        $("#nextbtn").click(function () {
+                            $("#backbtn1").show();
+                            url = "/it3/";
+                            $.get(url).success(function (data) {
+                                console.log(data);
+                                $("#content1").html(data)
+                                $("#nextbtn").click(function () {
+                                    $("#backbtn1").show();
+                                    url = "/it4/";
+                                    $.get(url).success(function (data) {
+                                        console.log(data);
+                                        $("#content1").html(data)
+                                    });
+                                });
+                            });
+                        });
+                    });
                 });
             });
 
-
         });
+    });
 
 </script>
 </html>

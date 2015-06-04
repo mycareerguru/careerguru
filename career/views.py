@@ -243,3 +243,9 @@ def it1(request):
 
 def it2(request):
     return render(request,"it2.html")
+
+def it3(request):
+    return render(request,"it3.html")
+
+def it4(request):
+    return render(request,"it4.html")
