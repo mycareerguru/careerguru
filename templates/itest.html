@@ -15,7 +15,7 @@
 
 
             <div id="content1">
-                <p>exam info </p>
+                <h2>Welcome to the Interest Profiler!</h2>
                 <p>The Interest Profiler can help you find out what your interests are and how they relate to the world of work. You can find out what you like to do.</p>
                 <p>The Interest Profiler helps you decide what kinds of careers you might want to explore.</p>
                 <p>On each screen, click the Next button at the bottom to continue. You can use the Back button at the bottom to re-read the instructions or change your answers.</p>
@@ -40,39 +40,45 @@
 <script type="text/javascript">
     $(function() {
         $("#backbtn1").hide();
-        $("#nextbtn").click(function() {
-            $("#backbtn1").show();
-            url = "/it1/";
-            $.get(url).success(function (data) {
-                console.log(data);
-                $("#content1").html(data)
-                $("#nextbtn").click(function () {
+        var count = 0;
+        $("#nextbtn").click(function () {
+            count += 1;
+            if (count === 1) {
                     $("#backbtn1").show();
                     url = "/it2/";
                     $.get(url).success(function (data) {
                         console.log(data);
                         $("#content1").html(data)
-                        $("#nextbtn").click(function () {
-                            $("#backbtn1").show();
-                            url = "/it3/";
-                            $.get(url).success(function (data) {
-                                console.log(data);
-                                $("#content1").html(data)
-                                $("#nextbtn").click(function () {
-                                    $("#backbtn1").show();
-                                    url = "/it4/";
-                                    $.get(url).success(function (data) {
-                                        console.log(data);
-                                        $("#content1").html(data)
-                                    });
-                                });
-                            });
-                        });
                     });
-                });
+                }
+            if (count === 2) {
+                    $("#backbtn1").show();
+                    url = "/it3/";
+                    $.get(url).success(function (data) {
+                        console.log(data);
+                        $("#content1").html(data)
+                    });
+                }
+            if (count === 3) {
+                    $("#backbtn1").show();
+                    url = "/it4/";
+                    $.get(url).success(function (data) {
+                        console.log(data);
+                        $("#content1").html(data)
+                    });
+                }
+            if (count === 4) {
+
+                    $("#backbtn1").show();
+                    url = "/it5/";
+                    $.get(url).success(function (data) {
+                        console.log(data);
+                        $("#content1").html(data)
+                    });
+                }
             });
 
-        });
+
     });
 
 </script>

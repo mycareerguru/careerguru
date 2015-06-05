@@ -1,0 +1,54 @@
+
+element.style {
+  float: left;
+  width: 23px;
+  border-right: solid 2px #ddd;
+  overflow: hidden;
+  text-align: center;
+  line-height: 1.7em;
+  height: 1.7em;
+  padding: 0.1em 0;
+  margin: 0;
+}
+
+#topleft{
+    width: 30%;
+    margin-left: 5px;
+
+}
+
+#topright{
+    width: 40%;
+  margin-left: 30%;
+  margin-top: -30px;
+
+}
+
+#testopt{
+    margin: -10px 0 0 10px;
+}
+
+#num{
+  margin: 10px 0 0 -8px;
+  float: left;
+  width: 2em;
+  text-align:left;
+  color: #555;
+  background-color: transparent;
+}
+
+.qblock{
+  padding: 0;
+  margin-bottom: 0;
+  height: 1.7em;
+  position: relative;
+  overflow: hidden;
+  margin-top: 55px;
+}
+
+.question{
+    margin-left: 135px;
+  height: 1.7em;
+  line-height: 1.7em;
+  margin-top:-25px;
+}

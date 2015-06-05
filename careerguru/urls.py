@@ -41,7 +41,8 @@ urlpatterns = patterns('',
     url(r'^it1/$','career.views.it1'),
     url(r'^it2/$','career.views.it2'),
     url(r'^it3/$','career.views.it3'),
-    url(r'^it4/$','career.views.it4')
+    url(r'^it4/$','career.views.it4'),
+    url(r'^it5/$','career.views.it5')
 
 
 )
