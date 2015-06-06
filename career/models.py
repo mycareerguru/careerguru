@@ -108,3 +108,18 @@ class Faculty(models.Model):
 
     def __unicode__(self):
         return str(self.name) + " " + str(self.college)
+
+
+class Qtype(models.Model):
+    qtype = models.TextField()
+
+    def __unicode__(self):
+        return str(self.qtype)
+
+
+class Question(models.Model):
+    name = models.TextField()
+    qtype = models.ForeignKey(Qtype)
+
+    def __unicode__(self):
+        return str(self.name)
