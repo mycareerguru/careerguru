@@ -25,7 +25,7 @@ element.style {
 }
 
 #testopt{
-    margin: -10px 0 0 10px;
+    margin: -10px 0 0 150px;
 }
 
 #num{
@@ -52,3 +52,36 @@ element.style {
   line-height: 1.7em;
   margin-top:-25px;
 }
+
+.idnum{
+
+
+}
+
+.qhead{
+    margin: -20px 0 0 50px;
+
+}
+
+.qopt{
+    margin: -20px 0 0 150px;
+
+}
+
+#one{
+margin-left: 5px;
+}
+#two{
+margin-left: 65px;
+}
+#three{
+margin-left: 90px;
+}
+#four{
+margin-left: 105px;
+}
+#five{
+margin-left: 135px;
+}
+
+
