@@ -19,29 +19,98 @@
 </div>
 </div>
 </div>
-        <div class="qblock">
+<div class="qblock">
+    <div id="qheading">
+        <div class="idnum"><b>No </b></div>
+        <div class="qhead" ><b>Questions </b></div>
+        <div class="qopt"> <b>Strongly-Dislike | Dislike | Unsure | like | Strongly-like</b></div>
+
+        </div>
+
+
+    </div>
  <div id="testopt">
      <div id="num">
-         25
+
+         <b></b>
      </div>
+     </div>
+
+   <div class="question">{{ q.name }}</div>
+
 
   <form role="form" id="opt">
 
+
     <label class="radio-inline">
 
-      <input type="radio" name="rest1">
+      <input type="radio" name="rest1" id="one">
     </label>
     <label class="radio-inline">
-      <input type="radio" name="rest1">
+      <input type="radio" name="rest1" id="two">
     </label>
     <label class="radio-inline">
-      <input type="radio" name="rest1">
+      <input type="radio" name="rest1" id="three">
+        </label>
+        <label class="radio-inline">
+
+      <input type="radio" name="rest1" id="four">
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="rest1" id="five">
+    </label>
     </label>
   </form>
 
-     <div class="question">Assemble electronic parts</div>
-      <div class="question">Assemble electronic parts2</div>
 </div>
 </div>
+
+{% comment %}  <div class="span2"></div>
+  <div class="span7">
+    <table class="table table-hover">
+       <tr>
+         <th>No.</th>
+         <th>Question</th>
+         <th>Strongly Dislike | Dislike | Unsure | like | Strongly like </th>
+
+
+
+       </tr>
+
+{% for q in question %}
+       <tr>
+         <td>
+           <div class="quize" id="quizeid_{{ q.id }}">
+
+           </div>
+         </td>
+         <td>{{ q.Question }}</td>
+         <td>
+             <form action="/answer/" method="get">{% csrf_token %}
+
+
+      <div class="opt">
+	<label><input type="radio" name="ans" value="1" /></label>
+      </div>
+      <div class="opt">
+	<label><input type="radio" name="ans" value="2" /></label>
+      </div>
+      <div class="opt">
+	<label><input type="radio" name="ans" value="3" /></label>
+      </div>
+      <div class="opt">
+	<label><input type="radio" name="ans" value="4" /></label>
+      </div>
+      <input type="hidden" name="question" value="{{q.id}}" />
+
+    </form>
+
+         </td>
+       </tr>
+{% endfor %}
+
+    </table>
+  </div>{% endcomment %}
+  </div>
 </div>
 </div>

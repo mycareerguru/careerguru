@@ -1,5 +1,5 @@
 from django.shortcuts import render, render_to_response
-from career.models import Tag, Subtag, CareerInfo, Faq, State, City, College, Facility
+from career.models import Tag, Subtag, CareerInfo, Faq, State, City, College, Facility, Question
 from django.http.response import HttpResponse
 from itertools import groupby
 
@@ -236,19 +236,27 @@ def colgsearch(request):
 
 
 def itest(request):
-    return render(request,"itest.html")
+    return render(request, "itest.html")
+
 
 def it1(request):
-    return render(request,"it1.html")
+    return render(request, "it1.html")
+
 
 def it2(request):
-    return render(request,"it2.html")
+    return render(request, "it2.html")
+
 
 def it3(request):
-    return render(request,"it3.html")
+    return render(request, "it3.html")
+
 
 def it4(request):
-    return render(request,"it4.html")
+    return render(request, "it4.html")
+
 
 def it5(request):
-    return render(request,"it5.html")
+    q = Question.objects.all()
+    return render_to_response("it5.html", {
+        'q': q
+    })
