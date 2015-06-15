@@ -269,14 +269,14 @@ def it5(request):
 
     })
 
-def it6(request):
-    arr=[]
-
-    x = Question.objects.all()
-    for q in x:
-        arr.append(q)
-
-    return render_to_response("it5.html", {
-            'q': arr[10:20],
-
-    })
+# def it6(request):
+#     arr=[]
+#
+#     x = Question.objects.all()
+#     for q in x:
+#         arr.append(q)
+#
+#     return render_to_response("it5.html", {
+#             'q': arr[10:20],
+#
+#     })

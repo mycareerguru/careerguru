@@ -19,17 +19,17 @@ element.style {
 
 #topright{
     width: 40%;
-  margin-left: 30%;
-  margin-top: -30px;
+  margin-left: 40%;
+
 
 }
 
 #testopt{
-    margin: -10px 0 0 150px;
+
 }
 
 #num{
-  margin: 10px 0 0 -8px;
+  margin: 6px 0 0 5px;
   float: left;
   width: 2em;
   text-align:left;
@@ -47,10 +47,9 @@ element.style {
 }
 
 .question{
-    margin-left: 135px;
   height: 1.7em;
   line-height: 1.7em;
-  margin-top:-25px;
+  margin: 5px 0 0 60px;
 }
 
 .idnum{
@@ -59,29 +58,39 @@ element.style {
 }
 
 .qhead{
-    margin: -20px 0 0 50px;
+    margin: -20px 0 0 100px;
 
 }
 
 .qopt{
-    margin: -20px 0 0 150px;
+    margin: -20px 0 0 350px;
 
 }
 
 #one{
 margin-left: 5px;
+    margin-top: -16px;
 }
 #two{
 margin-left: 65px;
+    margin-top: -16px;
 }
 #three{
 margin-left: 90px;
+    margin-top: -16px;
 }
 #four{
 margin-left: 105px;
+    margin-top: -16px;
 }
 #five{
 margin-left: 135px;
+    margin-top: -16px;
 }
 
+
+#opt{
+    margin:-15px 0 0 370px;
+
+}
 

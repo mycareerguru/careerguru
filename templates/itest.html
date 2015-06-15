@@ -1,17 +1,17 @@
 <html>
 <head>
-     <link type="text/css" rel="stylesheet" href=/static/css/bootstrap.css>
+    <link type="text/css" rel="stylesheet" href=/static/css/bootstrap.css>
     <link type = text/css rel="stylesheet" href="/static/css/colgpage.css">
 </head>
 <body>
 
-    <div id="container" class="mycontainer">
-        <div id="content">
+<div id="container" class="mycontainer">
+    <div id="content">
         <div id="wrapper">
-        <div id="heading">
-        <h3>{{ colg_name }}</h3>
+            <div id="heading">
+                <h3>{{ colg_name }}</h3>
 
-        </div>
+            </div>
 
 
             <div id="content1">
@@ -21,12 +21,46 @@
                 <p>On each screen, click the Next button at the bottom to continue. You can use the Back button at the bottom to re-read the instructions or change your answers.</p>
                 {{ o.about }}
             </div>
-            <div id="bottombtn">
-    <input type="submit" name="btn_register" value="Next >>" id="nextbtn" class="registerbtn">
+
+            <div id="1">
+                <h2> Here's how it works...</h2>
+                <p>The Interest Profiler has 60 questions about work activities that some people do on their jobs. </p>
+                <p> Read each question carefully and decide how you would feel about doing each type of work:</p>
+                <ul>
+                    <li> Dislike </li>
+                    <li> Unsure </li>
+                    <li> Like </li>
+
+
+                </ul>
+
+            </div>
+            <div id="2" )>
+                <h2> As you answer the questions: </h2>
+                <p> Try <strong>NOT </strong> to think about:</p>
+                <ul>
+                    <li>If you have enough education or training to do the work </li>
+                    <strong> OR </strong>
+                    <li>How much money you would make doing the work. </li>
+
+                </ul>
+                <p> Just think about if you would like or dislike doing the work.</p>
+
+            </div>
+            <div id="3">
+                <h2>THIS IS NOT A TEST!</h2>
+                <p> There are no right or wrong answers!</p>
+                <p> Please take your time answering the questions. There is no need to rush!</p>
+                <p> You are learning about your interests, so that you can explore work you might like and find rewarding!</p>
+                <p>On the next screen, please answer each question, in order, before continuing. There are 5 screens of questions in all. You can change your answers at any time; use the Back button to return to an earlier screen.</p>
+            </div>
+        </div>
+        <div id="bottombtn">
+            <input type="submit" name="btn_register" value="Next >>" id="nextbtn" class="registerbtn">
             <div id="backbtn">
-    <input type="submit" name="btn_register" value="<< Back"  id="backbtn1" class="registerbtn">
-                </div>
-                </div>
+                <input type="submit" name="btn_register" value="<< Back"  id="backbtn1" class="registerbtn">
+            </div>
+        </div>
     </div>
 
 
@@ -41,43 +75,44 @@
     $(function() {
         $("#backbtn1").hide();
         var count = 0;
-        $("#nextbtn").click(function () {
+        $("#content1").show();
+        $("#2,#1,#3,#backbtn1").hide();
+        $("#nextbtn").click(function i() {
             count += 1;
-            if (count === 1) {
-                    $("#backbtn1").show();
-                    url = "/it2/";
-                    $.get(url).success(function (data) {
-                        console.log(data);
-                        $("#content1").html(data)
-                    });
-                }
-            if (count === 2) {
-                    $("#backbtn1").show();
-                    url = "/it3/";
-                    $.get(url).success(function (data) {
-                        console.log(data);
-                        $("#content1").html(data)
-                    });
-                }
-            if (count === 3) {
-                    $("#backbtn1").show();
-                    url = "/it4/";
-                    $.get(url).success(function (data) {
-                        console.log(data);
-                        $("#content1").html(data)
-                    });
-                }
-            if (count === 4) {
+            if(count ===1 ){
+            $("#2,#3,#content1").hide();
+            $("#1,#backbtn1").show();}
+            else if(count ===2 ){
+            $("#1,#3,#content1").hide();
+            $("#2,#backbtn1").show();}
+            else if(count ===3 ){
+            $("#2,#1,#content1").hide();
+            $("#3,#backbtn1").show();}
 
-                    $("#backbtn1").show();
-                    url = "/it5/";
-                    $.get(url).success(function (data) {
-                        console.log(data);
-                        $("#content1").html(data)
-                    });
-                }
-            });
+            else if(count ===4){
+                window.location.href = "/it5/";
 
+            }
+
+        });
+    $("#backbtn1").click(function i() {
+            count -= 1;
+            if(count ===1 ){
+            $("#2,#3,#content1").hide();
+            $("#1,#backbtn1").show();}
+            else if(count ===2 ){
+            $("#1,#3,#content1").hide();
+            $("#2,#backbtn1").show();}
+            else if(count ===3 ){
+            $("#2,#1,#content1").hide();
+            $("#3,#backbtn1").show();}
+        else if(count === 0 ){
+            $("#2,#1,#3,#backbtn1").hide();
+                $("#content1").show();
+            }
+
+
+        });
 
     });
 

@@ -43,6 +43,6 @@ urlpatterns = patterns('',
     url(r'^it3/$','career.views.it3'),
     url(r'^it4/$','career.views.it4'),
     url(r'^it5/$','career.views.it5'),
-    url(r'^it6/$','career.views.it6'),
+
 
 )
