@@ -35,42 +35,43 @@
 
 
                 </div>
+                <div class="q">
+                    {% for i in q %}
+                        <div id={{ i.id}}>
+                            <div id="testopt">
+                                <div id="num">
+                                    {{ i.id }}
+                                    <b></b>
+                                </div>
+                            </div>
+                            <div class="question"> {{i.name}}</div>
 
-                {% for i in q %}
-                    <div id={{ i.id }}>
-                    <div id="testopt">
-                        <div id="num">
-                            {{ i.id }}
-                            <b></b>
+
+                            <form role="form" id="opt">
+
+
+                                <label class="radio-inline">
+
+                                    <input type="radio" name="rest1" id="one">
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="rest1" id="two">
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="rest1" id="three">
+                                </label>
+                                <label class="radio-inline">
+
+                                    <input type="radio" name="rest1" id="four">
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="rest1" id="five">
+                                </label>
+                                </label>
+                            </form>
                         </div>
-                    </div>
-                    <div class="question"> {{i.name}}</div>
-
-
-                    <form role="form" id="opt">
-
-
-                        <label class="radio-inline">
-
-                            <input type="radio" name="rest1" id="one">
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="rest1" id="two">
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="rest1" id="three">
-                        </label>
-                        <label class="radio-inline">
-
-                            <input type="radio" name="rest1" id="four">
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="rest1" id="five">
-                        </label>
-                        </label>
-                    </form>
-                    </div>
-                {% endfor %}
+                    {% endfor %}
+                </div>
             </div>
         </div>
         <div id="bottombtn">
@@ -135,12 +136,15 @@
 <script type="text/javascript">
     $(function() {
         $("#backbtn1").hide();
-        var count = 0;
-        for(i=1;i<=60;i++){
+        var x=[]
+        var a = $(".q")
+        var b=$(a[0]).children()
 
+        for(i=0;i<3;i++){
+            x = b[i]
         }
-        var n = [];
-        $("#content1").show();
+
+
         $("#nextbtn").click(function() {
 
         });
