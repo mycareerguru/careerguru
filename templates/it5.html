@@ -135,18 +135,71 @@
 <script src="/static/js/jquery-2.1.1.js"></script>
 <script type="text/javascript">
     $(function() {
+        count=0;
         $("#backbtn1").hide();
-        var x=[]
+        var x
         var a = $(".q")
         var b=$(a[0]).children()
-
-        for(i=0;i<3;i++){
-            x = b[i]
+        b.hide()
+        for(i=0;i<2;i++){
+            x=$(b[i])
+            x.show()
         }
 
 
         $("#nextbtn").click(function() {
 
+            count +=1
+            console.log(count)
+
+            if(count==1){
+                $("#backbtn1").show();
+                b.hide()
+                for(i=2;i<4;i++) {
+                    x = $(b[i])
+                    x.show()
+                }
+            }
+            if(count==2){
+                $("#backbtn1").show();
+                b.hide()
+                for(i=4;i<7;i++) {
+                    x = $(b[i])
+                    x.show()
+                }
+            }
+        });
+
+        $("#backbtn1").click(function() {
+
+            count -= 1
+            console.log(count)
+            if(count==0){
+
+                b.hide()
+                $("#backbtn1").hide();
+                for(i=0;i<2;i++) {
+                    x = $(b[i])
+                    x.show()
+                }
+            }
+
+            if(count==1){
+                $("#backbtn1").show();
+                b.hide()
+                for(i=2;i<4;i++) {
+                    x = $(b[i])
+                    x.show()
+                }
+            }
+            if(count==2){
+                $("#backbtn1").show();
+                b.hide()
+                for(i=4;i<7;i++) {
+                    x = $(b[i])
+                    x.show()
+                }
+            }
         });
 
     });
