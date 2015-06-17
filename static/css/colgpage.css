@@ -10,7 +10,7 @@ position: relative;
 #content {
 width: 90.72%;
 background: #FFFFFF;
-min-height: 554px;
+min-height: 754px;
 border: 5px solid #007D88;
 margin: 0 0 0 3.5%;
 margin-top: 100px;
@@ -50,7 +50,7 @@ cursor: pointer;
 }
 
 #bottombtn{
-    margin-top: 200px;
+    margin-top: 50px;
 
 }
 

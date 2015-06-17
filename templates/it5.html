@@ -47,25 +47,25 @@
                             <div class="question"> {{i.name}}</div>
 
 
-                            <form role="form" id="opt">
+                            <form role="form" id="opt" action="/result/" method="get">
 
 
                                 <label class="radio-inline">
 
-                                    <input type="radio" name="rest1" id="one">
+                                    <input type="radio" name="rest1" id="one" value="0">
                                 </label>
                                 <label class="radio-inline">
-                                    <input type="radio" name="rest1" id="two">
+                                    <input type="radio" name="rest1" id="two" value="1">
                                 </label>
                                 <label class="radio-inline">
-                                    <input type="radio" name="rest1" id="three">
+                                    <input type="radio" name="rest1" id="three" value="2">
                                 </label>
                                 <label class="radio-inline">
 
-                                    <input type="radio" name="rest1" id="four">
+                                    <input type="radio" name="rest1" id="four" value="3">
                                 </label>
                                 <label class="radio-inline">
-                                    <input type="radio" name="rest1" id="five">
+                                    <input type="radio" name="rest1" id="five" value="4">
                                 </label>
                                 </label>
                             </form>
@@ -76,57 +76,13 @@
         </div>
         <div id="bottombtn">
             <input type="submit" name="btn_register" value="Next >>" id="nextbtn" class="registerbtn">
+            <input type="submit" name="btn_register" value="SUBMIT" id="subbtn" class="registerbtn">
             <div id="backbtn">
                 <input type="submit" name="btn_register" value="<< Back"  id="backbtn1" class="registerbtn">
             </div>
         </div>
 
-        {% comment %}  <div class="span2"></div>
-  <div class="span7">
-    <table class="table table-hover">
-       <tr>
-         <th>No.</th>
-         <th>Question</th>
-         <th>Strongly Dislike | Dislike | Unsure | like | Strongly like </th>
 
-
-
-       </tr>
-
-{% for q in question %}
-       <tr>
-         <td>
-           <div class="quize" id="quizeid_{{ q.id }}">
-
-           </div>
-         </td>
-         <td>{{ q.Question }}</td>
-         <td>
-             <form action="/answer/" method="get">{% csrf_token %}
-
-
-      <div class="opt">
-	<label><input type="radio" name="ans" value="1" /></label>
-      </div>
-      <div class="opt">
-	<label><input type="radio" name="ans" value="2" /></label>
-      </div>
-      <div class="opt">
-	<label><input type="radio" name="ans" value="3" /></label>
-      </div>
-      <div class="opt">
-	<label><input type="radio" name="ans" value="4" /></label>
-      </div>
-      <input type="hidden" name="question" value="{{q.id}}" />
-
-    </form>
-
-         </td>
-       </tr>
-{% endfor %}
-
-    </table>
-  </div>{% endcomment %}
     </div>
 </div>
 </div>
@@ -136,12 +92,12 @@
 <script type="text/javascript">
     $(function() {
         count=0;
-        $("#backbtn1").hide();
+        $("#backbtn1,#subbtn").hide();
         var x
         var a = $(".q")
         var b=$(a[0]).children()
         b.hide()
-        for(i=0;i<2;i++){
+        for(i=0;i<12;i++){
             x=$(b[i])
             x.show()
         }
@@ -155,7 +111,7 @@
             if(count==1){
                 $("#backbtn1").show();
                 b.hide()
-                for(i=2;i<4;i++) {
+                for(i=12;i<24;i++) {
                     x = $(b[i])
                     x.show()
                 }
@@ -163,7 +119,24 @@
             if(count==2){
                 $("#backbtn1").show();
                 b.hide()
-                for(i=4;i<7;i++) {
+                for(i=24;i<36;i++) {
+                    x = $(b[i])
+                    x.show()
+                }
+            }
+            if(count==3){
+                $("#backbtn1").show();
+                b.hide()
+                for(i=36;i<48;i++) {
+                    x = $(b[i])
+                    x.show()
+                }
+            }
+            if(count==4){
+                $("#backbtn1,#subbtn").show();
+                $("#nextbtn").hide();
+                b.hide()
+                for(i=48;i<60;i++) {
                     x = $(b[i])
                     x.show()
                 }
@@ -174,11 +147,13 @@
 
             count -= 1
             console.log(count)
+            $("#subbtn").hide();
+            $("#nextbtn").show();
             if(count==0){
 
                 b.hide()
                 $("#backbtn1").hide();
-                for(i=0;i<2;i++) {
+                for(i=0;i<12;i++) {
                     x = $(b[i])
                     x.show()
                 }
@@ -187,7 +162,7 @@
             if(count==1){
                 $("#backbtn1").show();
                 b.hide()
-                for(i=2;i<4;i++) {
+                for(i=12;i<24;i++) {
                     x = $(b[i])
                     x.show()
                 }
@@ -195,7 +170,24 @@
             if(count==2){
                 $("#backbtn1").show();
                 b.hide()
-                for(i=4;i<7;i++) {
+                for(i=24;i<36;i++) {
+                    x = $(b[i])
+                    x.show()
+                }
+            }
+            if(count==3){
+                $("#backbtn1").show();
+                b.hide()
+                for(i=36;i<48;i++) {
+                    x = $(b[i])
+                    x.show()
+                }
+            }
+            if(count==4){
+                $("#backbtn1,#subbtn").show();
+                $("#nextbtn").hide();
+                b.hide()
+                for(i=48;i<60;i++) {
                     x = $(b[i])
                     x.show()
                 }
