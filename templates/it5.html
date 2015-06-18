@@ -35,7 +35,9 @@
 
 
                 </div>
+            <form role="form"  action="/result/" method="get">
                 <div class="q">
+
                     {% for i in q %}
                         <div id={{ i.id}}>
                             <div id="testopt">
@@ -47,40 +49,44 @@
                             <div class="question"> {{i.name}}</div>
 
 
-                            <form role="form" id="opt" action="/result/" method="get">
 
 
+                                <span class="opt">
                                 <label class="radio-inline">
 
                                     <input type="radio" name="rest1" id="one" value="0">
                                 </label>
-                                <label class="radio-inline">
+                                <label class="radio-inline opt">
                                     <input type="radio" name="rest1" id="two" value="1">
                                 </label>
-                                <label class="radio-inline">
+                                <label class="radio-inline opt">
                                     <input type="radio" name="rest1" id="three" value="2">
                                 </label>
-                                <label class="radio-inline">
+                                <label class="radio-inline opt">
 
                                     <input type="radio" name="rest1" id="four" value="3">
                                 </label>
-                                <label class="radio-inline">
+                                <label class="radio-inline opt">
                                     <input type="radio" name="rest1" id="five" value="4">
                                 </label>
-                                </label>
-                            </form>
-                        </div>
+                                </span>
+                                </div>
+
+
                     {% endfor %}
+
                 </div>
-            </div>
-        </div>
-        <div id="bottombtn">
-            <input type="submit" name="btn_register" value="Next >>" id="nextbtn" class="registerbtn">
+            <div id="bottombtn">
+            <input type="button" name="btn_register" value="Next >>" id="nextbtn" class="registerbtn">
             <input type="submit" name="btn_register" value="SUBMIT" id="subbtn" class="registerbtn">
             <div id="backbtn">
-                <input type="submit" name="btn_register" value="<< Back"  id="backbtn1" class="registerbtn">
+                <input type="button" name="btn_register" value="<< Back"  id="backbtn1" class="registerbtn">
             </div>
         </div>
+            </form>
+            </div>
+        </div>
+
 
 
     </div>

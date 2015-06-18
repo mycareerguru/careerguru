@@ -269,6 +269,9 @@ def it5(request):
 
     })
 
+def result(request):
+    return render(request, "result.html")
+
 # def it6(request):
 #     arr=[]
 #
