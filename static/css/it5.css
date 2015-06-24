@@ -47,8 +47,8 @@ element.style {
 }
 
 .question{
-  height: 1.7em;
-  line-height: 1.7em;
+  height: 0em;
+  line-height: 2.7em;
   margin: 5px 0 0 60px;
 }
 
@@ -89,8 +89,9 @@ margin-left: 135px;
 }
 
 
-#opt{
-    margin:-15px 0 0 370px;
+.opt{
+    margin:-15px 0 0 340px;
+    line-height: 2.7em;
 
 }
 
