@@ -239,20 +239,7 @@ def itest(request):
     return render(request, "itest.html")
 
 
-def it1(request):
-    return render(request, "it1.html")
 
-
-def it2(request):
-    return render(request, "it2.html")
-
-
-def it3(request):
-    return render(request, "it3.html")
-
-
-def it4(request):
-    return render(request, "it4.html")
 
 
 def it5(request):

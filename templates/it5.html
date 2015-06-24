@@ -35,7 +35,7 @@
 
 
                 </div>
-            <form role="form"  action="/result/" method="get">
+            <form role="form"  action="/result/" method="post">{%csrf_token%}
                 <div class="q">
 
                     {% for i in q %}
