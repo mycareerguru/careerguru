@@ -160,6 +160,16 @@ def faq(request):
     })
 
 
+
+def faq1(request):
+    return render_to_response("faq1.html", {
+        'item': Tag.objects.all(),
+        'sub': Subtag.objects.all(),
+        'recent': Faq.objects.all()
+    })
+
+
+
 def dropdown2(request, tag_id=1):
     o = Tag.objects.get(pk=tag_id)
     subtags = Subtag.objects.filter(tag=o)

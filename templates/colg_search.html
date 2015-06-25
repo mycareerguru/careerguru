@@ -13,7 +13,7 @@
             <form action="/search1/" method="get">
 
             <div id="title">
-    <select id="foo" class="dd" name="cs">
+    <select id="foo" class="dd sd" name="cs">
 
         <option value="">Select Course Stream</option>
         {% for i in item %}
@@ -24,14 +24,14 @@
     </select>
 
     <div id="subcources">
-        <select id="foo1" class="dd" name="scs">
+        <select id="foo1" class="dd sd" name="scs">
             <option value="">Select Sub-Course Stream</option>
 
         </select>
     </div>
 
 
-       <select id="state" class="dd" name="state">
+       <select id="state" class="dd sd" name="state">
 
         <option value="">All India</option>
         {% for i in state %}
@@ -42,7 +42,7 @@
     </select>
 
     <div id="city1">
-        <select id="city" class="dd" name="city">
+        <select id="city" class="dd sd" name="city">
             <option value="">Select City</option>
             {% for i in city%}
 
