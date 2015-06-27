@@ -280,3 +280,7 @@ def result(request):
 #             'q': arr[10:20],
 #
 #     })
+
+
+def base(request):
+    return render(request, "base.html")
