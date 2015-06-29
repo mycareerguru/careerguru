@@ -1,0 +1,57 @@
+body{
+      background-color: #d9dcd7;
+}
+.mcontainer{
+    padding-top: 40px;
+
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+
+}
+
+#sidebar{
+    width: 250px;
+    float:left;
+    background-color: #fff;
+
+}
+
+.right{
+    width: 800px;
+    height: 330px;
+     margin-top: 10px;
+     margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+
+
+}
+
+.rightslide{
+    width:840px;
+    float: right;
+    height: 360px;
+    background-color: #fff;
+
+}
+.logo{
+    height: 130px;
+
+}
+
+.list-group img{
+    width: 220px;
+    height: 100px;
+    margin: 3px -1px 2px;
+}
+
+.sec{
+    margin-top: 30px;
+}
+
+.sec p{
+    font-size: small;
+}
