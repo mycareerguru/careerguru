@@ -123,3 +123,11 @@ class Question(models.Model):
 
     def __unicode__(self):
         return str(self.name)
+
+class Agent(models.Model):
+    name = models.TextField()
+    email = models.EmailField()
+    course = models.ForeignKey(Tag)
+
+    def __unicode__(self):
+        return str(self.name) + " " + str(self.email) + " " + str(self.course)

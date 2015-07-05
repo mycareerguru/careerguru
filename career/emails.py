@@ -1,7 +1,7 @@
-from django.contrib.auth.decorators import login_required
+import random
 from django.core.mail import EmailMessage
 from django.shortcuts import render, render_to_response
-from career.models import Tag, Subtag, Faq
+from career.models import Tag, Subtag, Faq, Agent
 
 
 def faq(request):
@@ -10,8 +10,6 @@ def faq(request):
         'sub': Subtag.objects.all(),
         'recent': Faq.objects.all()
     })
-
-
 
 def faq1(request):
     return render_to_response("faq1.html", {
@@ -22,14 +20,20 @@ def faq1(request):
 
 def submitfaq(request):
     print(request.POST)
-    sub = "Query for " + request.POST['course'] + "-" + request.POST['subcourse']
-    body = request.POST['uquery']
-    if request.user.is_authenticated():
-        frm = request.user.emil_id
-    else:
-        frm = "query@test.com"
-    agent = "tushar@datatorrent.com"
-    email = EmailMessage(subject=sub, body=body, from_email=frm, to=[agent])
+    tag = Tag.objects.get(id=request.POST['course'])
+    subc = Subtag.objects.get(id=request.POST['subcourse'])
+    sub = "Query for " + str(tag) + "-" + str(subc)
+    body = request.POST['query']
+    #if request.user.is_authenticated():
+    #    frm = request.user.email
+    #else:
+    frm = request.POST['email']
+    agents = list(Agent.objects.filter(course=tag))
+    print(agents)
+    agent = agents[random.randint(0, len(agents) - 1)]
+    toemail = agent.email
+    print("sub " + sub + " from " + frm + " to " + agent.email)
+    email = EmailMessage(subject=sub, body=body, from_email=frm, to=[toemail])
     email.send()
     return render(request, 'submitfaq.html', {
     })
