@@ -1,89 +1,91 @@
 <html>
-    <head>
-        <title>
+<head>
+    <title>
         FAQ
-        </title>
-        <link type="text/css" rel="stylesheet" href=/static/css/FAQ.css>
-    </head>
+    </title>
+    <link type="text/css" rel="stylesheet" href=/static/css/FAQ.css>
 
-    <body>
-    <div id="container">
-        <div id="content">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/bootstrap-theme.min.css">
+    <script src="/static/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<div id="container">
+    <div id="content">
         <div class="wrapper ">
 
-        <form action="" method="get">
+            <form action="/submitfaq/" method="post">
+            {% csrf_token %}
+                <p>
+
                 <div id="title">
-                    <select id="foo" class="dd sd">
-
-                    <option>Select Course Stream </option>
-                    {%  for i in item %}
-
-                        <option   value={{ i.id }}>{{ i.id }} {{ i.name }}</option>
-
-                    {% endfor %}
-                </select>
+                    <select name="course" id="foo" class="dd sd">
+                        <option>Select Course Stream</option>
+                        {% for i in item %}
+                            <option value={{ i.id }}>{{ i.id }} {{ i.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                </p>
+                <p>
 
                 <div id="subcources">
-                <select id="foo1" class="dd sd">
-                    <option>Select Sub-Course Stream </option>
-                </select>
+                    <select name="subcourse" id="foo1" class="dd sd">
+                        <option>Select Sub-Course Stream</option>
+                    </select>
                 </div>
+                </p>
+                <p>
 
+                <div id="email">
+                    Email <input name="emailid" placeholder="Email id" />
                 </div>
 
                 <div id="query1">
-                <textarea id="query" placeholder="Write Your Query Here" rows="7" cols="67" name="uquery"> </textarea>
-
-
+                    <textarea id="query" placeholder="Write Your Query Here" rows="7" cols="67"
+                              name="uquery"></textarea>
                 </div>
-                 <input type="submit"  value=" Submit " class="registerbtn" id="subbtn">
-                <div id="msg"><h4>response your query will be sent to our expert & the rply will be posted soon...</h4></div>
-                </form>
+                </p>
+                <p>
+                    <input type="submit" value=" Submit " class="registerbtn" id="subbtn"/>
+                    <div id="msg"><h4>response your query will be sent to our expert & the rply will be posted soon...</h4>
+                    </div>
+                </p>
+            </form>
         </div>
-                <div id="recent" class="wrapper">
-
-               <h3> Recently added</h3>
-
-
-                </div>
-
-
+        <div id="recent" class="wrapper">
+            <h3> Recently added</h3>
         </div>
     </div>
+</div>
 
-    <script src="/static/js/jquery-2.1.1.js"></script>
-    <script type="text/javascript">
-        $(function() {
-            $("#msg").hide();
-            $("#foo").change(function() {
-                var field  = $("#foo").val();
-                var parts = field.split(" ");
-                console.log(parts);
-                console.log("value changed " + parts[0]);
-                url = "/dropdown2/" + parts[0];
-                $.get(url).success(function(data) {
-                    console.log(data);
-                    $("#foo1").html(data);
-                }  )
-            });
-            $("#subbtn").click(function(){
-                $("#subbtn").hide();
-                $("#msg").show();
+<script src="/static/js/jquery-2.1.1.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $("#msg").hide();
+        $("#foo").change(function () {
+            var field = $("#foo").val();
+            var parts = field.split(" ");
+            console.log(parts);
+            console.log("value changed " + parts[0]);
+            url = "/dropdown2/" + parts[0];
+            $.get(url).success(function (data) {
+                console.log(data);
+                $("#foo1").html(data);
+            })
+        });
+        $("#subbtn").click(function () {
+            $("#subbtn").hide();
+            $("#msg").show();
 
-            });
-
-           var txt = $("#query").val();
-            $("#recent").html(txt);
-            console.log(txt);
-            {% comment %}$("#foo1").change(function){
-
-
-            }{% endcomment %}
         });
 
-
-
-    </script>
-    </body>
-
+        var txt = $("#query").val();
+        $("#recent").html(txt);
+        console.log(txt);
+    });
+</script>
+</body>
 </html>

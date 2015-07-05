@@ -13,8 +13,7 @@ urlpatterns = patterns('',
     url(r'^colgpage/$','career.views.colgpage'),
     url(r'^search1/colgpage/(?P<colg_id>\w+)/$','career.views.colgpage'),
    # url(r'^colgpage/(?P<colg_id>\w+)/$','career.views.overview'),
-    url(r'^faq/$','career.views.faq'),
-    url(r'^faq1/$','career.views.faq1'),
+
     url(r'^colgsearch/$','career.views.colgsearch'),
     url(r'^recentfaq/(?P<tag_id>\w+)/$','career.views.recentfaq'),
     url(r'^all$', 'career.views.all'),
@@ -40,6 +39,12 @@ urlpatterns = patterns('',
     url(r'^itest/$','career.views.itest'),
     url(r'^it5/$','career.views.it5'),
     url(r'^result/$','career.views.result'),
-    url(r'^base/$','career.views.base'),
 
+    # functionality for FAQ.
+    url(r'^faq/$','career.emails.faq'),
+    url(r'^submitfaq', 'career.emails.submitfaq'),
+
+    # For testing
+    url(r'^base/$','career.views.base'),
+    url(r'^faq1/$','career.emails.faq1'),
 )

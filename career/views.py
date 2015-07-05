@@ -1,13 +1,11 @@
 from django.shortcuts import render, render_to_response
 from career.models import Tag, Subtag, CareerInfo, Faq, State, City, College, Facility, Question, Qtype
-from django.http.response import HttpResponse
-from itertools import groupby
 
 # Create your views here.
 
 
 def index(request):
-    return render_to_response("index.html", {
+    return render_to_response("modern/index.html", {
         'item': Tag.objects.all()})
 
 
@@ -152,21 +150,6 @@ def email(request):
     return render(request, "email.html")
 
 
-def faq(request):
-    return render_to_response("FAQ.html", {
-        'item': Tag.objects.all(),
-        'sub': Subtag.objects.all(),
-        'recent': Faq.objects.all()
-    })
-
-
-
-def faq1(request):
-    return render_to_response("faq1.html", {
-        'item': Tag.objects.all(),
-        'sub': Subtag.objects.all(),
-        'recent': Faq.objects.all()
-    })
 
 
 
@@ -302,3 +285,10 @@ def result(request):
 
 def base(request):
     return render(request, "base.html")
+
+
+def submitfaq(request):
+    print(request.POST)
+    return render(request, 'submitfaq.html', {
+
+    })
