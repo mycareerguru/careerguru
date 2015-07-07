@@ -284,3 +284,6 @@ def result(request):
 
 def base(request):
     return render(request, "base.html")
+
+def mainbase(request):
+    return render(request, "mainbase.html")

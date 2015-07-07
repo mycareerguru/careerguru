@@ -42,4 +42,6 @@ urlpatterns = patterns('',
     url(r'^result/$','career.views.result'),
     url(r'^base/$','career.views.base'),
 
+    url(r'^mainbase/$','career.views.mainbase'),
+
 )
