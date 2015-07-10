@@ -1,5 +1,5 @@
 from django.shortcuts import render, render_to_response
-from career.models import Tag, Subtag, CareerInfo, Faq, State, City, College, Facility, Question
+from career.models import Tag, Subtag, CareerInfo, Faq, State, City, College, Facility, Question, Qtype
 from django.http.response import HttpResponse
 from itertools import groupby
 
@@ -7,7 +7,7 @@ from itertools import groupby
 
 
 def index(request):
-    return render_to_response("index.html", {
+    return render_to_response("mainbase.html", {
         'item': Tag.objects.all()})
 
 
@@ -153,11 +153,14 @@ def email(request):
 
 
 def faq(request):
-    return render_to_response("FAQ.html", {
+    return render(request,"faq2.html", {
         'item': Tag.objects.all(),
         'sub': Subtag.objects.all(),
         'recent': Faq.objects.all()
     })
+
+def submitfaq(request):
+    return render(request,"submitfaq.html")
 
 
 
@@ -259,31 +262,45 @@ def it5(request):
     for q in x:
         arr.append(q)
 
-
-    return render_to_response("it5.html", {
+    return render(request, "it5.html", {
             'q': arr,
-
-
     })
 
-def result(request):
-    return render(request, "result.html")
 
-# def it6(request):
-#     arr=[]
-#
-#     x = Question.objects.all()
-#     for q in x:
-#         arr.append(q)
-#
-#     return render_to_response("it5.html", {
-#             'q': arr[10:20],
-#
-#     })
+def computeScore(answers):
+    result = {}
+    for qtype in Qtype.objects.all():
+        score = 0
+        questions = Question.objects.filter(qtype = qtype)
+        ids = [q.id for q in questions]
+        for id in ids:
+            score = score + answers[id-1]
+        result[qtype.qtype] = score
+    # print(result)
+    return result
+
+def result(request):
+    print(request.POST)
+    answers = []
+    for i in range(1, 61):
+        answers.append(int(request.POST.get(str(i), 0)))
+    # print(answers)
+    score = computeScore(answers)
+    return render(request, "result.html", {
+        'result': score
+    })
+
+
 
 
 def base(request):
     return render(request, "base.html")
 
 def mainbase(request):
-    return render(request, "mainbase.html")
+    return render(request, "mainbase.html",{
+        'item': Tag.objects.all(),
+        'sub': Subtag.objects.all(),
+        'state': State.objects.all(),
+        'city': City.objects.all(),
+
+    })
