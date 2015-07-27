@@ -152,17 +152,13 @@ def email(request):
     return render(request, "email.html")
 
 
+
 def faq(request):
-    return render(request,"faq2.html", {
+    return render(request, "modern/faq.html", {
         'item': Tag.objects.all(),
         'sub': Subtag.objects.all(),
         'recent': Faq.objects.all()
     })
-
-def submitfaq(request):
-    return render(request,"submitfaq.html")
-
-
 
 def faq1(request):
     return render_to_response("faq1.html", {
@@ -196,11 +192,12 @@ def recentfaq(request, tag_id=1):
 
 def category(request, subtag):
     arr = []
-    for type in ["ac", "td", "job", "kn", "sk", "ab", "ps", "tech"]:
+    # for type in ["ak", "sc","sal", "td", "bo", "join", "work", "sp"]:
+    for type in ["ac", "td", "job", "kn", "sk", "ab", "ps", "tech","define"]:
         data = CareerInfo.objects.filter(subtag=subtag, type=type)
         arr.append(dbtolist(data))
 
-    return render_to_response("first.html", {
+    return render_to_response("explore.html", {
         "carr": arr,
 
     })
@@ -297,10 +294,19 @@ def base(request):
     return render(request, "base.html")
 
 def mainbase(request):
-    return render(request, "mainbase.html",{
+    return render_to_response("mainbase.html",{
         'item': Tag.objects.all(),
         'sub': Subtag.objects.all(),
         'state': State.objects.all(),
-        'city': City.objects.all(),
-
+        'city': City.objects.all()
     })
+
+def contact(request):
+    return render(request, "contact.html")
+
+def submitfaq(request):
+    return render(request, "submitfaq.html")
+
+
+def explore(request):
+    return render(request,"explore.html")

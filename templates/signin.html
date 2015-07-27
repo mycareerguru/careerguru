@@ -1,9 +1,6 @@
-<html>
-<head>
-    <title>  </title>
-    <link rel="stylesheet" type="text/css" href="/static/css/signin.css">
-</head>
-<body>
+{% extends "base5.html" %}
+{% block contents %}
+
 <div id="wrapper">
     <div class="LoginContent">
         <div>
@@ -75,20 +72,16 @@
                     <label> Email ID </label>
 
                     <input  type="email" maxlength="50" name="email" class="signintxt" >{{  form.email }} </p>
-                     <div id="note">
-                     <p>
-                         If you forget your password, you can retrieve it by providing us with an email address. If you do not wish to give an email address then you may leave this section blank, but if you forget your password then you will lose access to your account.
-                     </p>
-                     </div>
+
+
+
                 </fieldset>
                 <fieldset>
                 <input type="submit"  value="Sign in >>" class="registerbtn">
                     <input type="submit"  value=" Cancel " class="registerbtn">
-                    <div id="note1">
-                        <h4>Use of your information</h4>
-                        <p>My career profile collects your information to store your personal profile for your use in the future.</p>
 
-                    </div>
+
+
                     </fieldset>
             </div>
     </form>
@@ -97,5 +90,4 @@
 </div>
 </div>
 
-</body>
-</html>
+{% endblock %}

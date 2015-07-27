@@ -1,0 +1,204 @@
+{% extends "base5.html" %}
+{% block contents %}
+
+    <div class="container">
+            <div class="row">
+            <div class="col-lg-8" style="padding-right: 0px;">
+                <div class="panel panel-success">
+                    <div class="panel-heading">  <h3 class="panel-title">Define {field name}</h3></div>
+                    <div class="panel-body">
+                    {# Job DATA#}
+                        <ul>
+                            {%  for obj in carr.8 %}
+
+
+                                {%  for val in obj.1 %}
+                                    <li>{{  val }}</li>
+                                {%  endfor %}
+
+                            {%  endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 equal-height-panels">
+                <div class="panel panel-success">
+                    <div class="panel-heading">  <h3 class="panel-title"> {field name} </h3></div>
+                    <div class="panel-body" style="margin-bottom: 0px;">
+                        <img src="/static/img/career-eng.jpg" class="img-responsive">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-6">
+                 <div class="col-lg-12" style="padding-right: 0px;padding-left: 0px;">
+                <div class="panel panel-success">
+                    <div class="panel-heading">  <h3 class="panel-title">Scope</h3></div>
+                    <div class="panel-body">
+                        Panel content
+                    </div>
+                </div>
+            </div>
+
+                <div class="col-lg-12" style="padding-right: 0px;padding-left: 0px;">
+                <div class="panel panel-success">
+                    <div class="panel-heading">  <h3 class="panel-title">What They Do?</h3></div>
+                    <div class="panel-body">
+                    {# what they do DATA#}
+                        {%  for obj in carr.1 %}
+
+                            <ul>
+                                {%  for val in obj.1 %}
+                                    <li>{{  val }}</li>
+                                {%  endfor %}
+                            </ul>
+                        {%  endfor %}
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-12 col-md-12" style="padding-right: 0px;padding-left: 0px;">
+                <div class="panel panel-success">
+                    <div class="panel-heading">  <h3 class="panel-title">Who Should Join?</h3></div>
+                    <div class="panel-body">
+                    {# Ability DATA#}
+                         <ul>
+                    {%  for obj in carr.5 %}
+                            <li  class="seclist" style="color:#064597;">{{ obj.0 }}</li>
+                            <ul style="padding-left: 25px;">
+                                {%  for val in obj.1 %}
+                                    <li class="thirdlist">{{  val }}</li>
+                                {%  endfor %}
+                            </ul>
+                        {%  endfor %}
+                </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-12"  style="padding-right: 0px;padding-left: 0px;">
+                <div class="panel panel-success">
+                    <div class="panel-heading">  <h3 class="panel-title">Specialization can be Done in</h3></div>
+                    <div class="panel-body">
+
+                    {# Knowledge DATA#}
+                        <ul>
+                        {%  for obj in carr.3 %}
+                            <li class="seclist" style="color:#570088;">{{ obj.0 }}</li>
+                            <ul>
+                                {%  for val in obj.1 %}
+                                    <li>{{  val }}</li>
+                                {%  endfor %}
+                            </ul>
+                        {%  endfor %}
+                    </ul>
+                    </div>
+                </div>
+
+            </div>
+
+
+            </div>
+
+<div class="col-lg-6">
+
+            <div class="col-lg-12"  style="padding-right: 0px;padding-left: 0px";>
+                <div class="panel panel-success">
+                    <div class="panel-heading">  <h3 class="panel-title">Salary</h3></div>
+                    <div class="panel-body">
+                        3 to 5 Lakh
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="col-lg-12"  style="padding-right: 0px;padding-left: 0px;">
+                <div class="panel panel-success ">
+                    <div class="panel-heading">  <h3 class="panel-title">How To Become One?</h3></div>
+                    <div class="panel-body">
+            {# SKILL DATA#}
+                         <ul style="padding-left: 25px;">
+                    {%  for obj in carr.4 %}
+                            <li  class="seclist" style="color:#B33800;">{{ obj.0 }}</li>
+                            <ul style="padding-left: 25px;">
+                                {%  for val in obj.1 %}
+                                    <li>{{  val }}</li>
+                                {%  endfor %}
+                            </ul>
+                        {%  endfor %}
+                </ul>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="col-lg-12" style="padding-right: 0px;padding-left: 0px;">
+                <div class="panel panel-success">
+                    <div class="panel-heading">  <h3 class="panel-title">Where I could Work?</h3></div>
+                    <div class="panel-body">
+                    {# Technology DATA#}
+                        <ul>
+                            {%  for obj in carr.7 %}
+                                <li  class="seclist" style="color:#78AA68;">{{ obj.0 }}</li>
+                                <ul>
+                                    {%  for val in obj.1 %}
+                                        <li>{{  val }}</li>
+                                    {%  endfor %}
+                                </ul>
+                            {%  endfor %}
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+
+            <div class="col-lg-12" style="padding-right: 0px;padding-left: 0px;">
+                <div class="panel panel-success">
+                    <div class="panel-heading">  <h3 class="panel-title">Related Occupation</h3></div>
+                    <div class="panel-body">
+                       <ul>
+                    {%  for obj in carr.6 %}
+                        {# Personality DATA#}
+{#                            <li  class="seclist" style="color:#9D3781;;">{{ obj.0 }}</li>#}
+                            <ul>
+                                {%  for val in obj.1 %}
+                                    <li>{{  val }}</li>
+                                {%  endfor %}
+                            </ul>
+                        {%  endfor %}
+                </ul>
+                    </div>
+                </div>
+
+            </div>
+
+</div>
+
+        <div class="col-lg-12">
+            <div class="panel panel-success">
+                <div class="panel-heading">  <h3 class="panel-title">College Search for { }</h3></div>
+                <div class="panel-body">
+                    Panel content
+                </div>
+            </div>
+
+        </div>
+
+   </div>
+</div>
+
+
+
+{% endblock %}

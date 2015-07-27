@@ -1,18 +1,8 @@
-<html>
-<head>
-    <link type="text/css" rel="stylesheet" href=/static/css/bootstrap.css>
-    <link type = text/css rel="stylesheet" href="/static/css/colgpage.css">
-</head>
-<body>
-
-<div id="container" class="mycontainer">
-    <div id="content">
-        <div id="wrapper">
-            <div id="heading">
-                <h3>{{ colg_name }}</h3>
-
-            </div>
-
+{% extends "base5.html" %}
+{% block contents %}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
 
             <div id="content1">
                 <h2>Welcome to the Interest Profiler!</h2>
@@ -117,4 +107,7 @@
     });
 
 </script>
-</html>
+</div>
+        </div>
+    </div>
+{% endblock %}

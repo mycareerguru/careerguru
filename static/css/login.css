@@ -30,7 +30,7 @@ margin: 0 2% 0 0;
 float: right;
 }
 
-.registerbtn{
+.rememberme .registerbtn{
 background-color: #007D88;
 border: medium none;
 border-radius: 3px;
@@ -112,9 +112,10 @@ border-radius: 5px;
     margin: 0;
     list-style: none;
 
+
 }
 
-ul li {
+.externallogin>ul li {
      display: inline;
 }
 .btnfb{

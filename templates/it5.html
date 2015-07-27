@@ -1,4 +1,8 @@
-<html>
+
+{% extends "base5.html" %}
+{% block contents %}
+
+{% comment %}<html>
 <head>
     <link rel="stylesheet" type="text/css" href="/static/css/it5.css">
     <link type = text/css rel="stylesheet" href="/static/css/colgpage.css">
@@ -6,7 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body>{% endcomment %}
 <div id="container" class="mycontainer">
     <div id="content">
         <div id="wrapper">
@@ -77,7 +81,7 @@
 
                 </div>
             <div id="bottombtn">
-            <input type="button" name="btn_register" value="Next >>" id="nextbtn" class="registerbtn">
+            <input type="button" name="btn_register" value="Next >>" id="nextbtn" class="registerbtn" >
             <input type="submit" name="btn_register" value="SUBMIT" id="subbtn" class="registerbtn">
             <div id="backbtn">
                 <input type="button" name="btn_register" value="<< Back"  id="backbtn1" class="registerbtn">
@@ -91,9 +95,9 @@
 
     </div>
 </div>
-</div>
 
-</body>
+
+{#</body>#}
 <script src="/static/js/jquery-2.1.1.js"></script>
 <script type="text/javascript">
     $(function() {
@@ -204,4 +208,4 @@
 
 </script>
 
-</html>
+{% endblock %}
