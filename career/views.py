@@ -1,5 +1,5 @@
 from django.shortcuts import render, render_to_response
-from career.models import Tag, Subtag, CareerInfo, Faq, State, City, College, Facility, Question, Qtype
+from career.models import Tag, Subtag, CareerInfo, Faq, State, City, College, Facility, Question, Qtype, NewCareerInfo
 from django.http.response import HttpResponse
 from itertools import groupby
 
@@ -310,3 +310,21 @@ def submitfaq(request):
 
 def explore(request):
     return render(request,"explore.html")
+
+
+def newcareerinfo(request, subtag):
+    obj = NewCareerInfo.objects.get(subtag=subtag)
+    data = {}
+    data["define"] = obj.define.split("|")
+    data["scope"] = obj.scope.split("|")
+    data["salary"] = obj.salary;
+    data["wtd"] = obj.wtd.split("|")
+    data["who"] = obj.who.split("|")
+    data["htbo"] = obj.htbo.split("|")
+    data["where"] = obj.where.split("|")
+    data["specialization"] = obj.specialization.split("|")
+    data["related"] = obj.related.split("|")
+
+    return render_to_response("explore1.html", {
+         "data": data,
+    })

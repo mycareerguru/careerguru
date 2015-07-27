@@ -46,6 +46,8 @@ urlpatterns = patterns('',
     url(r'^mainbase/$','career.views.mainbase'),
     url(r'^submitfaq/$','career.views.submitfaq'),
 
+    url(r'^newsec/(\w+)/$', 'career.views.newcareerinfo'),
+
     url(r'^contact/$','career.views.contact'),
      url(r'^explore/$','career.views.explore'),
 

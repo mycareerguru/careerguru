@@ -123,3 +123,22 @@ class Question(models.Model):
 
     def __unicode__(self):
         return str(self.name)
+
+
+class NewCareerInfo(models.Model):
+    subtag = models.ForeignKey(Subtag)
+    define = models.TextField()
+    scope = models.TextField()
+    salary = models.TextField()
+    # What to do
+    wtd = models.TextField()
+    # How To Become One
+    htbo = models.TextField()
+    # Who should Join
+    who = models.TextField()
+    # Where I could work
+    where = models.TextField()
+    # Specialization
+    specialization = models.TextField()
+    # Related
+    related = models.TextField()

@@ -1,0 +1,171 @@
+{% extends "base5.html" %}
+{% block contents %}
+
+    <div class="container">
+            <div class="row">
+            <div class="col-lg-8" style="padding-right: 0px;">
+                <div class="panel panel-success">
+                    <div class="panel-heading">  <h3 class="panel-title">Define {field name}</h3></div>
+                    <div class="panel-body">
+                    {# Job DATA#}
+                        <ul>
+                            {%  for d in data.define %}
+                           <li>{{  d }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 equal-height-panels">
+                <div class="panel panel-success">
+                    <div class="panel-heading">  <h3 class="panel-title"> {field name} </h3></div>
+                    <div class="panel-body" style="margin-bottom: 0px;">
+                        <img src="/static/img/career-eng.jpg" class="img-responsive">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-6">
+                 <div class="col-lg-12" style="padding-right: 0px;padding-left: 0px;">
+                <div class="panel panel-success">
+                    <div class="panel-heading">  <h3 class="panel-title">Scope</h3></div>
+                    <div class="panel-body">
+                        Panel content
+                    </div>
+                </div>
+            </div>
+
+                <div class="col-lg-12" style="padding-right: 0px;padding-left: 0px;">
+                <div class="panel panel-success">
+                    <div class="panel-heading">  <h3 class="panel-title">What They Do?</h3></div>
+                    <div class="panel-body">
+                    {# what they do DATA#}
+                            <ul>
+                                {%  for d in data.wtd %}
+                           <li>{{  d }}</li>
+                            {% endfor %}
+
+                            </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-12 col-md-12" style="padding-right: 0px;padding-left: 0px;">
+                <div class="panel panel-success">
+                    <div class="panel-heading">  <h3 class="panel-title">Who Should Join?</h3></div>
+                    <div class="panel-body">
+                    {# Ability DATA#}
+                         <ul>
+                             {%  for d in data.who %}
+                           <li>{{  d }}</li>
+                            {% endfor %}
+                         </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-12"  style="padding-right: 0px;padding-left: 0px;">
+                <div class="panel panel-success">
+                    <div class="panel-heading">  <h3 class="panel-title">Specialization can be Done in</h3></div>
+                    <div class="panel-body">
+
+                    {# Knowledge DATA#}
+                        <ul>
+                            {%  for d in data.specialization %}
+                           <li>{{  d }}</li>
+                            {% endfor %}
+                    </ul>
+                    </div>
+                </div>
+
+            </div>
+
+
+            </div>
+
+<div class="col-lg-6">
+
+            <div class="col-lg-12"  style="padding-right: 0px;padding-left: 0px";>
+                <div class="panel panel-success">
+                    <div class="panel-heading">  <h3 class="panel-title">Salary</h3></div>
+                    <div class="panel-body">
+                        {{  data.salary }}
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="col-lg-12"  style="padding-right: 0px;padding-left: 0px;">
+                <div class="panel panel-success ">
+                    <div class="panel-heading">  <h3 class="panel-title">How To Become One?</h3></div>
+                    <div class="panel-body">
+            {# SKILL DATA#}
+                         <ul style="padding-left: 25px;">
+                             {%  for d in data.htbo %}
+                           <li>{{  d }}</li>
+                            {% endfor %}
+                </ul>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="col-lg-12" style="padding-right: 0px;padding-left: 0px;">
+                <div class="panel panel-success">
+                    <div class="panel-heading">  <h3 class="panel-title">Where I could Work?</h3></div>
+                    <div class="panel-body">
+                    {# Technology DATA#}
+                        <ul>
+                            {%  for d in data.where %}
+                           <li>{{  d }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+
+            <div class="col-lg-12" style="padding-right: 0px;padding-left: 0px;">
+                <div class="panel panel-success">
+                    <div class="panel-heading">  <h3 class="panel-title">Related Occupation</h3></div>
+                    <div class="panel-body">
+                       <ul>
+                           {%  for d in data.related %}
+                           <li>{{  d }}</li>
+                            {% endfor %}
+
+                </ul>
+                    </div>
+                </div>
+            </div>
+
+</div>
+
+        <div class="col-lg-12">
+            <div class="panel panel-success">
+                <div class="panel-heading">  <h3 class="panel-title">College Search for { }</h3></div>
+                <div class="panel-body">
+                    Panel content
+                </div>
+            </div>
+
+        </div>
+
+   </div>
+</div>
+
+
+
+{% endblock %}
