@@ -142,3 +142,27 @@ class NewCareerInfo(models.Model):
     specialization = models.TextField()
     # Related
     related = models.TextField()
+
+
+class Institute_details(models.Model):
+            name=models.TextField()
+            est=models.TextField()
+            approved=models.TextField()
+            aided=models.TextField()
+            email=models.TextField()
+            website=models.TextField()
+            phone=models.TextField()
+            address=models.TextField()
+            overview=models.TextField()
+            principal=models.TextField()
+            totfaculty=models.IntegerField()
+            seniors=models.IntegerField()
+            achievement=models.TextField()
+            lab=models.TextField()
+            hostel=models.TextField()
+            canteen=models.TextField()
+            ground=models.TextField()
+            library=models.TextField()
+            wifi=models.TextField()
+            auditorium=models.TextField()
+            naac=models.TextField()
