@@ -153,6 +153,9 @@ class Institute_details(models.Model):
             website=models.TextField()
             phone=models.TextField()
             address=models.TextField()
+            city=models.TextField()
+            state=models.TextField()
+            pin=models.IntegerField()
             overview=models.TextField()
             principal=models.TextField()
             totfaculty=models.IntegerField()
@@ -166,3 +169,6 @@ class Institute_details(models.Model):
             wifi=models.TextField()
             auditorium=models.TextField()
             naac=models.TextField()
+
+            def __unicode__(self):
+                return str(self.name)

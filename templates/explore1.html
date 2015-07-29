@@ -3,30 +3,26 @@
 
     <div class="container">
             <div class="row">
-            <div class="col-lg-8" style="padding-right: 0px;">
+
+
+
+
+            <div class="col-lg-6">
+
+            <div class="col-lg-12" style="padding-right: 0px;padding-left: 0px;">
                 <div class="panel panel-success">
                     <div class="panel-heading">  <h3 class="panel-title">Define {field name}</h3></div>
                     <div class="panel-body">
                     {# Job DATA#}
                         <ul>
                             {%  for d in data.define %}
-                           <li>{{  d }}</li>
+                           <li style="text-align: justify;">{{  d }}</li>
                             {% endfor %}
                         </ul>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 equal-height-panels">
-                <div class="panel panel-success">
-                    <div class="panel-heading">  <h3 class="panel-title"> {field name} </h3></div>
-                    <div class="panel-body" style="margin-bottom: 0px;">
-                        <img src="/static/img/career-eng.jpg" class="img-responsive">
-                    </div>
-                </div>
-            </div>
 
-
-            <div class="col-lg-6">
                  <div class="col-lg-12" style="padding-right: 0px;padding-left: 0px;">
                 <div class="panel panel-success">
                     <div class="panel-heading">  <h3 class="panel-title">Scope</h3></div>
@@ -87,6 +83,15 @@
             </div>
 
 <div class="col-lg-6">
+
+        <div class="col-lg-12" style="padding-right: 0px;padding-left: 0px";>
+                <div class="panel panel-success">
+                    <div class="panel-heading">  <h3 class="panel-title"> {field name} </h3></div>
+                    <div class="panel-body" style="margin-bottom: 0px;">
+                        <img src="/static/img/career-eng.jpg" class="img-responsive">
+                    </div>
+                </div>
+            </div>
 
             <div class="col-lg-12"  style="padding-right: 0px;padding-left: 0px";>
                 <div class="panel panel-success">

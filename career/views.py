@@ -328,3 +328,8 @@ def newcareerinfo(request, subtag):
     return render_to_response("explore1.html", {
          "data": data,
     })
+
+
+
+def colginfo5(request):
+    return render(request,"colginfo5.html")

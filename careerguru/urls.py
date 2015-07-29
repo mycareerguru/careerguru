@@ -50,7 +50,7 @@ urlpatterns = patterns('',
 
     url(r'^contact/$','career.views.contact'),
      url(r'^explore/$','career.views.explore'),
-
+    url(r'^colginfo5/$','career.views.colginfo5'),
     # step-by-step url
 
                        url(r'^step1/$', 'career.menu_view.step1'),
