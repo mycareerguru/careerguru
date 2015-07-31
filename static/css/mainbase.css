@@ -621,3 +621,27 @@ li ul .dropdown-submenu:hover>.dropdown-menu {
     padding-bottom: 12px;
   }
 }
+
+
+
+/*search dropdown menu */
+
+.sd1{
+    padding: 7px;
+    border-radius: 3px;
+    margin:5px;
+}
+
+.b1{
+    border: 2px solid #000000;
+    margin-left: 1px;
+    
+}
+
+.regb{
+        float: left;
+    margin-top: 5px;
+    width: 130px;
+    height: 35px;
+    margin-left: -10px;
+}
