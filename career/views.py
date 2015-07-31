@@ -8,7 +8,11 @@ from itertools import groupby
 
 def index(request):
     return render_to_response("mainbase.html", {
-        'item': Tag.objects.all()})
+    'item': Tag.objects.all(),
+        'sub': Subtag.objects.all(),
+        'state': State.objects.all(),
+        'city': City.objects.all(),
+})
 
 
 def login(request):

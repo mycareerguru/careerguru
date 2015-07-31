@@ -7,7 +7,8 @@ from career.views import index
 urlpatterns = patterns('',
     # Examples:
     url(r'^$', 'career.views.index', name='index'),
-    url(r'^login/$','career.views.login'),
+   # url(r'^login/$','career.views.login'),
+    url(r'^login/$', 'django.contrib.auth.views.login'),
     url(r'^email/$','career.views.email'),
     url(r'^colginfo/$','career.views.colginfo'),
     url(r'^colgpage/$','career.views.colgpage'),
