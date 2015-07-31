@@ -41,7 +41,7 @@
 
                             <div style="padding-top:7px;padding-bottom: 0px;" class="panel-body bg2" >
                                 <select id="foo2" style="width:180px;padding:5px;margin-top:0px; margin-left: 8px;">
-                                    <option  value="#">Select Course Stream </option>
+                                    <option  value="">Select Course Stream </option>
                                     {%  for i in item %}
 
                                         <option  value="/get/{{i.id}}">{{ i.name }}</option>
@@ -87,7 +87,7 @@
                                     </div>
                                 </form>
 
-                                <p style="margin-top: 5px;" >You may know which career is right for you but you do not know where to start and how to reach there? This step by step process will guide you to achieve your dream career.</p>
+                                <p>You may know which career is right for you but you do not know where to start and how to reach there? This step by step process will guide you to achieve your dream career.</p>
 
                             </div>
 
@@ -117,7 +117,7 @@
                                     <form action="/search1/" method="get">
 
                                         <div id="title">
-                                            <select id="foo" class="dd sd" name="cs">
+                                            <select id="foo123" class="dd sd" name="cs">
 
                                                 <option value="">Main Stream</option>
                                                 {% for i in item %}
@@ -126,20 +126,20 @@
                                             </select>
 
                                             <div id="subcources">
-                                                <select id="foo1" class="dd sd" name="scs">
+                                                <select id="foo123" class="dd sd" name="scs">
                                                     <option value="">Sub-Course </option>
                                                 </select>
                                             </div>
 
 
-                                            <select id="state" class="dd sd" name="state">
+                                            <select id="state123" class="dd sd" name="state">
                                                 <option value="">All India</option>
                                                 {% for i in state %}
                                                     <option value="{{ i.id }}"> {{ i.name }}</option>
                                                 {% endfor %}
                                             </select>
-                                            <div id="city1">
-                                                <select id="city" class="dd sd" name="city">
+                                            <div id="city123">
+                                                <select id="city123" class="dd sd" name="city">
                                                     <option value="">Select City</option>
                                                     {% for i in city %}
                                                         <option value="{{ i.id }}">{{ i.name }}</option>
@@ -232,20 +232,74 @@
     </div>
 
 
+{# ********SEARCH MENU ************ #}
+
+     <div class="row b1">
+        <div class="col-lg-12 ">
+        College Search
+            <form action="/search1/" method="get">
+
+                                        <div id="title">
+                                            <select id="foo" class=" sd1 col-lg-2" name="cs">
+
+                                                <option value="">Main Stream</option>
+                                                {% for i in item %}
+                                                    <option value="{{ i.id }}">{{ i.id }} {{ i.name }}</option>
+                                                {% endfor %}
+                                            </select>
+
+                                            <div id="subcources">
+                                                <select id="foo1" class="sd1 col-lg-2" name="scs">
+                                                    <option value="">Sub-Course </option>
+                                                </select>
+                                            </div>
+
+
+                                            <select id="state" class="sd1 col-lg-2" name="state">
+                                                <option value="">Select State</option>
+                                                {% for i in state %}
+                                                    <option value="{{ i.id }}"> {{ i.name }}</option>
+                                                {% endfor %}
+                                            </select>
+                                            <div id="city1">
+                                                <select id="city" class="sd1 col-lg-2" name="city">
+                                                    <option value="">Select City</option>
+                                                    {% for i in city %}
+                                                        <option value="{{ i.id }}">{{ i.name }}</option>
+                                                    {% endfor %}
+                                                </select>
+                                            </div>
+
+                                        <div id="level1">
+                                                <select id="level" class="sd1 col-lg-2" name="level">
+                                                    <option value="">Course Level</option>
+                                                    {% for i in level %}
+                                                        <option value="{{ i.id }}">{{ i.name }}</option>
+                                                    {% endfor %}
+                                                </select>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-lg-1">
+                                        <input type="submit" value=" Submit " class="registerbtn regb" style="float: left;margin-top: 5px; width:130px;height:35px; margin-left: -10px;">
+                                          </div>
+                                    </form>
+        </div>
+     </div>
 
     {# *****KNOWLEDGE SOCIETY ROW ******** #}
 
     <!-- Portfolio Section -->
-    <div class="row">
-        <div class="kns col-lg-12" style="margin-top: 15px;margin-bottom: 15px;">
+    <div class="row" style="margin-top: 15px;">
+        {% comment %}<div class="kns col-lg-12" style="margin-top: 15px;margin-bottom: 15px;">
         <div class="col-lg-4"><hr></div>
         <div class="col-lg-4">
             <h3 style="text-align: center;color:#fff;margin-top: -10px;">KNOWLEDGE SOCIETY</h3>
 
         </div>
         <div class="col-lg-4"><hr></div>
-      </div>
-        <div class="col-lg-3">
+      </div>{% endcomment %}
+        <div class="col-lg-3 " >
             <div class="cuadro_intro_hover img-portfolio" style="background-color:#cccccc;">
                 <p style="text-align:center; margin-top:20px;">
                     <img src="/static/img/1.jpg" class="img-responsive " alt="">

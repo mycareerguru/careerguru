@@ -1,5 +1,5 @@
 from django.shortcuts import render, render_to_response
-from career.models import Tag, Subtag, CareerInfo, Faq, State, City, College, Facility, Question, Qtype, NewCareerInfo
+from career.models import Tag, Subtag, CareerInfo, Faq, State, City, College, Facility, Question, Qtype, NewCareerInfo,Degree_type
 from django.http.response import HttpResponse
 from itertools import groupby
 
@@ -12,6 +12,7 @@ def index(request):
         'sub': Subtag.objects.all(),
         'state': State.objects.all(),
         'city': City.objects.all(),
+        'level':Degree_type.objects.all()
 })
 
 
@@ -96,6 +97,8 @@ def search1(request):
         x = College.objects.raw(query)
         stag = list(x)
         slist = set(stag)
+
+
 
     return render_to_response('search1.html', {
         'slist': slist
@@ -302,7 +305,8 @@ def mainbase(request):
         'item': Tag.objects.all(),
         'sub': Subtag.objects.all(),
         'state': State.objects.all(),
-        'city': City.objects.all()
+        'city': City.objects.all(),
+        'level':Degree_type.objects.all()
     })
 
 def contact(request):
@@ -337,3 +341,5 @@ def newcareerinfo(request, subtag):
 
 def colginfo5(request):
     return render(request,"colginfo5.html")
+
+

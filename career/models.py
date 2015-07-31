@@ -145,54 +145,54 @@ class NewCareerInfo(models.Model):
 
 
 class Institute_details(models.Model):
-            name=models.TextField()
-            est=models.TextField()
-            approved=models.TextField()
-            aided=models.TextField()
-            email=models.TextField()
-            website=models.TextField(blank=True)
-            phone=models.TextField()
-            address=models.TextField()
-            city=models.TextField()
-            state=models.TextField()
-            pin=models.IntegerField()
-            overview=models.TextField(blank=True)
-            principal=models.TextField(blank=True)
-            totfaculty=models.IntegerField()
-            seniors=models.IntegerField()
-            achievement=models.TextField(blank=True)
-            lab=models.TextField()
-            hostel=models.TextField()
-            canteen=models.TextField()
-            ground=models.TextField()
-            library=models.TextField()
-            wifi=models.TextField()
-            auditorium=models.TextField()
-            naac=models.TextField()
+    name = models.TextField()
+    est=models.TextField()
+    approved=models.TextField()
+    aided=models.TextField()
+    email=models.TextField()
+    website=models.TextField(blank=True)
+    phone=models.TextField()
+    address=models.TextField()
+    city=models.TextField()
+    state=models.TextField()
+    pin=models.IntegerField()
+    overview=models.TextField(blank=True)
+    principal=models.TextField(blank=True)
+    totfaculty=models.IntegerField()
+    seniors=models.IntegerField()
+    achievement=models.TextField(blank=True)
+    lab=models.TextField()
+    hostel=models.TextField()
+    canteen=models.TextField()
+    ground=models.TextField()
+    library=models.TextField()
+    wifi=models.TextField()
+    auditorium=models.TextField()
+    naac=models.TextField()
 
-            def __unicode__(self):
-                return str(self.name)
+    def __unicode__(self):
+        return str(self.name)
 
 
 
 class Degree_type(models.Model):
-            name=models.TextField()
+    name=models.TextField()
 
-            def __unicode__(self):
-                return str(self.name)
+    def __unicode__(self):
+        return str(self.name)
 
 
 
 
 class Course(models.Model):
-        name=models.TextField()
-        eligibility=models.TextField()
-        fees=models.TextField()
-        seats=models.IntegerField()
-        hod=models.TextField()
-        hod_email=models.TextField()
-        course_type=models.ForeignKey(Degree_type)
-        colg=models.ForeignKey(Institute_details)
+    name=models.TextField()
+    eligibility=models.TextField()
+    fees=models.TextField()
+    seats=models.IntegerField()
+    hod=models.TextField()
+    hod_email=models.TextField()
+    course_type=models.ForeignKey(Degree_type)
+    colg=models.ForeignKey(Institute_details)
 
-        def __unicode__(self):
-                return str(self.name)+ " " + str(self.colg)
+    def __unicode__(self):
+        return str(self.name)+ " " + str(self.colg)
