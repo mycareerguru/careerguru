@@ -10,288 +10,287 @@
             <div class="col-sm-6 col-md-6 col-lg-6" >
                 <div class="row">
 
-                 <div class="col-md-6">
-                    <div id="loginbox" >
-                        <div class="panel panel-success" style="  border: 2px solid #fff;">
-                            <div class="panel-heading">
-                                <div class="panel-title"> Discover what I am good at?</div>
+                    <div class="col-md-6">
+                        <div id="loginbox" >
+                            <div class="panel panel-success" style="  border: 2px solid #fff;">
+                                <div class="panel-heading">
+                                    <div class="panel-title"> Discover what I am good at?</div>
 
+                                </div>
+
+                                <div  class="panel-body bg3" style="padding-bottom: 0px;">
+                                    <a href="/itest/"> <button type="button" class="btn btn-success" style="width: 110px; margin-top: -10px;float:left;">Aptitude</button> </a>
+                                    <a href="/itest/"> <button type="button" class="btn btn-success" style="width: 110px; margin-top: -10px;float:right;">Interest</button> </a>
+                                    <p>How do you decide what career to choose?, or where to start? Here’s an activity which can help you find out what your interests are and how they relate to the world of work.</p>
+
+                                </div>
                             </div>
+                        </div>
+                    </div>
 
-                            <div  class="panel-body bg3" style="padding-bottom: 0px;">
-                                <a href="/itest/"> <button type="button" class="btn btn-success" style="width: 110px; margin-top: -10px;float:left;">Aptitude</button> </a>
-                                <a href="/itest/"> <button type="button" class="btn btn-success" style="width: 110px; margin-top: -10px;float:right;">Interest</button> </a>
-                                <p>How do you decide what career to choose?, or where to start? Here’s an activity which can help you find out what your interests are and how they relate to the world of work.</p>
+
+
+
+                    <div class="col-md-6" style="padding-right: 20px;padding-left: 0px;">
+                        <div id="loginbox">
+                            <div class="panel panel-success" style="  border: 2px solid #fff;">
+                                <div class="panel-heading">
+                                    <div class="panel-title"> I will first Explore then decide</div>
+
+                                </div>
+
+                                <div style="padding-top:7px;padding-bottom: 0px;" class="panel-body bg2" >
+                                    <select id="foo2" style="width:180px;padding:5px;margin-top:0px; margin-left: 8px;">
+                                        <option  value="">Select Course Stream </option>
+                                        {%  for i in item %}
+
+                                            <option  value="/get/{{i.id}}">{{ i.name }}</option>
+
+                                        {% endfor %}
+                                    </select>
+
+                                    <script>
+                                        document.getElementById("foo2").onchange= function() {
+
+                                            window.location.href = this.value;
+
+                                        };
+                                    </script>
+                                    <p style="padding-top: 5px;">By exploring  different career options you will understand what kind of knowledge, skills, ability, personality and education is required in the occupation of your choice.</p>
+
+
+
+                                </div>
+
 
                             </div>
                         </div>
                     </div>
                 </div>
-
-
-
-
-                <div class="col-md-6" style="padding-right: 20px;padding-left: 0px;">
-                    <div id="loginbox">
-                        <div class="panel panel-success" style="  border: 2px solid #fff;">
-                            <div class="panel-heading">
-                                <div class="panel-title"> I will first Explore then decide</div>
-
-                            </div>
-
-                            <div style="padding-top:7px;padding-bottom: 0px;" class="panel-body bg2" >
-                                <select id="foo2" style="width:180px;padding:5px;margin-top:0px; margin-left: 8px;">
-                                    <option  value="">Select Course Stream </option>
-                                    {%  for i in item %}
-
-                                        <option  value="/get/{{i.id}}">{{ i.name }}</option>
-
-                                    {% endfor %}
-                                </select>
-
-                                <script>
-                                    document.getElementById("foo2").onchange= function() {
-
-                                        window.location.href = this.value;
-
-                                    };
-                                </script>
-                                <p style="padding-top: 5px;">By exploring  different career options you will understand what kind of knowledge, skills, ability, personality and education is required in the occupation of your choice.</p>
-
-
-
-                            </div>
-
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
+                <div class="row">
 
                     <div class="col-md-6" >
-                    <div id="loginbox">
-                        <div class="panel panel-success" style="  border: 2px solid #fff;">
-                            <div class="panel-heading">
-                                <div class="panel-title"> How can I become a...?</div>
-
-                            </div>
-
-                            <div style="padding-top:15px;padding-bottom: 0px;" class="panel-body bg1" >
-                                <form class="navbar-form" role="search" style="margin-top: -10px;" method="get" action="/search">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" placeholder="eg.doctor, engineer..." name="query" >
-                                        <div class="input-group-btn">
-                                            <button class="btn btn-default" type="submit" style="padding: 4px 12px;"><i class="glyphicon glyphicon-search"></i></button>
-                                        </div>
-                                    </div>
-                                </form>
-
-                                <p>You may know which career is right for you but you do not know where to start and how to reach there? This step by step process will guide you to achieve your dream career.</p>
-
-                            </div>
-
-
-
-
-
-                        </div>
-
-                    </div>
-                </div>
-
-
-                <div class="col-md-6" style="padding-right: 20px;padding-left: 0px;">
-                    <div class="panel panel-default " style="background-color:#f5f5f5;margin-bottom: 0px;">
-                        <div id="loginbox" style="margin-bottom: -15px;">
-                            <div class="panel panel-success" >
+                        <div id="loginbox">
+                            <div class="panel panel-success" style="  border: 2px solid #fff;">
                                 <div class="panel-heading">
-                                    <div class="panel-title">Search Colleges</div>
+                                    <div class="panel-title"> How can I become a...?</div>
 
+                                </div>
+
+                                <div style="padding-top:15px;padding-bottom: 0px;" class="panel-body bg1" >
+                                    <form class="navbar-form" role="search" style="margin-top: -10px;" method="get" action="/search">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="eg.doctor, engineer..." name="query" >
+                                            <div class="input-group-btn">
+                                                <button class="btn btn-default" type="submit" style="padding: 4px 12px;"><i class="glyphicon glyphicon-search"></i></button>
+                                            </div>
+                                        </div>
+                                    </form>
+
+                                    <p>You may know which career is right for you but you do not know where to start and how to reach there? This step by step process will guide you to achieve your dream career.</p>
 
                                 </div>
 
 
-                                <div  class="panel-body bg4"   style="padding-bottom: 10px;">
-
-                                    <form action="/search1/" method="get">
-
-                                        <div id="title">
-                                            <select id="foo123" class="dd sd" name="cs">
-
-                                                <option value="">Main Stream</option>
-                                                {% for i in item %}
-                                                    <option value="{{ i.id }}">{{ i.id }} {{ i.name }}</option>
-                                                {% endfor %}
-                                            </select>
-
-                                            <div id="subcources">
-                                                <select id="foo123" class="dd sd" name="scs">
-                                                    <option value="">Sub-Course </option>
-                                                </select>
-                                            </div>
 
 
-                                            <select id="state123" class="dd sd" name="state">
-                                                <option value="">All India</option>
-                                                {% for i in state %}
-                                                    <option value="{{ i.id }}"> {{ i.name }}</option>
-                                                {% endfor %}
-                                            </select>
-                                            <div id="city123">
-                                                <select id="city123" class="dd sd" name="city">
-                                                    <option value="">Select City</option>
-                                                    {% for i in city %}
-                                                        <option value="{{ i.id }}">{{ i.name }}</option>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-6" style="padding-right: 20px;padding-left: 0px;">
+                        <div class="panel panel-default " style="background-color:#f5f5f5;margin-bottom: 0px;">
+                            <div id="loginbox" style="margin-bottom: -15px;">
+                                <div class="panel panel-success" >
+                                    <div class="panel-heading">
+                                        <div class="panel-title">Search Colleges</div>
+
+
+                                    </div>
+
+
+                                    <div  class="panel-body bg4"   style="padding-bottom: 10px;">
+
+                                        <form action="/search1/" method="get">
+
+                                            <div id="title">
+                                                <select id="foo123" class="dd sd" name="cs">
+
+                                                    <option value="">Main Stream</option>
+                                                    {% for i in item %}
+                                                        <option value="{{ i.id }}">{{ i.id }} {{ i.name }}</option>
                                                     {% endfor %}
                                                 </select>
+
+                                                <div id="subcources">
+                                                    <select id="foo123" class="dd sd" name="scs">
+                                                        <option value="">Sub-Course </option>
+                                                    </select>
+                                                </div>
+
+
+                                                <select id="state123" class="dd sd" name="state">
+                                                    <option value="">All India</option>
+                                                    {% for i in state %}
+                                                        <option value="{{ i.id }}"> {{ i.name }}</option>
+                                                    {% endfor %}
+                                                </select>
+                                                <div id="city123">
+                                                    <select id="city123" class="dd sd" name="city">
+                                                        <option value="">Select City</option>
+                                                        {% for i in city %}
+                                                            <option value="{{ i.id }}">{{ i.name }}</option>
+                                                        {% endfor %}
+                                                    </select>
+                                                </div>
                                             </div>
-                                        </div>
 
-                                        <input type="submit" value=" Submit " class="registerbtn" style="float: left;margin: 5px 5px -15px 5px ; width:109px;">
+                                            <input type="submit" value=" Submit " class="registerbtn" style="float: left;margin: 5px 5px -15px 5px ; width:109px;">
 
-                                    </form>
-                                    <a href="/faq"> <input type="submit" value="Query" class="registerbtn" style="float: right;margin: 5px; width:109px;"></a>
+                                        </form>
+                                        <a href="/faq"> <input type="submit" value="Query" class="registerbtn" style="float: right;margin: 5px; width:109px;"></a>
+                                    </div>
                                 </div>
+
                             </div>
 
+
                         </div>
-
-
                     </div>
                 </div>
+
+
+
             </div>
 
 
 
-        </div>
+            <!-- *******sliding********* -->
 
+            <div class="col-sm-6 col-md-6 col-lg-6"  style="background-color:#f5f5f5; padding: 15px;padding-bottom: 25px;">
 
+                <div id="myCarousel" class="carousel slide" data-ride="carousel" >
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                        <li data-target="#myCarousel" data-slide-to="3"></li>
+                    </ol>
 
-        <!-- *******sliding********* -->
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <img src="/static/img/kitchen_adventurer_donut.jpg" alt="Chania" width="460" height="345">
+                            <div class="carousel-caption">
+                                <h3>Chania</h3>
+                                <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+                            </div>
+                        </div>
 
-        <div class="col-sm-6 col-md-6 col-lg-6"  style="background-color:#f5f5f5; padding: 15px;padding-bottom: 25px;">
+                        <div class="item">
+                            <img src="/static/img/kitchen_adventurer_cheesecake_brownie.jpg" alt="Chania" width="460" height="345">
+                            <div class="carousel-caption">
+                                <h3>Chania</h3>
+                                <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+                            </div>
+                        </div>
 
-            <div id="myCarousel" class="carousel slide" data-ride="carousel" >
-                <!-- Indicators -->
-                <ol class="carousel-indicators">
-                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                    <li data-target="#myCarousel" data-slide-to="3"></li>
-                </ol>
+                        <div class="item">
+                            <img src="/static/img/kitchen_adventurer_caramel.jpg"alt="Flower">
+                            <div class="carousel-caption">
+                                <h3>Flowers</h3>
+                                <p>Beatiful flowers in Kolymbari, Crete.</p>
+                            </div>
+                        </div>
 
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner" role="listbox">
-                    <div class="item active">
-                        <img src="/static/img/kitchen_adventurer_donut.jpg" alt="Chania" width="460" height="345">
-                        <div class="carousel-caption">
-                            <h3>Chania</h3>
-                            <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+                        <div class="item">
+                            <img src="/static/img/kitchen_adventurer_lemon.jpg" alt="Flower">
+                            <div class="carousel-caption">
+                                <h3>Flowers</h3>
+                                <p>Beatiful flowers in Kolymbari, Crete.</p>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="item">
-                        <img src="/static/img/kitchen_adventurer_cheesecake_brownie.jpg" alt="Chania" width="460" height="345">
-                        <div class="carousel-caption">
-                            <h3>Chania</h3>
-                            <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <img src="/static/img/kitchen_adventurer_caramel.jpg"alt="Flower">
-                        <div class="carousel-caption">
-                            <h3>Flowers</h3>
-                            <p>Beatiful flowers in Kolymbari, Crete.</p>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <img src="/static/img/kitchen_adventurer_lemon.jpg" alt="Flower">
-                        <div class="carousel-caption">
-                            <h3>Flowers</h3>
-                            <p>Beatiful flowers in Kolymbari, Crete.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Left and right controls-->
-                {% comment %}<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                    <!-- Left and right controls-->
+                    {% comment %}<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
                     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                     <span class="sr-only">Previous</span>
                 </a>
                 <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
                     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>{% endcomment %}
-                </a>
+                    </a>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        {# ********SEARCH MENU ************ #}
+
+        <div class="row b1">
+            <div class="col-lg-12 ">
+                <form action="/search1/" method="get">
+
+                    <div id="title">
+                        <select id="foo" class=" sd1 col-lg-2" name="cs">
+
+                            <option value="">Main Stream</option>
+                            {% for i in item %}
+                                <option value="{{ i.id }}">{{ i.id }} {{ i.name }}</option>
+                            {% endfor %}
+                        </select>
+
+                        <div id="subcources">
+                            <select id="foo1" class="sd1 col-lg-2" name="scs">
+                                <option value="">Sub-Course </option>
+                            </select>
+                        </div>
+
+
+                        <select id="state" class="sd1 col-lg-2" name="state">
+                            <option value="">Select State</option>
+                            {% for i in state %}
+                                <option value="{{ i.id }}"> {{ i.name }}</option>
+                            {% endfor %}
+                        </select>
+                        <div id="city1">
+                            <select id="city" class="sd1 col-lg-2" name="city">
+                                <option value="">Select City</option>
+                                {% for i in city %}
+                                    <option value="{{ i.id }}">{{ i.name }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <div id="level1">
+                            <select id="level" class="sd1 col-lg-2" name="level">
+                                <option value="">Course Level</option>
+                                {% for i in level %}
+                                    <option value="{{ i.id }}">{{ i.name }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-1">
+                        <input type="submit" value=" Submit " class="registerbtn regb" style="float: left;margin-top: 5px; width:130px;height:35px; margin-left: -10px;">
+                    </div>
+                </form>
             </div>
         </div>
 
+        {# *****KNOWLEDGE SOCIETY ROW ******** #}
 
-    </div>
-
-
-{# ********SEARCH MENU ************ #}
-
-     <div class="row b1">
-        <div class="col-lg-12 ">
-        College Search
-            <form action="/search1/" method="get">
-
-                                        <div id="title">
-                                            <select id="foo" class=" sd1 col-lg-2" name="cs">
-
-                                                <option value="">Main Stream</option>
-                                                {% for i in item %}
-                                                    <option value="{{ i.id }}">{{ i.id }} {{ i.name }}</option>
-                                                {% endfor %}
-                                            </select>
-
-                                            <div id="subcources">
-                                                <select id="foo1" class="sd1 col-lg-2" name="scs">
-                                                    <option value="">Sub-Course </option>
-                                                </select>
-                                            </div>
-
-
-                                            <select id="state" class="sd1 col-lg-2" name="state">
-                                                <option value="">Select State</option>
-                                                {% for i in state %}
-                                                    <option value="{{ i.id }}"> {{ i.name }}</option>
-                                                {% endfor %}
-                                            </select>
-                                            <div id="city1">
-                                                <select id="city" class="sd1 col-lg-2" name="city">
-                                                    <option value="">Select City</option>
-                                                    {% for i in city %}
-                                                        <option value="{{ i.id }}">{{ i.name }}</option>
-                                                    {% endfor %}
-                                                </select>
-                                            </div>
-
-                                        <div id="level1">
-                                                <select id="level" class="sd1 col-lg-2" name="level">
-                                                    <option value="">Course Level</option>
-                                                    {% for i in level %}
-                                                        <option value="{{ i.id }}">{{ i.name }}</option>
-                                                    {% endfor %}
-                                                </select>
-                                            </div>
-
-                                        </div>
-                                        <div class="col-lg-1">
-                                        <input type="submit" value=" Submit " class="registerbtn regb" style="float: left;margin-top: 5px; width:130px;height:35px; margin-left: -10px;">
-                                          </div>
-                                    </form>
-        </div>
-     </div>
-
-    {# *****KNOWLEDGE SOCIETY ROW ******** #}
-
-    <!-- Portfolio Section -->
-    <div class="row" style="margin-top: 15px;">
-        {% comment %}<div class="kns col-lg-12" style="margin-top: 15px;margin-bottom: 15px;">
+        <!-- Portfolio Section -->
+        <div class="row" style="margin-top: 15px;">
+            {% comment %}<div class="kns col-lg-12" style="margin-top: 15px;margin-bottom: 15px;">
         <div class="col-lg-4"><hr></div>
         <div class="col-lg-4">
             <h3 style="text-align: center;color:#fff;margin-top: -10px;">KNOWLEDGE SOCIETY</h3>
@@ -299,413 +298,413 @@
         </div>
         <div class="col-lg-4"><hr></div>
       </div>{% endcomment %}
-        <div class="col-lg-3 " >
-            <div class="cuadro_intro_hover img-portfolio" style="background-color:#cccccc;">
-                <p style="text-align:center; margin-top:20px;">
-                    <img src="/static/img/1.jpg" class="img-responsive " alt="">
-                </p>
-                <div class="caption">
-                    <div class="blur"></div>
-                    <div class="caption-text">
-                        <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">THIS IS H3</h3>
-                        <p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
-                        <a class=" btn btn-default" href="ks1/"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+            <div class="col-lg-3 " >
+                <div class="cuadro_intro_hover img-portfolio" style="background-color:#cccccc;">
+                    <p style="text-align:center; margin-top:20px;">
+                        <img src="/static/img/1.jpg" class="img-responsive " alt="">
+                    </p>
+                    <div class="caption">
+                        <div class="blur"></div>
+                        <div class="caption-text">
+                            <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">THIS IS H3</h3>
+                            <p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
+                            <a class=" btn btn-default" href="ks1/"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-        </div>
-        <div class="col-lg-3">
-            <div class="cuadro_intro_hover img-portfolio" style="background-color:#cccccc;">
-                <p style="text-align:center; margin-top:20px;">
-                    <img src="/static/img/1.jpg" class="img-responsive " alt="">
-                </p>
-                <div class="caption">
-                    <div class="blur"></div>
-                    <div class="caption-text">
-                        <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">THIS IS H3</h3>
-                        <p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
-                        <a class=" btn btn-default" href="ks2/"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+            </div>
+            <div class="col-lg-3">
+                <div class="cuadro_intro_hover img-portfolio" style="background-color:#cccccc;">
+                    <p style="text-align:center; margin-top:20px;">
+                        <img src="/static/img/1.jpg" class="img-responsive " alt="">
+                    </p>
+                    <div class="caption">
+                        <div class="blur"></div>
+                        <div class="caption-text">
+                            <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">THIS IS H3</h3>
+                            <p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
+                            <a class=" btn btn-default" href="ks2/"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-        </div>
-        <div class="col-lg-3">
-            <div class="cuadro_intro_hover img-portfolio" style="background-color:#cccccc;">
-                <p style="text-align:center; margin-top:20px;">
-                    <img src="/static/img/1.jpg" class="img-responsive " alt="">
-                </p>
-                <div class="caption">
-                    <div class="blur"></div>
-                    <div class="caption-text">
-                        <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">THIS IS H3</h3>
-                        <p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
-                        <a class=" btn btn-default" href="ks3/"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+            </div>
+            <div class="col-lg-3">
+                <div class="cuadro_intro_hover img-portfolio" style="background-color:#cccccc;">
+                    <p style="text-align:center; margin-top:20px;">
+                        <img src="/static/img/1.jpg" class="img-responsive " alt="">
+                    </p>
+                    <div class="caption">
+                        <div class="blur"></div>
+                        <div class="caption-text">
+                            <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">THIS IS H3</h3>
+                            <p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
+                            <a class=" btn btn-default" href="ks3/"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+                        </div>
                     </div>
                 </div>
+
             </div>
 
-        </div>
-
-        <div class="col-lg-3">
-            <div class="cuadro_intro_hover img-portfolio" style="background-color:#cccccc;">
-                <p style="text-align:center; margin-top:20px;">
-                    <img src="/static/img/1.jpg" class="img-responsive " alt="">
-                </p>
-                <div class="caption">
-                    <div class="blur"></div>
-                    <div class="caption-text">
-                        <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">THIS IS H3</h3>
-                        <p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
-                        <a class=" btn btn-default" href="ks4/"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+            <div class="col-lg-3">
+                <div class="cuadro_intro_hover img-portfolio" style="background-color:#cccccc;">
+                    <p style="text-align:center; margin-top:20px;">
+                        <img src="/static/img/1.jpg" class="img-responsive " alt="">
+                    </p>
+                    <div class="caption">
+                        <div class="blur"></div>
+                        <div class="caption-text">
+                            <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">THIS IS H3</h3>
+                            <p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
+                            <a class=" btn btn-default" href="ks4/"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+                        </div>
                     </div>
                 </div>
+
             </div>
 
-        </div>
-
-        <div class="col-lg-3">
-            <div class="cuadro_intro_hover img-portfolio" style="background-color:#cccccc;">
-                <p style="text-align:center; margin-top:20px;">
-                    <img src="/static/img/1.jpg" class="img-responsive " alt="">
-                </p>
-                <div class="caption">
-                    <div class="blur"></div>
-                    <div class="caption-text">
-                        <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">THIS IS H3</h3>
-                        <p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
-                        <a class=" btn btn-default" href="ks5/"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+            <div class="col-lg-3">
+                <div class="cuadro_intro_hover img-portfolio" style="background-color:#cccccc;">
+                    <p style="text-align:center; margin-top:20px;">
+                        <img src="/static/img/1.jpg" class="img-responsive " alt="">
+                    </p>
+                    <div class="caption">
+                        <div class="blur"></div>
+                        <div class="caption-text">
+                            <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">THIS IS H3</h3>
+                            <p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
+                            <a class=" btn btn-default" href="ks5/"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+                        </div>
                     </div>
                 </div>
+
             </div>
 
-        </div>
-
-        <div class="col-lg-3">
-            <div class="cuadro_intro_hover img-portfolio" style="background-color:#cccccc;">
-                <p style="text-align:center; margin-top:20px;">
-                    <img src="/static/img/1.jpg" class="img-responsive " alt="">
-                </p>
-                <div class="caption">
-                    <div class="blur"></div>
-                    <div class="caption-text">
-                        <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">THIS IS H3</h3>
-                        <p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
-                        <a class=" btn btn-default" href="ks6/"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+            <div class="col-lg-3">
+                <div class="cuadro_intro_hover img-portfolio" style="background-color:#cccccc;">
+                    <p style="text-align:center; margin-top:20px;">
+                        <img src="/static/img/1.jpg" class="img-responsive " alt="">
+                    </p>
+                    <div class="caption">
+                        <div class="blur"></div>
+                        <div class="caption-text">
+                            <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">THIS IS H3</h3>
+                            <p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
+                            <a class=" btn btn-default" href="ks6/"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+                        </div>
                     </div>
                 </div>
+
             </div>
 
-        </div>
-
-        <div class="col-lg-3">
-            <div class="cuadro_intro_hover img-portfolio" style="background-color:#cccccc;">
-                <p style="text-align:center; margin-top:20px;">
-                    <img src="/static/img/1.jpg" class="img-responsive " alt="">
-                </p>
-                <div class="caption">
-                    <div class="blur"></div>
-                    <div class="caption-text">
-                        <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">THIS IS H3</h3>
-                        <p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
-                        <a class=" btn btn-default" href="ks7/"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+            <div class="col-lg-3">
+                <div class="cuadro_intro_hover img-portfolio" style="background-color:#cccccc;">
+                    <p style="text-align:center; margin-top:20px;">
+                        <img src="/static/img/1.jpg" class="img-responsive " alt="">
+                    </p>
+                    <div class="caption">
+                        <div class="blur"></div>
+                        <div class="caption-text">
+                            <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">THIS IS H3</h3>
+                            <p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
+                            <a class=" btn btn-default" href="ks7/"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+                        </div>
                     </div>
                 </div>
+
             </div>
 
-        </div>
-
-        <div class="col-lg-3">
-            <div class="cuadro_intro_hover img-portfolio" style="background-color:#cccccc;">
-                <p style="text-align:center; margin-top:20px;">
-                    <img src="/static/img/1.jpg" class="img-responsive " alt="">
-                </p>
-                <div class="caption">
-                    <div class="blur"></div>
-                    <div class="caption-text">
-                        <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">THIS IS H3</h3>
-                        <p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
-                        <a class=" btn btn-default" href="ks8/"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+            <div class="col-lg-3">
+                <div class="cuadro_intro_hover img-portfolio" style="background-color:#cccccc;">
+                    <p style="text-align:center; margin-top:20px;">
+                        <img src="/static/img/1.jpg" class="img-responsive " alt="">
+                    </p>
+                    <div class="caption">
+                        <div class="blur"></div>
+                        <div class="caption-text">
+                            <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">THIS IS H3</h3>
+                            <p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
+                            <a class=" btn btn-default" href="ks8/"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+                        </div>
                     </div>
                 </div>
+
             </div>
 
-        </div>
 
-
-        <div class="col-lg-3">
-            <div class="cuadro_intro_hover img-portfolio" style="background-color:#cccccc;">
-                <p style="text-align:center; margin-top:20px;">
-                    <img src="/static/img/1.jpg" class="img-responsive " alt="">
-                </p>
-                <div class="caption">
-                    <div class="blur"></div>
-                    <div class="caption-text">
-                        <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">THIS IS H3</h3>
-                        <p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
-                        <a class=" btn btn-default" href="ks1/"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+            <div class="col-lg-3">
+                <div class="cuadro_intro_hover img-portfolio" style="background-color:#cccccc;">
+                    <p style="text-align:center; margin-top:20px;">
+                        <img src="/static/img/1.jpg" class="img-responsive " alt="">
+                    </p>
+                    <div class="caption">
+                        <div class="blur"></div>
+                        <div class="caption-text">
+                            <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">THIS IS H3</h3>
+                            <p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
+                            <a class=" btn btn-default" href="ks1/"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-        </div>
-        <div class="col-lg-3">
-            <div class="cuadro_intro_hover img-portfolio" style="background-color:#cccccc;">
-                <p style="text-align:center; margin-top:20px;">
-                    <img src="/static/img/1.jpg" class="img-responsive " alt="">
-                </p>
-                <div class="caption">
-                    <div class="blur"></div>
-                    <div class="caption-text">
-                        <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">THIS IS H3</h3>
-                        <p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
-                        <a class=" btn btn-default" href="ks2/"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+            </div>
+            <div class="col-lg-3">
+                <div class="cuadro_intro_hover img-portfolio" style="background-color:#cccccc;">
+                    <p style="text-align:center; margin-top:20px;">
+                        <img src="/static/img/1.jpg" class="img-responsive " alt="">
+                    </p>
+                    <div class="caption">
+                        <div class="blur"></div>
+                        <div class="caption-text">
+                            <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">THIS IS H3</h3>
+                            <p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
+                            <a class=" btn btn-default" href="ks2/"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-        </div>
-        <div class="col-lg-3">
-            <div class="cuadro_intro_hover img-portfolio" style="background-color:#cccccc;">
-                <p style="text-align:center; margin-top:20px;">
-                    <img src="/static/img/1.jpg" class="img-responsive " alt="">
-                </p>
-                <div class="caption">
-                    <div class="blur"></div>
-                    <div class="caption-text">
-                        <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">THIS IS H3</h3>
-                        <p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
-                        <a class=" btn btn-default" href="ks3/"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+            </div>
+            <div class="col-lg-3">
+                <div class="cuadro_intro_hover img-portfolio" style="background-color:#cccccc;">
+                    <p style="text-align:center; margin-top:20px;">
+                        <img src="/static/img/1.jpg" class="img-responsive " alt="">
+                    </p>
+                    <div class="caption">
+                        <div class="blur"></div>
+                        <div class="caption-text">
+                            <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">THIS IS H3</h3>
+                            <p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
+                            <a class=" btn btn-default" href="ks3/"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+                        </div>
                     </div>
                 </div>
+
             </div>
 
-        </div>
-
-        <div class="col-lg-3">
-            <div class="cuadro_intro_hover img-portfolio" style="background-color:#cccccc;">
-                <p style="text-align:center; margin-top:20px;">
-                    <img src="/static/img/1.jpg" class="img-responsive " alt="">
-                </p>
-                <div class="caption">
-                    <div class="blur"></div>
-                    <div class="caption-text">
-                        <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">THIS IS H3</h3>
-                        <p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
-                        <a class=" btn btn-default" href="ks4/"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+            <div class="col-lg-3">
+                <div class="cuadro_intro_hover img-portfolio" style="background-color:#cccccc;">
+                    <p style="text-align:center; margin-top:20px;">
+                        <img src="/static/img/1.jpg" class="img-responsive " alt="">
+                    </p>
+                    <div class="caption">
+                        <div class="blur"></div>
+                        <div class="caption-text">
+                            <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">THIS IS H3</h3>
+                            <p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
+                            <a class=" btn btn-default" href="ks4/"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+                        </div>
                     </div>
                 </div>
+
             </div>
 
-        </div>
-
-        <div class="col-lg-3">
-            <div class="cuadro_intro_hover img-portfolio" style="background-color:#cccccc;">
-                <p style="text-align:center; margin-top:20px;">
-                    <img src="/static/img/1.jpg" class="img-responsive " alt="">
-                </p>
-                <div class="caption">
-                    <div class="blur"></div>
-                    <div class="caption-text">
-                        <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">THIS IS H3</h3>
-                        <p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
-                        <a class=" btn btn-default" href="ks5/"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+            <div class="col-lg-3">
+                <div class="cuadro_intro_hover img-portfolio" style="background-color:#cccccc;">
+                    <p style="text-align:center; margin-top:20px;">
+                        <img src="/static/img/1.jpg" class="img-responsive " alt="">
+                    </p>
+                    <div class="caption">
+                        <div class="blur"></div>
+                        <div class="caption-text">
+                            <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">THIS IS H3</h3>
+                            <p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
+                            <a class=" btn btn-default" href="ks5/"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+                        </div>
                     </div>
                 </div>
+
             </div>
 
-        </div>
-
-        <div class="col-lg-3">
-            <div class="cuadro_intro_hover img-portfolio" style="background-color:#cccccc;">
-                <p style="text-align:center; margin-top:20px;">
-                    <img src="/static/img/1.jpg" class="img-responsive " alt="">
-                </p>
-                <div class="caption">
-                    <div class="blur"></div>
-                    <div class="caption-text">
-                        <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">THIS IS H3</h3>
-                        <p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
-                        <a class=" btn btn-default" href="ks6/"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+            <div class="col-lg-3">
+                <div class="cuadro_intro_hover img-portfolio" style="background-color:#cccccc;">
+                    <p style="text-align:center; margin-top:20px;">
+                        <img src="/static/img/1.jpg" class="img-responsive " alt="">
+                    </p>
+                    <div class="caption">
+                        <div class="blur"></div>
+                        <div class="caption-text">
+                            <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">THIS IS H3</h3>
+                            <p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
+                            <a class=" btn btn-default" href="ks6/"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+                        </div>
                     </div>
                 </div>
+
             </div>
 
-        </div>
-
-        <div class="col-lg-3">
-            <div class="cuadro_intro_hover img-portfolio" style="background-color:#cccccc;">
-                <p style="text-align:center; margin-top:20px;">
-                    <img src="/static/img/1.jpg" class="img-responsive " alt="">
-                </p>
-                <div class="caption">
-                    <div class="blur"></div>
-                    <div class="caption-text">
-                        <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">THIS IS H3</h3>
-                        <p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
-                        <a class=" btn btn-default" href="ks7/"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+            <div class="col-lg-3">
+                <div class="cuadro_intro_hover img-portfolio" style="background-color:#cccccc;">
+                    <p style="text-align:center; margin-top:20px;">
+                        <img src="/static/img/1.jpg" class="img-responsive " alt="">
+                    </p>
+                    <div class="caption">
+                        <div class="blur"></div>
+                        <div class="caption-text">
+                            <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">THIS IS H3</h3>
+                            <p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
+                            <a class=" btn btn-default" href="ks7/"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+                        </div>
                     </div>
                 </div>
+
             </div>
 
-        </div>
-
-        <div class="col-lg-3">
-            <div class="cuadro_intro_hover img-portfolio" style="background-color:#cccccc;">
-                <p style="text-align:center; margin-top:20px;">
-                    <img src="/static/img/1.jpg" class="img-responsive " alt="">
-                </p>
-                <div class="caption">
-                    <div class="blur"></div>
-                    <div class="caption-text">
-                        <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">THIS IS H3</h3>
-                        <p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
-                        <a class=" btn btn-default" href="ks8/"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+            <div class="col-lg-3">
+                <div class="cuadro_intro_hover img-portfolio" style="background-color:#cccccc;">
+                    <p style="text-align:center; margin-top:20px;">
+                        <img src="/static/img/1.jpg" class="img-responsive " alt="">
+                    </p>
+                    <div class="caption">
+                        <div class="blur"></div>
+                        <div class="caption-text">
+                            <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">THIS IS H3</h3>
+                            <p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
+                            <a class=" btn btn-default" href="ks8/"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+                        </div>
                     </div>
                 </div>
+
             </div>
 
-        </div>
 
-
-        <div class="col-lg-3">
-            <div class="cuadro_intro_hover img-portfolio" style="background-color:#cccccc;">
-                <p style="text-align:center; margin-top:20px;">
-                    <img src="/static/img/1.jpg" class="img-responsive " alt="">
-                </p>
-                <div class="caption">
-                    <div class="blur"></div>
-                    <div class="caption-text">
-                        <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">THIS IS H3</h3>
-                        <p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
-                        <a class=" btn btn-default" href="ks1/"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+            <div class="col-lg-3">
+                <div class="cuadro_intro_hover img-portfolio" style="background-color:#cccccc;">
+                    <p style="text-align:center; margin-top:20px;">
+                        <img src="/static/img/1.jpg" class="img-responsive " alt="">
+                    </p>
+                    <div class="caption">
+                        <div class="blur"></div>
+                        <div class="caption-text">
+                            <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">THIS IS H3</h3>
+                            <p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
+                            <a class=" btn btn-default" href="ks1/"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-        </div>
-        <div class="col-lg-3">
-            <div class="cuadro_intro_hover img-portfolio" style="background-color:#cccccc;">
-                <p style="text-align:center; margin-top:20px;">
-                    <img src="/static/img/1.jpg" class="img-responsive " alt="">
-                </p>
-                <div class="caption">
-                    <div class="blur"></div>
-                    <div class="caption-text">
-                        <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">THIS IS H3</h3>
-                        <p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
-                        <a class=" btn btn-default" href="ks2/"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+            </div>
+            <div class="col-lg-3">
+                <div class="cuadro_intro_hover img-portfolio" style="background-color:#cccccc;">
+                    <p style="text-align:center; margin-top:20px;">
+                        <img src="/static/img/1.jpg" class="img-responsive " alt="">
+                    </p>
+                    <div class="caption">
+                        <div class="blur"></div>
+                        <div class="caption-text">
+                            <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">THIS IS H3</h3>
+                            <p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
+                            <a class=" btn btn-default" href="ks2/"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-        </div>
-        <div class="col-lg-3">
-            <div class="cuadro_intro_hover img-portfolio" style="background-color:#cccccc;">
-                <p style="text-align:center; margin-top:20px;">
-                    <img src="/static/img/1.jpg" class="img-responsive " alt="">
-                </p>
-                <div class="caption">
-                    <div class="blur"></div>
-                    <div class="caption-text">
-                        <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">THIS IS H3</h3>
-                        <p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
-                        <a class=" btn btn-default" href="ks3/"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+            </div>
+            <div class="col-lg-3">
+                <div class="cuadro_intro_hover img-portfolio" style="background-color:#cccccc;">
+                    <p style="text-align:center; margin-top:20px;">
+                        <img src="/static/img/1.jpg" class="img-responsive " alt="">
+                    </p>
+                    <div class="caption">
+                        <div class="blur"></div>
+                        <div class="caption-text">
+                            <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">THIS IS H3</h3>
+                            <p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
+                            <a class=" btn btn-default" href="ks3/"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+                        </div>
                     </div>
                 </div>
+
             </div>
 
-        </div>
-
-        <div class="col-lg-3">
-            <div class="cuadro_intro_hover img-portfolio" style="background-color:#cccccc;">
-                <p style="text-align:center; margin-top:20px;">
-                    <img src="/static/img/1.jpg" class="img-responsive " alt="">
-                </p>
-                <div class="caption">
-                    <div class="blur"></div>
-                    <div class="caption-text">
-                        <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">THIS IS H3</h3>
-                        <p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
-                        <a class=" btn btn-default" href="ks4/"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+            <div class="col-lg-3">
+                <div class="cuadro_intro_hover img-portfolio" style="background-color:#cccccc;">
+                    <p style="text-align:center; margin-top:20px;">
+                        <img src="/static/img/1.jpg" class="img-responsive " alt="">
+                    </p>
+                    <div class="caption">
+                        <div class="blur"></div>
+                        <div class="caption-text">
+                            <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">THIS IS H3</h3>
+                            <p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
+                            <a class=" btn btn-default" href="ks4/"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+                        </div>
                     </div>
                 </div>
+
             </div>
 
-        </div>
-
-        <div class="col-lg-3">
-            <div class="cuadro_intro_hover img-portfolio" style="background-color:#cccccc;">
-                <p style="text-align:center; margin-top:20px;">
-                    <img src="/static/img/1.jpg" class="img-responsive " alt="">
-                </p>
-                <div class="caption">
-                    <div class="blur"></div>
-                    <div class="caption-text">
-                        <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">THIS IS H3</h3>
-                        <p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
-                        <a class=" btn btn-default" href="ks5/"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+            <div class="col-lg-3">
+                <div class="cuadro_intro_hover img-portfolio" style="background-color:#cccccc;">
+                    <p style="text-align:center; margin-top:20px;">
+                        <img src="/static/img/1.jpg" class="img-responsive " alt="">
+                    </p>
+                    <div class="caption">
+                        <div class="blur"></div>
+                        <div class="caption-text">
+                            <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">THIS IS H3</h3>
+                            <p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
+                            <a class=" btn btn-default" href="ks5/"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+                        </div>
                     </div>
                 </div>
+
             </div>
 
-        </div>
-
-        <div class="col-lg-3">
-            <div class="cuadro_intro_hover img-portfolio" style="background-color:#cccccc;">
-                <p style="text-align:center; margin-top:20px;">
-                    <img src="/static/img/1.jpg" class="img-responsive " alt="">
-                </p>
-                <div class="caption">
-                    <div class="blur"></div>
-                    <div class="caption-text">
-                        <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">THIS IS H3</h3>
-                        <p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
-                        <a class=" btn btn-default" href="ks6/"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+            <div class="col-lg-3">
+                <div class="cuadro_intro_hover img-portfolio" style="background-color:#cccccc;">
+                    <p style="text-align:center; margin-top:20px;">
+                        <img src="/static/img/1.jpg" class="img-responsive " alt="">
+                    </p>
+                    <div class="caption">
+                        <div class="blur"></div>
+                        <div class="caption-text">
+                            <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">THIS IS H3</h3>
+                            <p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
+                            <a class=" btn btn-default" href="ks6/"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+                        </div>
                     </div>
                 </div>
+
             </div>
 
-        </div>
-
-        <div class="col-lg-3">
-            <div class="cuadro_intro_hover img-portfolio" style="background-color:#cccccc;">
-                <p style="text-align:center; margin-top:20px;">
-                    <img src="/static/img/1.jpg" class="img-responsive " alt="">
-                </p>
-                <div class="caption">
-                    <div class="blur"></div>
-                    <div class="caption-text">
-                        <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">THIS IS H3</h3>
-                        <p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
-                        <a class=" btn btn-default" href="ks7/"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+            <div class="col-lg-3">
+                <div class="cuadro_intro_hover img-portfolio" style="background-color:#cccccc;">
+                    <p style="text-align:center; margin-top:20px;">
+                        <img src="/static/img/1.jpg" class="img-responsive " alt="">
+                    </p>
+                    <div class="caption">
+                        <div class="blur"></div>
+                        <div class="caption-text">
+                            <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">THIS IS H3</h3>
+                            <p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
+                            <a class=" btn btn-default" href="ks7/"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+                        </div>
                     </div>
                 </div>
+
             </div>
 
-        </div>
-
-        <div class="col-lg-3">
-            <div class="cuadro_intro_hover img-portfolio" style="background-color:#cccccc;">
-                <p style="text-align:center; margin-top:20px;">
-                    <img src="/static/img/1.jpg" class="img-responsive " alt="">
-                </p>
-                <div class="caption">
-                    <div class="blur"></div>
-                    <div class="caption-text">
-                        <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">THIS IS H3</h3>
-                        <p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
-                        <a class=" btn btn-default" href="ks8/"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+            <div class="col-lg-3">
+                <div class="cuadro_intro_hover img-portfolio" style="background-color:#cccccc;">
+                    <p style="text-align:center; margin-top:20px;">
+                        <img src="/static/img/1.jpg" class="img-responsive " alt="">
+                    </p>
+                    <div class="caption">
+                        <div class="blur"></div>
+                        <div class="caption-text">
+                            <h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">THIS IS H3</h3>
+                            <p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
+                            <a class=" btn btn-default" href="ks8/"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+                        </div>
                     </div>
                 </div>
+
             </div>
 
+
         </div>
-
-
-    </div>
-    <!-- /.row -->
+        <!-- /.row -->
     </div>
 
 
@@ -726,7 +725,7 @@
                 }  )
             });
 
-             $("#state").change(function() {
+            $("#state").change(function() {
                 var field  = $("#state").val();
                 var parts = field.split(" ");
                 console.log(parts);

@@ -153,8 +153,8 @@ class Institute_details(models.Model):
     website=models.TextField(blank=True)
     phone=models.TextField()
     address=models.TextField()
-    city=models.TextField()
-    state=models.TextField()
+    state = models.ForeignKey(State)
+    city = models.ForeignKey(City)
     pin=models.IntegerField()
     overview=models.TextField(blank=True)
     principal=models.TextField(blank=True)
@@ -193,6 +193,7 @@ class Course(models.Model):
     hod_email=models.TextField()
     course_type=models.ForeignKey(Degree_type)
     colg=models.ForeignKey(Institute_details)
+    subtag = models.ForeignKey(Subtag)
 
     def __unicode__(self):
         return str(self.name)+ " " + str(self.colg)
