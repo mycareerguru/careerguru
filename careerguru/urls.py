@@ -101,4 +101,6 @@ urlpatterns = patterns('',
                        url(r'^ks7/$', 'career.knowledge_view.ks7'),
                        url(r'^ks8/$', 'career.knowledge_view.ks8'),
 
+     url(r'^test5/$', 'career.views.test5'),
+
 )

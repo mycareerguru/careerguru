@@ -1,5 +1,6 @@
 from django.shortcuts import render, render_to_response
-from career.models import Tag, Subtag, CareerInfo, Faq, State, City, College, Facility, Question, Qtype, NewCareerInfo,Degree_type
+from career.models import Tag, Subtag, CareerInfo, Faq, State, City, College, Facility, Question, Qtype, NewCareerInfo,Degree_type, \
+    Course, Institute_details
 from django.http.response import HttpResponse
 from itertools import groupby
 
@@ -54,50 +55,22 @@ def search(request):
 
 def search1(request):
     slist = []
+    query = "select * from career_institute_details A JOIN career_course B ON A.id=B.colg_id JOIN career_subtag C ON B.subtag_id=C.id JOIN career_tag D ON D.id=C.tag_id";
     if 'city' in request.GET and request.GET['city']:
-        city = request.GET['city']
+        query += " and A.city_id = " + request.GET['city']
+    if 'state' in request.GET and request.GET['state']:
+        query += " and A.state_id = " + request.GET['state']
+    if 'scs' in request.GET and request.GET['scs']:
+        query += " and B.subtag_id = " + request.GET['scs']
+    if 'level' in request.GET and request.GET['level']:
+        query += " and B.course_type_id = " + request.GET['level']
+    if 'cs' in request.GET and request.GET['cs']:
+        query += " and C.tag_id = " + request.GET['cs']
 
-        cs = request.GET['cs']
-        query = 'SELECT * FROM career_college where city_id =' + str(city)
-        query += ' and tag_id =' + str(cs)
-        print(query)
-        x = College.objects.raw(query)
-        stag = list(x)
-        slist = set(stag)
 
-    elif 'state' in request.GET and request.GET['state']:
-
-        state = request.GET['state']
-        cs = request.GET['cs']
-        query = 'SELECT * FROM career_college where state_id =' + str(state)
-        query += ' and tag_id =' + str(cs)
-        print(query)
-        x = College.objects.raw(query)
-        stag = list(x)
-        slist = set(stag)
-
-    elif 'scs' in request.GET and request.GET['scs']:
-
-        scs = request.GET['scs']
-        cs = request.GET['cs']
-        query = 'SELECT * FROM career_college where subtag_id =' + str(scs)
-        query += ' and tag_id =' + str(cs)
-        print(query)
-        x = College.objects.raw(query)
-        stag = list(x)
-        slist = set(stag)
-
-    elif 'cs' in request.GET and request.GET['cs']:
-
-        cs = request.GET['cs']
-
-        query = 'SELECT * FROM career_college where tag_id =' + str(cs)
-
-        print(query)
-        x = College.objects.raw(query)
-        stag = list(x)
-        slist = set(stag)
-
+    x = Course.objects.raw(query)
+    stag = list(x)
+    slist = set(stag)
 
 
     return render_to_response('search1.html', {
@@ -220,12 +193,10 @@ def colginfo(request):
 
 
 def colgpage(request, colg_id=1):
-    o = College.objects.get(pk=colg_id)
-    name = o.name
-    return render(request, "colgpage.html", {
-        'colg_name': name,
-        'o': o
+    o = Institute_details.objects.get(pk=colg_id)
 
+    return render(request, "colginfo5.html", {
+        'item' : Institute_details.objects.all()
     })
 
 
@@ -255,6 +226,11 @@ def colgsearch(request):
 def itest(request):
     return render(request, "itest.html")
 
+
+
+
+def test5(request):
+    return render(request, "test5.html")
 
 
 
