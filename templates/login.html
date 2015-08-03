@@ -14,13 +14,21 @@ Discover occupations that may interest you and begin your career planning journe
 <br>
 You can return to your profile and improve it at any time by completing more activities.
 <br>
-        <input type="submit" name="btn_register" value="Register >>"  class="registerbtn">
+
+       <a href="/register"> <button type="button" name="btn_register"  class="registerbtn">Register >></button></a>
+
 
     </div>
 
     <div id="right">
         <h3>Existing User / Log in</h3>
         </br>
+       <form method="post" action="/login/">{% csrf_token %}
+           {% if form.errors %}
+        <div class="alert alert-error">
+          <p>Your username and password didn't match. Please try again.</p>
+        </div>
+        {% endif %}
     <label class="labelname">User name</label>
     <input name="username" type="text" class="logintxt">
      <label class="labelname">Password</label>
@@ -32,9 +40,13 @@ You can return to your profile and improve it at any time by completing more act
         <div class="rememberme">
         <input type="checkbox" name="rememberme">
         <label style="margin-right:10px;" >Remember me</label>
-             <input type="submit" name="btn_register" value="Login >>"  class="registerbtn">
+
+            <input type="hidden" name="next" value={{ next }} />
+            <button type="submit" name="btn_register"  class="registerbtn">Login >></button>
         </div>
+       </form>
     </div>
+
 
         <div class="externallogin">
             <h2>

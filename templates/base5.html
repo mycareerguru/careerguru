@@ -268,8 +268,19 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="/static/js/bootstrap.min.js"></script>
-        <script src="/static/js/plugin.js"></script>
+    <script src="/static/js/plugin.js"></script>
     <script src="/static/js/easing.js"></script>
+    <script src="/static/js/scrolling.js"></script>
+     <script src="/static/js/cust.js"></script>
+    <script data-turbolinks-track="true" src="/static/js/angular.min.js"></script>
+<script data-turbolinks-track="true" src="/static/js/angular-sanitize.min.js"></script>
+<script data-turbolinks-track="true" src="/static/js/angular-animate.min.js"></script>
+<script data-turbolinks-track="true" src="/static/js/jquery.min.js"></script>
+<script data-turbolinks-track="true" src="/static/js/bootstrap.min.js"></script>
+<script data-turbolinks-track="true" src="/static/js/script.js"></script>
+<script data-turbolinks-track="true" src="/static/js/scroll-smooth.js"></script>
+<script data-turbolinks-track="true" src="/static/js/desktop-navigation.js"></script>
+<script data-turbolinks-track="true" src="/static/js/custom.js"></script>
 
     <!-- Script to Activate the Carousel -->
     <script>
@@ -280,7 +291,22 @@
 
 
 
-
+<script>
+        $(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top-150
+        }, 1000);
+        return false;
+      }
+    }
+  });
+})
+    </script>
 </body>
 
 </html>
