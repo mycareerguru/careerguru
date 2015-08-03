@@ -196,7 +196,7 @@ def colgpage(request, colg_id=1):
     o = Institute_details.objects.get(pk=colg_id)
 
     return render(request, "colginfo5.html", {
-        'item' : Institute_details.objects.all()
+        'item' : o
     })
 
 
@@ -317,5 +317,9 @@ def newcareerinfo(request, subtag):
 
 def colginfo5(request):
     return render(request,"colginfo5.html")
+
+
+def aptitest(request):
+    return render(request, "apti.html")
 
 
