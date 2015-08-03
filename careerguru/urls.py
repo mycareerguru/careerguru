@@ -102,6 +102,24 @@ urlpatterns = patterns('',
                        url(r'^ks7/$', 'career.knowledge_view.ks7'),
                        url(r'^ks8/$', 'career.knowledge_view.ks8'),
 
+
+                    # aptitude test
+
+                       url(r'^test1/$', 'career.aptitest_view.test1'),
+                       url(r'^test2/$', 'career.aptitest_view.test2'),
+                       url(r'^test3/$', 'career.aptitest_view.test3'),
+                       url(r'^test4/$', 'career.aptitest_view.test4'),
+                       url(r'^test5/$', 'career.aptitest_view.test5'),
+                       url(r'^test6/$', 'career.aptitest_view.test6'),
+                       url(r'^test7/$', 'career.aptitest_view.test7'),
+                       url(r'^test8/$', 'career.aptitest_view.test8'),
+                       url(r'^test9/$', 'career.aptitest_view.test9'),
+                       url(r'^test10/$', 'career.aptitest_view.test10'),
+                       url(r'^test11/$', 'career.aptitest_view.test11'),
+
+
+
+    # rough developing perpose not in use in actual project
      url(r'^test5/$', 'career.views.test5'),
 
 )
