@@ -192,11 +192,13 @@ def colginfo(request):
     })
 
 
-def colgpage(request, colg_id=1):
-    o = Institute_details.objects.get(pk=colg_id)
+def colgpage(request, colg1_id=1):
+    o = Institute_details.objects.get(pk=colg1_id)
+    x = Course.objects.filter(colg_id=o)
 
     return render(request, "colginfo5.html", {
-        'item' : o
+        'item' : o,
+        'x' : x
     })
 
 
@@ -311,6 +313,7 @@ def newcareerinfo(request, subtag):
 
     return render_to_response("explore1.html", {
          "data": data,
+         'name': obj
     })
 
 
