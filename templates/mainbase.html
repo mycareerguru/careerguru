@@ -236,10 +236,12 @@
 
         <div class="row b1">
             <div class="col-lg-12 ">
+            <div class="col-lg-2 sd2"> <h4 style="margin-top: 6px;margin-bottom:0px;">College Search</h4> </div>
                 <form action="/search1/" method="get">
 
+
                     <div id="title">
-                        <select id="foo" class=" sd1 col-lg-2" name="cs">
+                        <select id="foo" class=" sd1 col-lg-2"  name="cs" style="width:17%;">
 
                             <option value="">Main Stream</option>
                             {% for i in item %}
@@ -248,20 +250,20 @@
                         </select>
 
                         <div id="subcources">
-                            <select id="foo1" class="sd1 col-lg-2" name="scs">
+                            <select id="foo1" class="sd1 col-lg-2" name="scs" style="width:17%;">
                                 <option value="">Sub-Course </option>
                             </select>
                         </div>
 
 
-                        <select id="state" class="sd1 col-lg-2" name="state">
+                        <select id="state" class="sd1 col-lg-2" name="state" style="width:15%;">
                             <option value="">Select State</option>
                             {% for i in state %}
                                 <option value="{{ i.id }}"> {{ i.name }}</option>
                             {% endfor %}
                         </select>
                         <div id="city1">
-                            <select id="city" class="sd1 col-lg-2" name="city">
+                            <select id="city" class="sd1 col-lg-1" name="city" style="width:12%;">
                                 <option value="">Select City</option>
                                 {% for i in city %}
                                     <option value="{{ i.id }}">{{ i.name }}</option>
@@ -270,7 +272,7 @@
                         </div>
 
                         <div id="level1">
-                            <select id="level" class="sd1 col-lg-2" name="level">
+                            <select id="level" class="sd1 col-lg-1" name="level" style="width:12%;">
                                 <option value="">Course Level</option>
                                 {% for i in level %}
                                     <option value="{{ i.id }}">{{ i.name }}</option>
@@ -280,7 +282,7 @@
 
                     </div>
                     <div class="col-lg-1">
-                        <input type="submit" value=" Submit " class="registerbtn regb" style="float: left;margin-top: 5px; width:130px;height:35px; margin-left: -10px;">
+                        <input type="submit" value=" Submit " class="registerbtn regb" style="float: left;margin-top: 2px; width:130px;height:26px; margin-left: -10px;">
                     </div>
                 </form>
             </div>

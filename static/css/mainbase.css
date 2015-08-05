@@ -363,6 +363,7 @@ Third row Img Hover Iffect*/
     border-style: solid;
     border-width: 3px;
     border-color: #000;
+    z-index: 12;
 }
 
 
@@ -627,14 +628,24 @@ li ul .dropdown-submenu:hover>.dropdown-menu {
 /*search dropdown menu */
 
 .sd1{
-    padding: 7px;
+    padding: 3px;
     border-radius: 3px;
-    margin:5px;
+    margin:2px;
+    width: 14.5%;
+}
+
+.sd2{
+    color:#ffffff;
+   /* padding-left: 0px;
+    padding-right: 0px;*/
+    width: 160px;
 }
 
 .b1{
-    border: 2px solid #000000;
+
     margin-left: 1px;
+    background-color: #000000;
+    border-radius: 3px;
     
 }
 
@@ -647,5 +658,31 @@ li ul .dropdown-submenu:hover>.dropdown-menu {
 }
 
 .topmargin{
-    margin-top: -50px;
+    margin-top: -35px;
 }
+
+
+
+
+@media (min-width: 992px){
+.mfx {
+    position: fixed;
+    width: 86%;
+    top: 99px;
+    z-index: 10;
+}
+}
+
+
+
+/*equal hieght video n define box */
+
+.equalh, .equalh > div[class*='col-'] {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex:1 1 auto;
+}
+

@@ -197,6 +197,11 @@ def colgpage(request, colg1_id=1):
     x = Course.objects.filter(colg_id=o)
 
     return render(request, "colginfo5.html", {
+         'item1': Tag.objects.all(),
+        'sub': Subtag.objects.all(),
+        'state': State.objects.all(),
+        'city': City.objects.all(),
+        'level':Degree_type.objects.all(),
         'item' : o,
         'x' : x
     })
@@ -312,6 +317,11 @@ def newcareerinfo(request, subtag):
     data["related"] = obj.related.split("|")
 
     return render_to_response("explore1.html", {
+        'item1': Tag.objects.all(),
+        'sub': Subtag.objects.all(),
+        'state': State.objects.all(),
+        'city': City.objects.all(),
+        'level':Degree_type.objects.all(),
          "data": data,
          'name': obj
     })

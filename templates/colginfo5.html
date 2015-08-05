@@ -8,7 +8,63 @@
 
     <div class="container" >
 
+     <div class="row b1 mfx" style="margin-left: 0px;">
+            <div class="col-lg-12 ">
+            <div class="col-lg-2 sd2"> <h4 style="margin-top: 6px;margin-bottom:0px;">College Search</h4> </div>
+                <form action="/search1/" method="get">
+
+
+                    <div id="title">
+                        <select id="foo" class=" sd1 col-lg-2"  name="cs" style="width:17%;">
+
+                            <option value="">Main Stream</option>
+                            {% for i in item1 %}
+                                <option value="{{ i.id }}">{{ i.id }} {{ i.name }}</option>
+                            {% endfor %}
+                        </select>
+
+                        <div id="subcources">
+                            <select id="foo1" class="sd1 col-lg-2" name="scs" style="width:17%;">
+                                <option value="">Sub-Course </option>
+                            </select>
+                        </div>
+
+
+                        <select id="state" class="sd1 col-lg-2" name="state" style="width:15%;">
+                            <option value="">Select State</option>
+                            {% for i in state %}
+                                <option value="{{ i.id }}"> {{ i.name }}</option>
+                            {% endfor %}
+                        </select>
+                        <div id="city1">
+                            <select id="city" class="sd1 col-lg-1" name="city" style="width:12%;">
+                                <option value="">Select City</option>
+                                {% for i in city %}
+                                    <option value="{{ i.id }}">{{ i.name }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <div id="level1">
+                            <select id="level" class="sd1 col-lg-1" name="level" style="width:12%;">
+                                <option value="">Course Level</option>
+                                {% for i in level %}
+                                    <option value="{{ i.id }}">{{ i.name }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-1">
+                        <input type="submit" value=" Submit " class="registerbtn regb" style="float: left;margin-top: 2px; width:130px;height:26px; margin-left: -12px;">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
         <section class="one" >
+
 
             <div class="row topmargin" >
                 <div class="col-md-3" id="gry2" >
@@ -27,7 +83,7 @@
                             </div>
 
                             <ul class="mobile-open-left" id="nav1" >
-                                <li><h3 style="padding-right:10px;padding-top: 5px;"><b>College Menu</b></h3></li>
+                               {% comment %} <li><h3 style="padding-right:10px;padding-top: 5px;"><b>College Menu</b></h3></li>{% endcomment %}
                                 <li><a href="#college"> College</a></li>
                                 <li><a href="#courses"> Courses</a></li>
                                 <li><a href="#overview">OverView</a></li>
@@ -42,7 +98,7 @@
 
 
                 </div>
-                <div class="col-md-9 whitebg">
+                <div class="col-md-6 whitebg">
                     <p style="text-align:center;">
                         <img alt="Heading" class="img-responsive center-block" src="/uploads/page/headimg_url/235/heading.jpg" />
                     </p>
@@ -123,7 +179,29 @@
 
             </div>
 
+
+            <div class="col-md-3" >
+
+                     <div class="col-lg-12"  style="padding-right: 0px;padding-left: 0px;">
+                <div class="panel panel-success ">
+                    <div class="panel-heading">  <h3 class="panel-title">How To Become One?</h3></div>
+                    <div class="panel-body">
+                    <p> Thinking about the pros and cons of different options and picking the best one</p>
+                    <p> Figuring out how a system should work and how changes in the future will affect it</p>
+                        <p> Thinking about the pros and cons of different ways to solve a problem</p>
+                        <p>Reading work related information </p>
+                        <p>Noticing a problem and figuring out the best way to solve it </p>
+                        <p> Direct or coordinate activities of engineering or technical personnel involved in designing, fabricating, modifying, or testing of aircraft or aerospace products.</p>
+                    </div>
+                </div>
+            </div>
+
+
+                </div>
+
             <div class="division"></div>
+
+
 
         </section>
     </div>
@@ -147,7 +225,7 @@
         $('html,body').animate({
           scrollTop: target.offset().top-0
 
-        }, 2000);
+        }, 1000);
         return false;
       }
     }

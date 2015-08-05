@@ -2054,7 +2054,7 @@ width: 250px;
 }
 #sidebar.affix {
 position: fixed;
-top:100px;
+top:140px;
 
 }
 #sidebar.affix-bottom {
@@ -2441,5 +2441,7 @@ padding-top:10px;
 .show-in-mobile{display:none;}
 .dont-show-in-mobile{display:block;}
 }
+
+
 
 
