@@ -170,7 +170,7 @@
 
             <!-- *******sliding********* -->
 
-            <div class="col-sm-6 col-md-6 col-lg-6"  style="background-color:#f5f5f5; padding: 15px;padding-bottom: 25px;">
+            <div class="col-sm-6 col-md-6 col-lg-6"  style="background-color:#f5f5f5; padding: 15px;">
 
                 <div id="myCarousel" class="carousel slide" data-ride="carousel" >
                     <!-- Indicators -->
@@ -241,7 +241,7 @@
 
 
                     <div id="title">
-                        <select id="foo" class=" sd1 col-lg-2"  name="cs" style="width:17%;">
+                        <select id="foo" class=" sd1 col-lg-2"  name="cs" >
 
                             <option value="">Main Stream</option>
                             {% for i in item %}
@@ -250,13 +250,13 @@
                         </select>
 
                         <div id="subcources">
-                            <select id="foo1" class="sd1 col-lg-2" name="scs" style="width:17%;">
+                            <select id="foo1" class="sd1 col-lg-2" name="scs" >
                                 <option value="">Sub-Course </option>
                             </select>
                         </div>
 
 
-                        <select id="state" class="sd1 col-lg-2" name="state" style="width:15%;">
+                        <select id="state" class="sd1 col-lg-2" name="state" >
                             <option value="">Select State</option>
                             {% for i in state %}
                                 <option value="{{ i.id }}"> {{ i.name }}</option>
@@ -713,40 +713,8 @@
 
 
     <script src="/static/js/jquery-2.1.1.js"></script>
-    <script type="text/javascript">
-        $(function() {
-            $("#foo").change(function() {
-                var field  = $("#foo").val();
-                var parts = field.split(" ");
-                console.log(parts);
-                console.log("value changed " + parts[0]);
-                url = "/dropdown2/" + parts[0];
-                $.get(url).success(function(data) {
-                    console.log(data);
-                    $("#foo1").html(data);
-                }  )
-            });
+    <script src="/static/js/search_colg.js"></script>
 
-            $("#state").change(function() {
-                var field  = $("#state").val();
-                var parts = field.split(" ");
-                console.log(parts);
-                console.log("value changed " + parts[0]);
-                url = "/city/" + parts[0];
-                $.get(url).success(function(data) {
-                    console.log(data);
-                    $("#city").html(data);
-                }  )
-            });
-            {% comment %}$("#foo1").change(function){
-
-
-            }{% endcomment %}
-        });
-
-
-
-    </script>
 {% endblock %}
 {% comment %}</body>
 </html>{% endcomment %}

@@ -2,14 +2,14 @@
 {% block contents %}
 
     <div class="container">
-         <div class="row b1 mfx" style="margin-left: 0px;">
+         <div class="row b1 mfx" style="margin-left: 0px;margin-top: 0px;">
             <div class="col-lg-12 ">
             <div class="col-lg-2 sd2"> <h4 style="margin-top: 6px;margin-bottom:0px;">College Search</h4> </div>
                 <form action="/search1/" method="get">
 
 
                     <div id="title">
-                        <select id="foo" class=" sd1 col-lg-2"  name="cs" style="width:17%;">
+                        <select id="foo" class=" sd1 col-lg-2"  name="cs" >
 
                             <option value="">Main Stream</option>
                             {% for i in item1 %}
@@ -18,20 +18,20 @@
                         </select>
 
                         <div id="subcources">
-                            <select id="foo1" class="sd1 col-lg-2" name="scs" style="width:17%;">
+                            <select id="foo1" class="sd1 col-lg-2" name="scs" >
                                 <option value="">Sub-Course </option>
                             </select>
                         </div>
 
 
-                        <select id="state" class="sd1 col-lg-2" name="state" style="width:15%;">
+                        <select id="state" class="sd1 col-lg-2" name="state" >
                             <option value="">Select State</option>
                             {% for i in state %}
                                 <option value="{{ i.id }}"> {{ i.name }}</option>
                             {% endfor %}
                         </select>
                         <div id="city1">
-                            <select id="city" class="sd1 col-lg-1" name="city" style="width:12%;">
+                            <select id="city" class="sd1 col-lg-1" name="city" >
                                 <option value="">Select City</option>
                                 {% for i in city %}
                                     <option value="{{ i.id }}">{{ i.name }}</option>
@@ -40,7 +40,7 @@
                         </div>
 
                         <div id="level1">
-                            <select id="level" class="sd1 col-lg-1" name="level" style="width:12%;">
+                            <select id="level" class="sd1 col-lg-1" name="level" >
                                 <option value="">Course Level</option>
                                 {% for i in level %}
                                     <option value="{{ i.id }}">{{ i.name }}</option>
@@ -55,99 +55,48 @@
                 </form>
             </div>
         </div>
-            <div class="row">
 
 
-<div class="col-lg-12">
-    <h2 style="color: #ffffff;border: 2px solid #000000;padding: 5px;"> {{ name.subtag }}</h2>
-</div>
+    <div class="row" style="margin-top: 20px;" >
 
-</div>
-
-    <div class="row equalh">
-
+    <div class="colg-lg-12 equalh" style="background-color: #868A08">
 
             <div class="col-lg-7">
-                <div class="panel panel-success">
-                    <div class="panel-heading">  <h3 class="panel-title">Define {field name}</h3></div>
-                    <div class="panel-body">
+            <div class="panel" style="background-color: #868A08">
+            <div class="panel-heading" style="width:80%;margin-left: 25px; margin-top:0px;"> <h2 class="ht2 "> {{ name.subtag }}</h2> </div>
+              <div class="panel-body" style="margin-bottom: 0px;">
+
+
+
                     {# Job DATA#}
                         <ul>
                             {%  for d in data.define %}
                            <li style="text-align: justify;">{{  d }}</li>
                             {% endfor %}
                         </ul>
-                    </div>
-                </div>
             </div>
+             </div>
+             </div>
 
-             <div class="col-lg-5" style="padding-left: 0px";>
-                <div class="panel panel-success">
-                    <div class="panel-heading">  <h3 class="panel-title"> {field name} </h3></div>
+
+             <div class="col-lg-5">
+
                     <div class="panel-body" style="margin-bottom: 0px;">
-                        <img src="/static/img/career-eng.jpg" class="img-responsive">
+                        <img src="/static/img/black_board.png" class="img-responsive">
                     </div>
-                </div>
-            </div>
-
 
 
 </div>
+
+</div>
+    </div>
     <div class="row">
-            <div class="col-lg-3">
 
-
-
-                 <div class="col-lg-12" style="padding-right: 0px;padding-left: 0px;">
-                <div class="panel panel-success">
-                    <div class="panel-heading">  <h3 class="panel-title">Scope</h3></div>
-                    <div class="panel-body">
-                        Panel content
-                    </div>
-                </div>
-            </div>
-
-                <div class="col-lg-12" style="padding-right: 0px;padding-left: 0px;">
-                <div class="panel panel-success">
-                    <div class="panel-heading">  <h3 class="panel-title">What They Do?</h3></div>
-                    <div class="panel-body">
-                    {# what they do DATA#}
-                            <ul>
-                                {%  for d in data.wtd %}
-                           <li>{{  d }}</li>
-                            {% endfor %}
-
-                            </ul>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="col-lg-12 col-md-12" style="padding-right: 0px;padding-left: 0px;">
-                <div class="panel panel-success">
-                    <div class="panel-heading">  <h3 class="panel-title">Who Should Join?</h3></div>
-                    <div class="panel-body">
-                    {# Ability DATA#}
-                         <ul>
-                             {%  for d in data.who %}
-                           <li>{{  d }}</li>
-                            {% endfor %}
-                         </ul>
-                    </div>
-                </div>
-            </div>
-
-
-
-
-
-            </div>
-
-<div class="col-lg-6">
+    <div class="col-lg-6 col-md-push-3">
 
        <div class="col-lg-12" style="padding-right: 0px;padding-left: 0px";>
                 <div class="panel panel-success">
-                    <div class="panel-heading">  <h3 class="panel-title"> {field name} </h3></div>
+                    <div class="panel-heading">  <h3 class="panel-title"> CENTER {field name} </h3></div>
                     <div class="panel-body" style="margin-bottom: 0px;">
                         <img src="/static/img/career-eng.jpg" class="img-responsive">
                     </div>
@@ -156,7 +105,7 @@
 
        <div class="col-lg-12" style="padding-right: 0px;padding-left: 0px;">
                 <div class="panel panel-success">
-                    <div class="panel-heading">  <h3 class="panel-title">Define {field name}</h3></div>
+                    <div class="panel-heading">  <h3 class="panel-title"> CENTER Define {field name}</h3></div>
                     <div class="panel-body">
                     {# Job DATA#}
                         <ul>
@@ -170,7 +119,7 @@
 
             <div class="col-lg-12"  style="padding-right: 0px;padding-left: 0px";>
                 <div class="panel panel-success">
-                    <div class="panel-heading">  <h3 class="panel-title">Salary</h3></div>
+                    <div class="panel-heading">  <h3 class="panel-title"> CENTER Salary</h3></div>
                     <div class="panel-body">
                         {{  data.salary }}
                     </div>
@@ -179,7 +128,7 @@
 
           <div class="col-lg-12" style="padding-right: 0px;padding-left: 0px;">
                 <div class="panel panel-success">
-                    <div class="panel-heading">  <h3 class="panel-title">Scope</h3></div>
+                    <div class="panel-heading">  <h3 class="panel-title"> CENTER Scope</h3></div>
                     <div class="panel-body">
                         Panel content
                     </div>
@@ -189,7 +138,7 @@
 
           <div class="col-lg-12" style="padding-right: 0px;padding-left: 0px;">
                 <div class="panel panel-success">
-                    <div class="panel-heading">  <h3 class="panel-title">What They Do?</h3></div>
+                    <div class="panel-heading">  <h3 class="panel-title"> CENTER What They Do?</h3></div>
                     <div class="panel-body">
                     {# what they do DATA#}
                             <ul>
@@ -205,7 +154,7 @@
 
           <div class="col-lg-12"  style="padding-right: 0px;padding-left: 0px;">
                 <div class="panel panel-success ">
-                    <div class="panel-heading">  <h3 class="panel-title">How To Become One?</h3></div>
+                    <div class="panel-heading">  <h3 class="panel-title"> CENTER How To Become One?</h3></div>
                     <div class="panel-body">
             {# SKILL DATA#}
                          <ul style="padding-left: 25px;">
@@ -219,7 +168,7 @@
 
             <div class="col-lg-12 col-md-12" style="padding-right: 0px;padding-left: 0px;">
                 <div class="panel panel-success">
-                    <div class="panel-heading">  <h3 class="panel-title">Who Should Join?</h3></div>
+                    <div class="panel-heading">  <h3 class="panel-title">CENTER Who Should Join?</h3></div>
                     <div class="panel-body">
                     {# Ability DATA#}
                          <ul>
@@ -233,7 +182,7 @@
 
           <div class="col-lg-12"  style="padding-right: 0px;padding-left: 0px;">
                 <div class="panel panel-success">
-                    <div class="panel-heading">  <h3 class="panel-title">Specialization can be Done in</h3></div>
+                    <div class="panel-heading">  <h3 class="panel-title"> CENTER Specialization can be Done in</h3></div>
                     <div class="panel-body">
 
                     {# Knowledge DATA#}
@@ -249,7 +198,7 @@
 
             <div class="col-lg-12" style="padding-right: 0px;padding-left: 0px;">
                 <div class="panel panel-success">
-                    <div class="panel-heading">  <h3 class="panel-title">Where I could Work?</h3></div>
+                    <div class="panel-heading">  <h3 class="panel-title"> CENTER Where I could Work?</h3></div>
                     <div class="panel-body">
                     {# Technology DATA#}
                         <ul>
@@ -268,7 +217,7 @@
 
             <div class="col-lg-12" style="padding-right: 0px;padding-left: 0px;">
                 <div class="panel panel-success">
-                    <div class="panel-heading">  <h3 class="panel-title">Related Occupation</h3></div>
+                    <div class="panel-heading">  <h3 class="panel-title"> CENTER Related Occupation</h3></div>
                     <div class="panel-body">
                        <ul>
                            {%  for d in data.related %}
@@ -284,11 +233,70 @@
 
 
 
+            <div class="col-lg-3 col-md-pull-6">
+
+            <div class="panel panel-default">
+  <div class="panel-body">
+
+
+
+
+                <div class="panel panel-default">
+
+                    <div class="panel-body">
+                      <h3 class="panel-title"> LEFT COlumn Scope</h3>
+                        Panel content
+                    </div>
+                </div>
+
+
+                 <div class="panel panel-default">
+
+                    <div class="panel-body">
+
+                    <h3 class="panel-title"> LEFT What They Do?</h3>
+                    {# what they do DATA#}
+                            <ul>
+                                {%  for d in data.wtd %}
+                           <li>{{  d }}</li>
+                            {% endfor %}
+
+                            </ul>
+                    </div>
+                </div>
+
+
+
+            <div class="col-lg-12 col-md-12" style="padding-right: 0px;padding-left: 0px;">
+                <div class="panel panel-success">
+                    <div class="panel-heading">  <h3 class="panel-title"> LEFT Who Should Join?</h3></div>
+                    <div class="panel-body">
+                    {# Ability DATA#}
+                         <ul>
+                             {%  for d in data.who %}
+                           <li>{{  d }}</li>
+                            {% endfor %}
+                         </ul>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            </div>
+            </div>
+</div>
+
+
+
+
 
             <div class="col-lg-3">
                 <div class="col-lg-12" style="padding-right: 0px;padding-left: 0px";>
                 <div class="panel panel-success">
-                    <div class="panel-heading">  <h3 class="panel-title"> {field name} </h3></div>
+                    <div class="panel-heading">  <h3 class="panel-title"> RIGHT {field name} </h3></div>
                     <div class="panel-body" style="margin-bottom: 0px;">
                         <img src="/static/img/career-eng.jpg" class="img-responsive">
                     </div>
@@ -297,7 +305,7 @@
 
                 <div class="col-lg-12"  style="padding-right: 0px;padding-left: 0px;">
                 <div class="panel panel-success ">
-                    <div class="panel-heading">  <h3 class="panel-title">How To Become One?</h3></div>
+                    <div class="panel-heading">  <h3 class="panel-title"> RIGHT How To Become One?</h3></div>
                     <div class="panel-body">
             {# SKILL DATA#}
                          <ul style="padding-left: 25px;">
@@ -311,7 +319,7 @@
 
             <div class="col-lg-12"  style="padding-right: 0px;padding-left: 0px;">
                 <div class="panel panel-success">
-                    <div class="panel-heading">  <h3 class="panel-title">Specialization can be Done in</h3></div>
+                    <div class="panel-heading">  <h3 class="panel-title"> RIGHT Specialization can be Done in</h3></div>
                     <div class="panel-body">
 
                     {# Knowledge DATA#}
@@ -341,6 +349,7 @@
    </div>
 </div>
 
-
+ <script src="/static/js/jquery-2.1.1.js"></script>
+  <script src="/static/js/search_colg.js"></script>
 
 {% endblock %}
