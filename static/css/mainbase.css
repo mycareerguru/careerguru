@@ -367,6 +367,10 @@ Third row Img Hover Iffect*/
     z-index: 12;
 }
 
+.nav .dropdown:hover {
+     border: 2px solid black;
+}
+
 
 
 
@@ -392,6 +396,9 @@ Third row Img Hover Iffect*/
     background-color: #d9534f;
 }
 
+.dropdown:hover .purple {
+    background-color: mediumpurple;
+}
 .kns hr{
     margin-top: 0px;
 }
@@ -441,6 +448,7 @@ li ul .dropdown-submenu:hover>.dropdown-menu {
 
 .dropdown-submenu:hover>a:after {
     border-left-color: #ccc;
+
 }
 
 .dropdown-submenu.pull-left {
@@ -701,4 +709,11 @@ li ul .dropdown-submenu:hover>.dropdown-menu {
         width: 80%;
     }
 
+}
+
+
+.btn-purple{
+        color: #fff;
+    background-color: mediumpurple;
+    border-color: mediumpurple;
 }
