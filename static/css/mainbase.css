@@ -279,7 +279,8 @@ body{
 
 }
 .panel{
-      margin-bottom: 15px;
+      margin-bottom:2px;
+
 }
 
 
@@ -638,7 +639,7 @@ li ul .dropdown-submenu:hover>.dropdown-menu {
     color:#ffffff;
    /* padding-left: 0px;
     padding-right: 0px;*/
-    width: 160px;
+
 }
 
 .b1{

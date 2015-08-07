@@ -49,10 +49,12 @@
 </head>
 
 <body>
-
+<div class="row">
+<div class="col-lg-12" >
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top " role="navigation" style="margin-bottom:0px;">
         <div class="container">
+        <div class="col-lg-3">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -61,14 +63,17 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="/"> <img class="img-responsive" src="/static/img/mainlogo.png"></a>
+                <a href="/"> <img class="img-responsive" src="/static/img/mainlogo.png" style="padding-left: 4px;"></a>
             </div>
+        </div>
+        <div class="col-lg-9 pull-right">
+            <!-- Brand and togg
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="collapse navbar-collapse  " id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
 
                     <li class="dropdown btn btn-primary" style="padding: 3px;">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Step By Step <b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Career Planning <b class="caret"></b></a>
                         <ul class="dropdown-menu blue">
                             <li><a href="/step1">What is a Career? </a></li>
                                 <li><a href="/step2">Self-Assessment </a></li>
@@ -83,7 +88,7 @@
 
                      <li class="dropdown btn btn-success" style="padding: 3px;">
 
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Parents <b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">In a Nutshell <b class="caret"></b></a>
                         <ul class="dropdown-menu green">
                             <li><a href="/parents1">Talk to your child about careers </a></li>
                                 <li><a href="/parents2">Exploring interests, skills and occupations </a></li>
@@ -93,7 +98,7 @@
                     </li>
 
                      <li class="dropdown btn btn-info" style="padding: 3px;">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Explore Careers <b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Career Options <b class="caret"></b></a>
                         <ul class="dropdown-menu skyblue">
                             <li><a href="/exp1">Browse occupations </a></li>
                                 <li><a href="/exp2">Matching interests and skills to a career </a></li>
@@ -104,7 +109,7 @@
                     </li>
 
                      <li class="dropdown btn btn-default" style="padding: 3px;">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Changing Careers <b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ours Programs <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li><a href="/cc1">What's out there? </a></li>
                                 <li><a href="/cc2">I need a job now </a></li>
@@ -146,6 +151,31 @@
 
 
                     <li class="dropdown btn btn-danger" style="padding: 3px;">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Knowledge Society <b class="caret"></b></a>
+                        <ul class="dropdown-menu red">
+                            <li><a class="btn btn-block btn-social btn-envelope">
+                                <i class="fa fa-envelope"></i> Send Us An Email
+                            </a></li>
+                            <li><a class="btn btn-block btn-social btn-facebook">
+                                <i class="fa fa-facebook "></i> Find Us On Facebook
+                            </a></li>
+                            <li><a class="btn btn-block btn-social btn-google-plus">
+                                <i class="fa fa-google-plus "></i> Find Us On Google+
+                            </a></li>
+
+                            <li><a class="btn btn-block btn-social btn-youtube">
+                                <i class="fa fa-youtube "></i> Find Us On YouTube
+                            </a></li>
+                            <li><a class="btn btn-block btn-social-icon btn-twitter">
+                                <i class="fa fa-twitter fa"></i> Follow Us On Twitter
+                            </a></li>
+
+
+                        </ul>
+                    </li>
+
+
+                    <li class="dropdown btn btn-danger" style="padding: 3px;">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact Us <b class="caret"></b></a>
                         <ul class="dropdown-menu red">
                             <li><a class="btn btn-block btn-social btn-envelope">
@@ -169,13 +199,73 @@
                         </ul>
                     </li>
 
+
                 </ul>
-            </div>
+
             <!-- /.navbar-collapse -->
+
+            <div class="col-lg-12 b1" style=" margin-top:38px;">
+            <div class="col-lg-2 sd2"> <h4 style="margin-top: 6px;margin-bottom:0px;">College Search</h4> </div>
+                <form action="/search1/" method="get">
+
+
+                    <div id="title">
+                        <select id="foo" class=" sd1 col-lg-2"  name="cs"  style="width: 20%;">
+
+                            <option value="">Main Stream</option>
+                            {% for i in item %}
+                                <option value="{{ i.id }}">{{ i.id }} {{ i.name }}</option>
+                            {% endfor %}
+                        </select>
+
+                        <div id="subcources">
+                            <select id="foo1" class="sd1 col-lg-2" name="scs" style="width: 19%;">
+                                <option value="">Sub-Course </option>
+                            </select>
+                        </div>
+
+
+                        <select id="state" class="sd1 col-lg-2" name="state" style="width: 13%;">
+                            <option value="">Select State</option>
+                            {% for i in state %}
+                                <option value="{{ i.id }}"> {{ i.name }}</option>
+                            {% endfor %}
+                        </select>
+                        <div id="city1">
+                            <select id="city" class="sd1 col-lg-1" name="city" style="width: 12%;">
+                                <option value="">Select City</option>
+                                {% for i in city %}
+                                    <option value="{{ i.id }}">{{ i.name }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <div id="level1">
+                            <select id="level" class="sd1 col-lg-1" name="level" style="width: 8.5%;">
+                                <option value=""> Level</option>
+                                {% for i in level %}
+                                    <option value="{{ i.id }}">{{ i.name }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-1 pull-right">
+                         <div class="input-group-btn ">
+                                                <button class="btn btn-success" type="submit" style="padding: 3px 25px;"><i class="glyphicon glyphicon-search"></i></button>
+                                            </div>
+                    </div>
+                </form>
+            </div>
         </div>
+        </div>
+</div>
+
+
         <!-- /.container -->
     </nav>
-
+</div>
+</div>
     {% block contents %}{% endblock %}
 
 {% comment %}        <!-- Footer -->
