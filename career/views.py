@@ -336,3 +336,6 @@ def aptitest(request):
     return render(request, "apti.html")
 
 
+
+def testfloat(request):
+    return render(request, "testing.html")

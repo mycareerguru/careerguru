@@ -121,5 +121,6 @@ urlpatterns = patterns('',
 
     # rough developing perpose not in use in actual project
      url(r'^test5/$', 'career.views.test5'),
+    url(r'^testfloat/$', 'career.views.testfloat'),
 
 )
