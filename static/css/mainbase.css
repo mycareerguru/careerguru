@@ -43,7 +43,7 @@ body{
   }
 
 .img-portfolio{
-      margin-bottom: 30px;
+      margin-bottom: 15px;
       border: 3px solid #000;
 }
 
@@ -378,15 +378,15 @@ Third row Img Hover Iffect*/
 
 
 .dropdown:hover .blue {
-    background-color: #3394B2;
+    background-color: mediumpurple;
 }
 
 .dropdown:hover .green {
-    background-color: #5cb85c;
+    background-color: turquoise;
 }
 
 .dropdown:hover .skyblue {
-    background-color: #31b0d5;
+    background-color: blue;
 }
 
 .dropdown:hover .yellow {
@@ -686,7 +686,7 @@ content: " ";
     padding: 3px;
     border-radius: 3px;
     margin:2px;
-    width: 14.5%;
+
 }
 
 .sd2{
@@ -750,12 +750,14 @@ content: " ";
 
 }
 
-@media (max-width: 792px){
+@media (min-width: 792px){
     .sd1{
         width: 80%;
     }
 
 }
+
+
 
 
 .btn-purple{
@@ -764,7 +766,94 @@ content: " ";
     border-color: mediumpurple;
 }
 
+.btn-violet{
+        color: #fff;
+    background-color:yellowgreen;
+    border-color: yellowgreen;
+}
+
+.btn-turquoise{
+        color: #fff;
+    background-color:turquoise;
+    border-color: turquoise;
+}
+
+.btn-indigo{
+        color: #fff;
+    background-color:mediumblue;
+    border-color: mediumblue;
+}
+
+.btn-yellow{
+        color: #fff;
+    background-color: #ffff00;
+    border-color: #ffff00;
+}
+
+.btn-rd{
+        color: #fff;
+    background-color: red;
+    border-color: red;
+}
+
+.btn-pink{
+        color: #fff;
+    background-color: hotpink;
+    border-color: hotpink;
+}
+
+.btn-orange{
+        color: #fff;
+    background-color: orange;
+    border-color: orange;
+}
+
 
 .rd{
     border-radius: 3px;
+}
+
+
+#city{
+    width: 12%;
+}
+
+#level{
+    width:8.5%
+}
+
+#foo{
+    width: 20%;
+}
+
+#foo1{
+    width: 19%;
+}
+
+#state{
+    width: 13%;
+}
+
+
+@media (max-width: 900px) {
+
+    #city {
+        width: 80%;
+    }
+
+    #level {
+        width: 80%
+    }
+
+    #foo {
+        width: 80%;
+    }
+
+    #foo1 {
+        width: 80%;
+    }
+
+    #state {
+        width: 80%;
+    }
 }
