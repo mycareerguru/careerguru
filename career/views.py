@@ -55,6 +55,7 @@ def search(request):
 
 def search1(request):
     slist = []
+
     query = "select * from career_institute_details A JOIN career_course B ON A.id=B.colg_id JOIN career_subtag C ON B.subtag_id=C.id JOIN career_tag D ON D.id=C.tag_id";
     if 'city' in request.GET and request.GET['city']:
         query += " and A.city_id = " + request.GET['city']
@@ -68,13 +69,17 @@ def search1(request):
         query += " and C.tag_id = " + request.GET['cs']
 
 
+
     x = Course.objects.raw(query)
     stag = list(x)
     slist = set(stag)
 
 
-    return render_to_response('search1.html', {
-        'slist': slist
+    return render_to_response('colg_search.html', {
+        'slist': slist,
+
+
+
     })
 
 
@@ -202,7 +207,7 @@ def colgpage(request, colg1_id=1):
         'state': State.objects.all(),
         'city': City.objects.all(),
         'level':Degree_type.objects.all(),
-        'item' : o,
+        'item5' : o,
         'x' : x
     })
 

@@ -1,102 +1,83 @@
-<html>
-    <head>
-        <title>
-        colg search
-        </title>
-        <link type="text/css" rel="stylesheet" href=/static/css/FAQ.css>
-    </head>
+{% extends "base5.html" %}
+{% block contents %}
 
-    <body>
-    <div id="container">
-        <div id="content">
-        <div class="wrapper">
-            <form action="/search1/" method="get">
+    <div class="container">
 
-            <div id="title">
-    <select id="foo" class="dd sd" name="cs">
+        <div class="row" >
+<div class="col-lg-12" style="border: solid 1px #000000">
+       <h1> {{ scs }}</h1>
+        </div>
+            </div>
+        <div class="row">
 
-        <option value="">Select Course Stream</option>
-        {% for i in item %}
-
-            <option value="{{ i.id}}">{{ i.id }} {{ i.name }}</option>
-
-        {% endfor %}
-    </select>
-
-    <div id="subcources">
-        <select id="foo1" class="dd sd" name="scs">
-            <option value="">Select Sub-Course Stream</option>
-
-        </select>
-    </div>
-
-
-       <select id="state" class="dd sd" name="state">
-
-        <option value="">All India</option>
-        {% for i in state %}
-
-            <option value="{{ i.id }}"> {{ i.name }}</option>
-
-        {% endfor %}
-    </select>
-
-    <div id="city1">
-        <select id="city" class="dd sd" name="city">
-            <option value="">Select City</option>
-            {% for i in city%}
-
-            <option value="{{ i.id}}">{{ i.name }}</option>
-
-        {% endfor %}
-        </select>
-    </div>
-
+            <div class="col-lg-12">
+                <div class="col-lg-2" style="border: solid 1px #000000;">
+Left side
 </div>
-                 <input type="submit"  value=" Submit " class="registerbtn">
-                </form>
-        </div>
 
 
+<div>
+<div class="col-lg-8" style="border: solid 1px #000000;background-color: #E9E6C7">
+                    {% if slist %}
+                        {% for t in slist %}
 
-        </div>
+
+                   <div class="col-lg-12 row" style="border: solid 1px #000000">
+                    <div class="col-lg-2" style="border: solid 1px #000000;min-height: 100px;">
+        colg logo
     </div>
 
-    <script src="/static/js/jquery-2.1.1.js"></script>
-    <script type="text/javascript">
-        $(function() {
-            $("#foo").change(function() {
-                var field  = $("#foo").val();
-                var parts = field.split(" ");
-                console.log(parts);
-                console.log("value changed " + parts[0]);
-                url = "/dropdown2/" + parts[0];
-                $.get(url).success(function(data) {
-                    console.log(data);
-                    $("#foo1").html(data);
-                }  )
-            });
 
-             $("#state").change(function() {
-                var field  = $("#state").val();
-                var parts = field.split(" ");
-                console.log(parts);
-                console.log("value changed " + parts[0]);
-                url = "/city/" + parts[0];
-                $.get(url).success(function(data) {
-                    console.log(data);
-                    $("#city").html(data);
-                }  )
-            });
-            {% comment %}$("#foo1").change(function){
+                    <div class="col-lg-10">
+                        <h2> <a href="colgpage/{{ t.id }}/">{{ t.name }}</a></h2> city private/public
+                        course search name (approved by)
+                        course duration :
+                    </div>
+
+                    <div class="col-lg-12">
+                        <div class="col-lg-12">
+                        Eligibility :
+                        Also offering Courses of :</div>
+                        <div class="col-lg-5">
+                            <ul>
+                                <li>
+                                    comp sciens
+                                </li>
+                                <li>
+                                    comp sciens
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col-lg-5">
+                            <ul>
+                                <li>
+                                    physics
+                                </li>
+                                <li>
+                                    commerse
+                                </li>
+                            </ul>
+                            </div>
+                        <div class="col-lg-2">
+
+                            <a href="colgpage/{{ t.id }}/"> <button type="button" class="btn btn-success" style="width: 119px;padding: 3px;float: right;">Apply</button> </a>
+                        </div>
 
 
-            }{% endcomment %}
-        });
+                    </div>
+                </div>
+{%endfor%}
+                    {% else %}
+                        no data found
+                    {% endif %}
+</div>
+                </div>
 
-
-
-    </script>
-    </body>
-
-</html>
+                <div class="col-lg-2" style="border: solid 1px #000000">
+right 2 colm block
+</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
