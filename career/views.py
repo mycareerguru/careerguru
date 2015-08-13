@@ -161,11 +161,20 @@ def dropdown2(request, tag_id=1):
         'tags': subtags})
 
 
+
+
 def city(request, state_id=1):
     o = State.objects.get(pk=state_id)
     city = City.objects.filter(state=o)
     return render_to_response("city.html", {
         'city': city})
+
+
+def colginfosearch(request, colg_id=1):
+    o = Institute_details.objects.get(pk=colg_id)
+
+    return render_to_response("colginfosearch.html", {
+        'o': o})
 
 
 def recentfaq(request, tag_id=1):

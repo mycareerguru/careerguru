@@ -34,6 +34,7 @@ urlpatterns = patterns('',
 
     url(r'^dropdown2/(?P<tag_id>\w+)/$','career.views.dropdown2'),
     url(r'^city/(?P<state_id>\w+)/$','career.views.city'),
+    url(r'^colginfosearch/(?P<colg_id>\w+)/$','career.views.colginfosearch'),
     url(r'^overview/(?P<colg_id>\w+)/$', 'career.views.overview'),
     url(r'^coursesoff/(?P<colg_id>\w+)$', 'career.views.coursesoff'),
     url(r'^campfac/(?P<college_id>\w+)/$', 'career.views.campfac'),
