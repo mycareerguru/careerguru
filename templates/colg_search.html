@@ -80,4 +80,27 @@ right 2 colm block
             </div>
         </div>
     </div>
+
+    <div id="pageid">
+
+    </div>
+
+    <script>
+    $("#pageid").live("pageinit",function(){
+    $.ajax({
+        type:'GET',
+        url:'/colginfosearch/',
+        success:function(data){
+            console.log(data)
+            $.each(data,function(i,data){
+                $data.append(
+                    '<li>name:'+data.name+',est:'+data.est+',city:'+data.city+'</li>'
+                )
+            })
+        }
+    });
+
+});
+
+    </script>
 {% endblock %}
