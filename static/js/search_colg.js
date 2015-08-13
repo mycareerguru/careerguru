@@ -28,18 +28,3 @@ $(function() {
 
         });
 
-$(function(){
-    $.ajax({
-        type:'GET',
-        url:'/colginfosearch/',
-        success:function(data){
-            console.log(data)
-            $.each(data,function(i,data){
-                $data.append(
-                    '<li>name:'+data.name+',est:'+data.est+',city:'+data.city+'</li>'
-                )
-            })
-        }
-    });
-
-});
