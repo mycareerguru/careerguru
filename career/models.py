@@ -197,3 +197,18 @@ class Course(models.Model):
 
     def __unicode__(self):
         return str(self.name)+ " " + str(self.colg)
+
+
+class Entranse(models.Model):
+    name=models.TextField()
+    eligibility=models.TextField()
+    fees=models.TextField()
+    seats=models.IntegerField()
+    hod=models.TextField()
+    hod_email=models.TextField()
+    course_type=models.ForeignKey(Degree_type)
+    colg=models.ForeignKey(Institute_details)
+    subtag = models.ForeignKey(Subtag)
+
+    def __unicode__(self):
+        return str(self.name)+ " " + str(self.colg)

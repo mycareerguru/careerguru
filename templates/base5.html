@@ -122,13 +122,14 @@
                         </ul>
                     </li>
 
-                   <li class="dropdown btn btn-danger yellow" style="padding: 1px;">
-            <a  role="button" class="dropdown-toggle" data-toggle="dropdown">
-                Entrance Test <span class="caret"></span>
+
+              {% comment %}*****************  multi level dropdown box ****************{% endcomment %}
+     {% comment %}              <li class="dropdown btn btn-danger yellow" style="padding: 1px;">
+            <a  role="button" class="dropdown-toggle" data-toggle="dropdown">Entrance Test <span class="caret"></span>
             </a>
     		<ul class="dropdown-menu multi-level yellow" role="menu" aria-labelledby="dropdownMenu">
-              <li><a href="#">Some action</a></li>
-              <li><a href="#">Some other action</a></li>
+              <li><a href="#">Medical</a></li>
+              <li><a href="#">Engineering</a></li>
 
               <li class="dropdown-submenu yellow">
                 <a tabindex="-1" href="#">Hover me for more options</a>
@@ -147,7 +148,24 @@
               </li>
             </ul>
 
+</li>{% endcomment %}
+
+                    <li class="dropdown btn btn-danger yellow" style="padding: 1px;">
+            <a  role="button" class="dropdown-toggle" data-toggle="dropdown">Entrance Test <span class="caret"></span>
+            </a>
+    		<ul class="dropdown-menu multi-level yellow" role="menu" aria-labelledby="dropdownMenu">
+              <li><a href="/et1">Medical</a></li>
+              <li><a href="/et2">Engineering</a></li>
+              <li><a href="/et3">Pharmacy</a></li>
+              <li><a href="/et4">Law</a></li>
+              <li><a href="/et5">Management</a></li>
+              <li><a href="/et6">UPSC</a></li>
+              <li><a href="/et7">Others</a></li>
+            </ul>
+
 </li>
+
+
 
 
                     <li class="dropdown btn btn-warning" style="padding: 1px;">

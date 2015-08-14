@@ -54,6 +54,7 @@ urlpatterns = patterns('',
      url(r'^explore/$','career.views.explore'),
     url(r'^colginfo5/$','career.views.colginfo5'),
     url(r'^aptitest/$', 'career.views.aptitest'),
+     url(r'^entrance/$', 'career.views.entrance'),
     # step-by-step url
 
                        url(r'^step1/$', 'career.menu_view.step1'),
@@ -117,6 +118,17 @@ urlpatterns = patterns('',
                        url(r'^test9/$', 'career.aptitest_view.test9'),
                        url(r'^test10/$', 'career.aptitest_view.test10'),
                        url(r'^test11/$', 'career.aptitest_view.test11'),
+
+
+                    # Entrece exam menu
+
+                       url(r'^et1/$', 'career.aptitest_view.test1'),
+                       url(r'^et2/$', 'career.aptitest_view.test2'),
+                       url(r'^et3/$', 'career.aptitest_view.test3'),
+                       url(r'^et4/$', 'career.aptitest_view.test4'),
+                       url(r'^et5/$', 'career.aptitest_view.test5'),
+                       url(r'^et6/$', 'career.aptitest_view.test6'),
+                       url(r'^et7/$', 'career.aptitest_view.test7'),
 
 
 
