@@ -4,10 +4,10 @@
     <div class="container">
 
         <div class="row" >
-<div class="col-lg-12" style="border: solid 1px #000000">
-       <h1> {{ scs }}</h1>
-        </div>
+            <div class="col-lg-12" style="border: solid 1px #000000">
+                <h1> {{ scs }}</h1>
             </div>
+        </div>
         <div class="row">
 
             <div class="col-lg-12">
@@ -15,63 +15,64 @@
 Left side
 </div>
 
+<div id="colginfosearch">
 
-<div>
-<div class="col-lg-8" style="border: solid 1px #000000;background-color: #E9E6C7">
+                <div class="col-lg-8" style="border: solid 1px #000000;background-color: #E9E6C7">
                     {% if slist %}
                         {% for t in slist %}
 
 
-                   <div class="col-lg-12 row" style="border: solid 1px #000000">
-                    <div class="col-lg-2" style="border: solid 1px #000000;min-height: 100px;">
+                            <div class="col-lg-12 row" style="border: solid 1px #000000">
+                                <div class="col-lg-2" style="border: solid 1px #000000;min-height: 100px;">
         colg logo
     </div>
 
 
-                    <div class="col-lg-10">
-                        <h2> <a href="colgpage/{{ t.id }}/">{{ t.name }}</a></h2> city private/public
-                        course search name (approved by)
-                        course duration :
-                    </div>
+                                <div class="col-lg-10">
+                                   <p> <h2> <a href="colgpage/{{ t.id }}/">{{ t.name }}</a></h2></p><p> est:{{ t.est }} city:{{ t.city}}  private/public:{{ t.aided }}
+                                    (approved by):{{ t.approved }} NAAC : {{ t.naac }}</p>
+                                    course duration :{{ t.eligibility }}
+                                </div>
 
-                    <div class="col-lg-12">
-                        <div class="col-lg-12">
+                                <div class="col-lg-12">
+                                    <div class="col-lg-12">
                         Eligibility :
                         Also offering Courses of :</div>
-                        <div class="col-lg-5">
-                            <ul>
-                                <li>
-                                    comp sciens
-                                </li>
-                                <li>
-                                    comp sciens
-                                </li>
-                            </ul>
-                        </div>
+                                    <div class="col-lg-5">
+                                        <ul>
+                                            <li>
 
-                        <div class="col-lg-5">
-                            <ul>
-                                <li>
-                                    physics
-                                </li>
-                                <li>
-                                    commerse
-                                </li>
-                            </ul>
+                                            </li>
+                                            <li>
+
+                                            </li>
+
+                                        </ul>
+                                    </div>
+
+                                    <div class="col-lg-5">
+                                        <ul>
+                                            <li>
+                                                physics
+                                            </li>
+                                            <li>
+                                                commerse
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-lg-2">
+
+                                        <a href="colgpage/{{ t.id }}/"> <button type="button" class="btn btn-success" style="width: 119px;padding: 3px;float: right;">Apply</button> </a>
+                                    </div>
+
+
+                                </div>
                             </div>
-                        <div class="col-lg-2">
-
-                            <a href="colgpage/{{ t.id }}/"> <button type="button" class="btn btn-success" style="width: 119px;padding: 3px;float: right;">Apply</button> </a>
-                        </div>
-
-
-                    </div>
-                </div>
-{%endfor%}
+                        {%endfor%}
                     {% else %}
                         no data found
                     {% endif %}
-</div>
+                    </div>
                 </div>
 
                 <div class="col-lg-2" style="border: solid 1px #000000">
@@ -85,22 +86,5 @@ right 2 colm block
 
     </div>
 
-    <script>
-    $("#pageid").live("pageinit",function(){
-    $.ajax({
-        type:'GET',
-        url:'/colginfosearch/',
-        success:function(data){
-            console.log(data)
-            $.each(data,function(i,data){
-                $data.append(
-                    '<li>name:'+data.name+',est:'+data.est+',city:'+data.city+'</li>'
-                )
-            })
-        }
-    });
 
-});
-
-    </script>
 {% endblock %}

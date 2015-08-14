@@ -28,3 +28,19 @@ $(function() {
 
         });
 
+$("#colginfosearch").live("pageinit",function(){
+            var slistid = $()
+            $.ajax({
+                type:'GET',
+                url:'/colginfosearch/ +[i]',
+                success:function(data){
+                    console.log(data)
+                    $.each(data,function(i,data){
+                        $data.append(
+                                '<li>name:'+data.name+',est:'+data.est+',city:'+data.city+'</li>'
+                        )
+                    })
+                }
+            });
+
+        });
