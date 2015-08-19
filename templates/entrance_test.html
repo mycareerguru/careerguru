@@ -1,0 +1,182 @@
+{% extends "base5.html" %}
+{% block contents %}
+
+
+
+
+
+
+    <div class="container" >
+
+
+        <section class="one" >
+
+
+            <div class="row topmargin" >
+                <div class="col-md-3" id="gry2" >
+
+                    <div id="sidebar">
+                        <div class="link">
+
+                            <div class="lmenu bio-section-plus-minus">
+                                <div class="row">
+                                    <div class="col-xs-9"><h1>{{ item5.name }}</h1> </div>
+                                    <div class="col-xs-3" >
+                                        <img src="/images/plus.png"  alt="" class="ar-down bio-section-plus">
+                                        <img src="/images/minus.png"  alt="" class="ar-down bio-section-minus"></div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+
+                            <ul class="mobile-open-left" id="nav1" >
+                               {% comment %} <li><h3 style="padding-right:10px;padding-top: 5px;"><b>College Menu</b></h3></li>{% endcomment %}
+                                <li><a href="#college"> State</a></li>
+                                <li><a href="#courses"> Exam</a></li>
+                                <li><a href="#overview">About</a></li>
+                                <li><a href=#achievement>Eligibility</a></li>
+                                <li><a href=#faculty>Admit Card</a></li>
+                                <li><a href="#facility">Exam Pattern</a></li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="col-md-6 whitebg">
+                    <p style="text-align:center;">
+                        <img alt="Heading" class="img-responsive center-block" src="/uploads/page/headimg_url/235/heading.jpg" />
+                    </p>
+                    <div id="college"><!--youtube video replace-->
+
+                        <div class="mobile-show"><h1>{{ item5.name }}</h1></div>
+                        <h2>{{ item.name }}</h2>
+                        <p>est:{{ item.est }}   approved:{{ item.approved }}   aided:{{ item.aided }}</p>
+
+                    </div>
+                    <div class="division"></div>
+                    <div id="courses"><div class="mobile-show"> </div>
+
+                        <div class="mobile-show"><h1>course type</h1></div>
+                        <h1>course type</h1>
+                        {% for i in x %}
+                        <p>  {{ i.name}}  ( {{ i.seats }} ) fees:Rs.{{ i.fees }}</p>
+
+
+                        {% endfor %}
+                    </div>
+                    <div class="division"></div>
+                    <div id="overview"><div class="mobile-show"> </div>
+
+                        <div class="mobile-show"><h1>OverView</h1></div>
+                        <h1>OverView</h1>
+                        <p>{{ item5.overview }}</p>
+
+                    </div>
+
+                     <div class="division"></div>
+                    <div id="achievement"><div class="mobile-show"> </div>
+
+                        <div class="mobile-show"><h1>Achievement</h1></div>
+                        <h1>Achievement</h1>
+                        <p>{{ item5.achievement}}</p>
+
+                    </div>
+
+                        <div class="division"></div>
+                        <div id="faculty"></div>
+
+                        <div class="mobile-show"><h1>Faculty</h1></div>
+                        <h1>Faculty</h1>
+                        <p>NO OF TOTAL FACULTY : {{ item.totfaculty }}</p>
+                        <p>NO OF TOTAL Sr. FACULTY : {{ item.seniors }}</p>
+
+
+                    <div class="division"></div>
+                    <div id="facility"></div>
+
+                    <div class="mobile-show"><h1>Facility</h1></div>
+
+                    <h1>Facility</h1>
+                    <p>Hostel : {{ item5.hostel }}</p>
+                    <p>Auditorium : {{ item5.auditorium }}</p>
+                    <p>Canteen : {{ item5.canteen }}</p>
+                    <p>Ground : {{ item5.ground }}</p>
+                    <p>Lab : {{ item5.lab }}</p>
+                    <p>Library : {{ item5.library }}</p>
+                    <p>Wifi : {{ item5.wifi }}</p>
+
+
+
+
+                <div class="division"></div>
+                <div id="contact"></div>
+
+                <div class="mobile-show"><h1>Contact details</h1></div>
+                <h1>Contact details</h1>
+                <p>Address : {{ item5.address }}</p>
+                <p>City : {{ item5.city }}</p>
+                <p>State : {{ item5.state }}</p>
+                <p>Pin No : {{ item5.pin }}</p>
+                <p>Phone No : {{ item5.phone }}</p>
+                <p>Email  : {{ item5.email }}</p>
+                <p>Website : {{ item5.website }}</p>
+
+            </div>
+
+
+            <div class="col-md-3" >
+
+                     <div class="col-lg-12"  style="padding-right: 0px;padding-left: 0px;">
+                <div class="panel panel-success ">
+                    <div class="panel-heading">  <h3 class="panel-title">How To Become One?</h3></div>
+                    <div class="panel-body">
+                    <p> Thinking about the pros and cons of different options and picking the best one</p>
+                    <p> Figuring out how a system should work and how changes in the future will affect it</p>
+                        <p> Thinking about the pros and cons of different ways to solve a problem</p>
+                        <p>Reading work related information </p>
+                        <p>Noticing a problem and figuring out the best way to solve it </p>
+                        <p> Direct or coordinate activities of engineering or technical personnel involved in designing, fabricating, modifying, or testing of aircraft or aerospace products.</p>
+                    </div>
+                </div>
+            </div>
+
+
+                </div>
+
+            <div class="division"></div>
+
+
+
+        </section>
+    </div>
+
+    </div>
+
+
+
+    <script src="/static/js/jquery-2.1.1.js"></script>
+    <script src="/static/js/plugin.js"></script>
+    <script src="/static/js/search_colg.js"></script>
+   {% comment %} <script src="/static/js/easing.js"></script>
+     <script src="/static/js/scrolling.js"></script>{% endcomment %}
+     <script src="/static/js/cust.js"></script>
+    <script>
+        $(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top-0
+
+        }, 1000);
+        return false;
+      }
+    }
+  });
+})
+    </script>
+{% endblock %}

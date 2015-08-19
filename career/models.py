@@ -1,4 +1,3 @@
-import StringIO
 from django.contrib.auth.models import User
 from django.db import models
 from django.contrib import admin
@@ -199,16 +198,21 @@ class Course(models.Model):
         return str(self.name)+ " " + str(self.colg)
 
 
-class Entranse(models.Model):
-    name=models.TextField()
-    eligibility=models.TextField()
-    fees=models.TextField()
-    seats=models.IntegerField()
-    hod=models.TextField()
-    hod_email=models.TextField()
-    course_type=models.ForeignKey(Degree_type)
-    colg=models.ForeignKey(Institute_details)
-    subtag = models.ForeignKey(Subtag)
+class Entrance_name(models.Model):
+    name = models.TextField()
 
     def __unicode__(self):
-        return str(self.name)+ " " + str(self.colg)
+        return str(self.name)
+
+
+class Entrance(models.Model):
+    name=models.TextField()
+    eligibility=models.TextField(blank=True)
+    fees=models.TextField(blank=True)
+    admit_card=models.TextField(blank=True)
+    pattern=models.TextField(blank=True)
+    entrance_type=models.ForeignKey(Entrance_name)
+    state = models.ForeignKey(State)
+
+    def __unicode__(self):
+        return str(self.name)

@@ -122,13 +122,13 @@ urlpatterns = patterns('',
 
                     # Entrece exam menu
 
-                       url(r'^et1/$', 'career.aptitest_view.test1'),
-                       url(r'^et2/$', 'career.aptitest_view.test2'),
-                       url(r'^et3/$', 'career.aptitest_view.test3'),
-                       url(r'^et4/$', 'career.aptitest_view.test4'),
-                       url(r'^et5/$', 'career.aptitest_view.test5'),
-                       url(r'^et6/$', 'career.aptitest_view.test6'),
-                       url(r'^et7/$', 'career.aptitest_view.test7'),
+                       # url(r'^medical_test/$', 'career.etest_view.medical'),
+                       # url(r'^engineering_test/$', 'career.etest_view.engineering'),
+                       # url(r'^pharmacy/$', 'career.etest_view.pharmacy'),
+                       # url(r'^law/$', 'career.etest_view.law'),
+                       # url(r'^manaement/$', 'career.etest_view.management'),
+                       # url(r'^upsc/$', 'career.etest_view.upsc'),
+                       # url(r'^others/$', 'career.etest_view.others'),
 
 
 
@@ -136,5 +136,6 @@ urlpatterns = patterns('',
      url(r'^test5/$', 'career.views.test5'),
     url(r'^testfloat/$', 'career.views.testfloat'),
     url(r'^testfloat/$', 'career.views.colgsearch'),
+    url(r'^entrance/$', 'career.views.entrance'),
 
 )
