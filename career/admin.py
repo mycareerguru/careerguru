@@ -1,6 +1,6 @@
 from django.contrib import admin
 from career.models import Tag,Subtag,CareerInfo, College, Course_name, Facility, Faculty,Faq,UserProfile,State,City,Degree, \
-    Question, Qtype, Institute_details, NewCareerInfo, Degree_type, Course
+    Question, Qtype, Institute_details, NewCareerInfo, Degree_type, Course, Entrance_name, Entrance
 
 admin.site.register(Tag)
 admin.site.register(Subtag)
@@ -20,4 +20,5 @@ admin.site.register(Institute_details)
 admin.site.register(NewCareerInfo)
 admin.site.register(Degree_type)
 admin.site.register(Course)
-
+admin.site.register(Entrance_name)
+admin.site.register(Entrance)

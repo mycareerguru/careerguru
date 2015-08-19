@@ -49,12 +49,12 @@ urlpatterns = patterns('',
     url(r'^submitfaq/$','career.views.submitfaq'),
 
     url(r'^newsec/(\w+)/$', 'career.views.newcareerinfo'),
-
+     url(r'^entrance/(?P<test_id>\w+)/$', 'career.views.entrance'),
     url(r'^contact/$','career.views.contact'),
      url(r'^explore/$','career.views.explore'),
     url(r'^colginfo5/$','career.views.colginfo5'),
     url(r'^aptitest/$', 'career.views.aptitest'),
-     url(r'^entrance/$', 'career.views.entrance'),
+
     # step-by-step url
 
                        url(r'^step1/$', 'career.menu_view.step1'),
@@ -136,6 +136,6 @@ urlpatterns = patterns('',
      url(r'^test5/$', 'career.views.test5'),
     url(r'^testfloat/$', 'career.views.testfloat'),
     url(r'^testfloat/$', 'career.views.colgsearch'),
-    url(r'^entrance/$', 'career.views.entrance'),
+
 
 )

@@ -193,6 +193,7 @@ class Course(models.Model):
     course_type=models.ForeignKey(Degree_type)
     colg=models.ForeignKey(Institute_details)
     subtag = models.ForeignKey(Subtag)
+    course_duration=models.TextField()
 
     def __unicode__(self):
         return str(self.name)+ " " + str(self.colg)

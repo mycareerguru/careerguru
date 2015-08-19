@@ -11,41 +11,44 @@
         <div class="row">
 
             <div class="col-lg-12">
-                <div class="col-lg-2" style="border: solid 1px #000000;">
+                <div class="col-lg-2" style="border: solid 1px #000000;background-color: #B9BA6A">
 Left side
+<p> Thinking about the pros and cons of different options and picking the best one</p>
+                    <p> Figuring out how a system should work and how changes in the future will affect it</p>
+                        <p> Thinking about the pros and cons of different ways to solve a problem</p>
+                        <p>Reading work related information </p>
+                        <p>Noticing a problem and figuring out the best way to solve it </p>
 </div>
 
 <div id="colginfosearch">
-
-                <div class="col-lg-8" style="border: solid 1px #000000;background-color: #E9E6C7">
+<div class="col-lg-8">
+                <div class="col-lg-12" style="border: solid 1px #000000;background-color: #E9E6C7">
                     {% if slist %}
                         {% for t in slist %}
 
 
                             <div class="col-lg-12 row" style="border: solid 1px #000000">
-                                <div class="col-lg-2" style="border: solid 1px #000000;min-height: 100px;">
+                                <div class="col-lg-2" style="border: solid 1px #000000;min-height: 70px;width: 70px;">
         colg logo
     </div>
 
 
-                                <div class="col-lg-10">
-                                   <p> <h2> <a href="colgpage/{{ t.id }}/">{{ t.name }}</a></h2></p><p> est:{{ t.est }} city:{{ t.city}}  private/public:{{ t.aided }}
-                                    (approved by):{{ t.approved }} NAAC : {{ t.naac }}</p>
-                                    course duration :{{ t.eligibility }}
+                                <div class="col-lg-10 bold">
+                                   <p style="margin-top: -20px;"> <h2> <a href="colgpage/{{ t.id }}/">{{ t.name }}</a></h2></p><p style="margin-top: -10px;"> <x1>est:</x1>{{ t.est }}  | <x1>city:</x1>{{city}}  | <x1>private/public:</x1>{{ t.aided }}
+                                    | <x1> approved by: </x1>{{ t.approved }} | <x1>NAAC :</x1> {{ t.naac }}</p>
+
                                 </div>
 
-                                <div class="col-lg-12">
+                                <div class="col-lg-12 ">
                                     <div class="col-lg-12">
-                        Eligibility :
-                        Also offering Courses of :</div>
+
+                        <x1 style="margin-left: -10px">Also offering Courses of :</x1></div>
                                     <div class="col-lg-5">
                                         <ul>
                                             <li>
 
                                             </li>
-                                            <li>
 
-                                            </li>
 
                                         </ul>
                                     </div>
@@ -73,11 +76,18 @@ Left side
                         no data found
                     {% endif %}
                     </div>
+</div>
                 </div>
 
-                <div class="col-lg-2" style="border: solid 1px #000000">
-right 2 colm block
-</div>
+                <div class="col-lg-2" style="border: solid 1px #000000;background-color: #B9BA6A">
+
+<p> Thinking about the pros and cons of different options and picking the best one</p>
+                    <p> Figuring out how a system should work and how changes in the future will affect it</p>
+                        <p> Thinking about the pros and cons of different ways to solve a problem</p>
+                        <p>Reading work related information </p>
+                        <p>Noticing a problem and figuring out the best way to solve it </p>
+
+                    </div>
             </div>
         </div>
     </div>

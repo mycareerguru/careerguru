@@ -154,13 +154,9 @@
             <a  role="button" class="dropdown-toggle" data-toggle="dropdown">Entrance Test <span class="caret"></span>
             </a>
     		<ul class="dropdown-menu multi-level yellow" role="menu" aria-labelledby="dropdownMenu">
-              <li><a href="/et1">Medical</a></li>
-              <li><a href="/et2">Engineering</a></li>
-              <li><a href="/et3">Pharmacy</a></li>
-              <li><a href="/et4">Law</a></li>
-              <li><a href="/et5">Management</a></li>
-              <li><a href="/et6">UPSC</a></li>
-              <li><a href="/et7">Others</a></li>
+                {% for et in entrance %}
+              <li><a href="/entrance/{{ et.id }}">{{ et.name }}</a></li>
+              {% endfor %}
             </ul>
 
 </li>

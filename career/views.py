@@ -1,6 +1,6 @@
 from django.shortcuts import render, render_to_response
 from career.models import Tag, Subtag, CareerInfo, Faq, State, City, College, Facility, Question, Qtype, NewCareerInfo,Degree_type, \
-    Course, Institute_details
+    Course, Institute_details, Entrance_name, Entrance
 from django.http.response import HttpResponse
 from itertools import groupby
 
@@ -13,7 +13,8 @@ def index(request):
         'sub': Subtag.objects.all(),
         'state': State.objects.all(),
         'city': City.objects.all(),
-        'level':Degree_type.objects.all()
+        'level':Degree_type.objects.all(),
+        'entrance':Entrance_name.objects.all()
 })
 
 
@@ -70,16 +71,13 @@ def search1(request):
 
 
 
-    x = Course.objects.raw(query)
+    x = Institute_details.objects.raw(query)
     stag = list(x)
+    print(stag)
     slist = set(stag)
-
 
     return render_to_response('colg_search.html', {
         'slist': slist,
-
-
-
     })
 
 
@@ -211,7 +209,7 @@ def colgpage(request, colg1_id=1):
     x = Course.objects.filter(colg_id=o)
 
     return render(request, "colginfo5.html", {
-         'item1': Tag.objects.all(),
+        'item1': Tag.objects.all(),
         'sub': Subtag.objects.all(),
         'state': State.objects.all(),
         'city': City.objects.all(),
@@ -354,5 +352,11 @@ def aptitest(request):
 def testfloat(request):
     return render(request, "testing.html")
 
-def entrance(request):
-    return render(request, "entrance_test.html")
+def entrance(request,test_id=1):
+    o = Entrance_name.objects.get(pk=test_id)
+    x = Entrance.objects.filter(entrance_type=o)
+    return render(request, "entrance_test.html",{
+        'test' : x,
+        'state' : State.objects.all(),
+        'o':o
+    })

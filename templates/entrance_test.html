@@ -7,15 +7,34 @@
 
 
     <div class="container" >
+    <div class="row">
+<div class="col-lg-12" style="border:1px solid #000000">
+            <div class="col-lg-5" ><h2>{{ o.name }} Entrance Test </h2></div>
+            <div class="col-lg-4" style="padding-top: 20px;">
+                <select id="state" class="sd1 col-lg-2" name="state" style="width:47%">
+                            <option value="">Select State</option>
+                            {% for i in state %}
+                                <option value="{{ i.id }}"> {{ i.name }}</option>
+                            {% endfor %}
+                        </select>
+
+                             <select id="state" class="sd1 col-lg-2" name="state" style="width:47%;float: right;">
+                            <option value="">Select Exam</option>
+                            {% for i in test %}
+                                <option value="{{ i.id }}"> {{ i.name }}</option>
+                            {% endfor %}
+                        </select>
+            </div></div></div>
 
 
         <section class="one" >
 
-
             <div class="row topmargin" >
                 <div class="col-md-3" id="gry2" >
 
+
                     <div id="sidebar">
+
                         <div class="link">
 
                             <div class="lmenu bio-section-plus-minus">
@@ -28,10 +47,11 @@
                                 <div class="clearfix"></div>
                             </div>
 
+
+
                             <ul class="mobile-open-left" id="nav1" >
                                {% comment %} <li><h3 style="padding-right:10px;padding-top: 5px;"><b>College Menu</b></h3></li>{% endcomment %}
-                                <li><a href="#college"> State</a></li>
-                                <li><a href="#courses"> Exam</a></li>
+
                                 <li><a href="#overview">About</a></li>
                                 <li><a href=#achievement>Eligibility</a></li>
                                 <li><a href=#faculty>Admit Card</a></li>
@@ -50,16 +70,16 @@
                     </p>
                     <div id="college"><!--youtube video replace-->
 
-                        <div class="mobile-show"><h1>{{ item5.name }}</h1></div>
-                        <h2>{{ item.name }}</h2>
-                        <p>est:{{ item.est }}   approved:{{ item.approved }}   aided:{{ item.aided }}</p>
+                        <div class="mobile-show"><h1>{{ test.name }}</h1></div>
+
+
 
                     </div>
                     <div class="division"></div>
                     <div id="courses"><div class="mobile-show"> </div>
 
-                        <div class="mobile-show"><h1>course type</h1></div>
-                        <h1>course type</h1>
+                        <div class="mobile-show"><h1>About</h1></div>
+                        <h1>About</h1>
                         {% for i in x %}
                         <p>  {{ i.name}}  ( {{ i.seats }} ) fees:Rs.{{ i.fees }}</p>
 
@@ -69,8 +89,8 @@
                     <div class="division"></div>
                     <div id="overview"><div class="mobile-show"> </div>
 
-                        <div class="mobile-show"><h1>OverView</h1></div>
-                        <h1>OverView</h1>
+                        <div class="mobile-show"><h1>Eligibility</h1></div>
+                        <h1>Eligibility</h1>
                         <p>{{ item5.overview }}</p>
 
                     </div>
@@ -78,8 +98,8 @@
                      <div class="division"></div>
                     <div id="achievement"><div class="mobile-show"> </div>
 
-                        <div class="mobile-show"><h1>Achievement</h1></div>
-                        <h1>Achievement</h1>
+                        <div class="mobile-show"><h1>Admitcard</h1></div>
+                        <h1>Admitcard</h1>
                         <p>{{ item5.achievement}}</p>
 
                     </div>
@@ -87,41 +107,13 @@
                         <div class="division"></div>
                         <div id="faculty"></div>
 
-                        <div class="mobile-show"><h1>Faculty</h1></div>
-                        <h1>Faculty</h1>
-                        <p>NO OF TOTAL FACULTY : {{ item.totfaculty }}</p>
-                        <p>NO OF TOTAL Sr. FACULTY : {{ item.seniors }}</p>
+                        <div class="mobile-show"><h1>Exam pattern</h1></div>
+                        <h1>Exam Pattern</h1>
+
 
 
                     <div class="division"></div>
-                    <div id="facility"></div>
 
-                    <div class="mobile-show"><h1>Facility</h1></div>
-
-                    <h1>Facility</h1>
-                    <p>Hostel : {{ item5.hostel }}</p>
-                    <p>Auditorium : {{ item5.auditorium }}</p>
-                    <p>Canteen : {{ item5.canteen }}</p>
-                    <p>Ground : {{ item5.ground }}</p>
-                    <p>Lab : {{ item5.lab }}</p>
-                    <p>Library : {{ item5.library }}</p>
-                    <p>Wifi : {{ item5.wifi }}</p>
-
-
-
-
-                <div class="division"></div>
-                <div id="contact"></div>
-
-                <div class="mobile-show"><h1>Contact details</h1></div>
-                <h1>Contact details</h1>
-                <p>Address : {{ item5.address }}</p>
-                <p>City : {{ item5.city }}</p>
-                <p>State : {{ item5.state }}</p>
-                <p>Pin No : {{ item5.pin }}</p>
-                <p>Phone No : {{ item5.phone }}</p>
-                <p>Email  : {{ item5.email }}</p>
-                <p>Website : {{ item5.website }}</p>
 
             </div>
 
