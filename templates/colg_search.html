@@ -11,7 +11,7 @@
         <div class="row">
 
             <div class="col-lg-12">
-                <div class="col-lg-2" style="border: solid 1px #000000;background-color: #B9BA6A">
+                <div class="col-lg-2 curve" style="border: solid 1px #000000;background-color: #B9BA6A">
 Left side
 <p> Thinking about the pros and cons of different options and picking the best one</p>
                     <p> Figuring out how a system should work and how changes in the future will affect it</p>
@@ -22,7 +22,7 @@ Left side
 
 <div id="colginfosearch">
 <div class="col-lg-8">
-                <div class="col-lg-12" style="border: solid 1px #000000;background-color: #E9E6C7">
+                <div class="col-lg-12 curve" style="border: solid 1px #000000;background-color: #E9E6C7">
                     {% if slist %}
                         {% for t in slist %}
 
@@ -45,9 +45,13 @@ Left side
                         <x1 style="margin-left: -10px">Also offering Courses of :</x1></div>
                                     <div class="col-lg-5">
                                         <ul>
+
                                             <li>
 
+                                                {{ t.course_name}}
+
                                             </li>
+
 
 
                                         </ul>
@@ -55,12 +59,12 @@ Left side
 
                                     <div class="col-lg-5">
                                         <ul>
-                                            <li>
-                                                physics
+                                            {% comment %}<li>
+
                                             </li>
                                             <li>
-                                                commerse
-                                            </li>
+
+                                            </li>{% endcomment %}
                                         </ul>
                                     </div>
                                     <div class="col-lg-2">
@@ -79,7 +83,7 @@ Left side
 </div>
                 </div>
 
-                <div class="col-lg-2" style="border: solid 1px #000000;background-color: #B9BA6A">
+                <div class="col-lg-2 curve" style="border: solid 1px #000000;background-color: #B9BA6A">
 
 <p> Thinking about the pros and cons of different options and picking the best one</p>
                     <p> Figuring out how a system should work and how changes in the future will affect it</p>

@@ -184,7 +184,7 @@ class Degree_type(models.Model):
 
 
 class Course(models.Model):
-    name=models.TextField()
+    course_name=models.TextField()
     eligibility=models.TextField()
     fees=models.TextField()
     seats=models.IntegerField()

@@ -9,7 +9,7 @@ from itertools import groupby
 
 def index(request):
     return render_to_response("mainbase.html", {
-    'item': Tag.objects.all(),
+        'item': Tag.objects.all(),
         'sub': Subtag.objects.all(),
         'state': State.objects.all(),
         'city': City.objects.all(),
@@ -70,14 +70,15 @@ def search1(request):
         query += " and C.tag_id = " + request.GET['cs']
 
 
-
     x = Institute_details.objects.raw(query)
+
     stag = list(x)
-    print(stag)
     slist = set(stag)
 
     return render_to_response('colg_search.html', {
         'slist': slist,
+
+
     })
 
 

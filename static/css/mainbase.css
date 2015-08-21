@@ -382,22 +382,26 @@ Third row Img Hover Iffect*/
 }
 
 .dropdown:hover .green {
-    background-color: turquoise;
+    background-color: yellowgreen;
 }
 
 .dropdown:hover .skyblue {
-    background-color: blue;
+    background-color: #337ab7;
+}
+
+.dropdown:hover .lemon {
+    background-color: #b8b65c;
 }
 
 .dropdown:hover .yellow {
-    background-color: #f0ad4e;
+    background-color: #d9534f;
 }
 .dropdown:hover .red {
-    background-color: #d9534f;
+    background-color: #31b0d5;
 }
 
 .dropdown:hover .purple {
-    background-color: mediumpurple;
+    background-color: #ec971f;
 }
 .kns hr{
     margin-top: 0px;
@@ -496,24 +500,11 @@ li ul .dropdown-submenu:hover>.dropdown-menu {
 
 /* ***********Four blog img************ */
 
-.bg1{
-    background-image: url("/static/img/bg.png");
+.bg1,.bg2,.bg3,.bg4{
+    /*background-image: url("/static/img/bg.png");*/
+    background-color: #B9BA6A;
 
 }
-
-.bg2{
-    background-image: url("/static/img/bg.png");
-
-}
-.bg3{
-    background-image: url("/static/img/bg.png");
-
-}
-.bg4{
-    background-image: url("/static/img/bg.png");
-
-}
-
 
 
 
@@ -856,4 +847,9 @@ content: " ";
     #state {
         width: 80%;
     }
+}
+
+
+.curve{
+    border-radius: 5px;
 }
