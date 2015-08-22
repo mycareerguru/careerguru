@@ -56,11 +56,11 @@ $( ".bio-section-plus" ).toggle();
 
 
 
-	$("#sidebar a").click(function() {
+	/*$("#sidebar a").click(function() {
 		$("#sidebar a").css({"border": "0px", "font-weight":"normal"})
 	     $(this).css({ "border": "1px dotted red", "font-weight":"bold"});
 
-	});
+	});*/
 
 
 

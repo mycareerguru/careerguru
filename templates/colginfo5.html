@@ -9,10 +9,10 @@
         <section class="one" >
 
             <div class="row topmargin" >
-                <div class="col-md-3" id="gry2" >
+                <div class="col-md-3 "  >
                     <div>
 
-                        <div  class="col-md-12 bg1" id="sidebar" style="border-radius: 5px;" >
+                        <div  class="col-md-12 bg1 psf" id="sidebar" style="border-radius: 5px;" >
                             <div class="link">
 
                                 <div class="lmenu bio-section-plus-minus">
@@ -45,7 +45,7 @@
 
 
 
-                    <div class="mobile-show"><h1>{{ item5.name }}</h1></div>
+                    <div id="college" class="mobile-show"><h1>{{ item5.name }}</h1></div>
 
                     <div class="col-lg-12 row" >
                         <div class="col-lg-2" style="border: solid 1px #000000;min-height: 70px;width: 70px;">
@@ -64,10 +64,10 @@
                     <div class="division"></div>
                     <div id="courses"><div class="mobile-show"> </div>
 
-                        <div class="mobile-show"><h1>course type</h1></div>
-                        <h2>course type</h2>
+                        <div class="mobile-show"><h2>course Offered</h2></div>
+                        <h2>Course Offered</h2>
                         {% for i in x %}
-                            <p>  {{ i.name}}  ( {{ i.seats }} ) fees:Rs.{{ i.fees }}</p>
+                            <p>  {{ i.course_name}}  ( {{ i.seats }} ) fees:Rs.{{ i.fees }}</p>
 
 
                         {% endfor %}
@@ -75,7 +75,7 @@
                     <div class="division"></div>
                     <div id="overview"><div class="mobile-show"> </div>
 
-                        <div class="mobile-show"><h1>OverView</h1></div>
+                        <div class="mobile-show"><h2>OverView</h2></div>
                         <h2>OverView</h2>
                         <p>{{ item5.overview }}</p>
 
@@ -84,8 +84,8 @@
                     <div class="division"></div>
                     <div id="achievement"><div class="mobile-show"> </div>
 
-                        <div class="mobile-show"><h1>Achievement</h1></div>
-                        <h1>Achievement</h1>
+                        <div class="mobile-show"><h2>Achievement</h2></div>
+                        <h2>Achievement</h2>
                         <p>{{ item5.achievement}}</p>
 
                     </div>
@@ -93,25 +93,38 @@
                     <div class="division"></div>
                     <div id="faculty"></div>
 
-                    <div class="mobile-show"><h1>Faculty</h1></div>
-                    <h1>Faculty</h1>
-                    <p>NO OF TOTAL FACULTY : {{ item.totfaculty }}</p>
-                    <p>NO OF TOTAL Sr. FACULTY : {{ item.seniors }}</p>
+                    <div class="mobile-show"><h2>Faculty</h2></div>
+                    <h2>Faculty</h2>
+                <div class="col-lg-6">
+                    <h4>NO OF TOTAL FACULTY </h4>
+                    <p style="text-align: center;">{{ item5.totfaculty }}</p>
+                    </div>
+                <div class="col-lg-6">
+                    <h4>NO OF TOTAL Sr. FACULTY </h4>
+                    <p style="text-align: center;"> {{ item5.seniors }}</p>
+                    </div>
 
 
                     <div class="division"></div>
                     <div id="facility"></div>
 
-                    <div class="mobile-show"><h1>Facility</h1></div>
+                    <div class="mobile-show"><h2>Facility</h2></div>
 
-                    <h1>Facility</h1>
-                    <p>Hostel : {{ item5.hostel }}</p>
-                    <p>Auditorium : {{ item5.auditorium }}</p>
-                    <p>Canteen : {{ item5.canteen }}</p>
-                    <p>Ground : {{ item5.ground }}</p>
-                    <p>Lab : {{ item5.lab }}</p>
-                    <p>Library : {{ item5.library }}</p>
-                    <p>Wifi : {{ item5.wifi }}</p>
+                    <h2>Facility</h2>
+                <div class="col-lg-4">
+                    <p>Hostel : {{ item5.hostel }}</p></div>
+                <div class="col-lg-4">
+                    <p>Auditorium : {{ item5.auditorium }}</p></div>
+                <div class="col-lg-4">
+                    <p>Canteen : {{ item5.canteen }}</p></div>
+                <div class="col-lg-4">
+                    <p>Ground : {{ item5.ground }}</p></div>
+                <div class="col-lg-4">
+                    <p>Lab : {{ item5.lab }}</p></div>
+                <div class="col-lg-4">
+                    <p>Library : {{ item5.library }}</p></div>
+                <div class="col-lg-4">
+                    <p>Wifi : {{ item5.wifi }}</p></div>
 
 
 
@@ -119,15 +132,24 @@
                     <div class="division"></div>
                     <div id="contact"></div>
 
-                    <div class="mobile-show"><h1>Contact details</h1></div>
-                    <h1>Contact details</h1>
-                    <p>Address : {{ item5.address }}</p>
-                    <p>City : {{ item5.city }}</p>
-                    <p>State : {{ item5.state }}</p>
-                    <p>Pin No : {{ item5.pin }}</p>
-                    <p>Phone No : {{ item5.phone }}</p>
-                    <p>Email  : {{ item5.email }}</p>
+                    <div class="mobile-show"><h2>Contact details</h2></div>
+                    <h2>Contact details</h2>
+                <div class="col-lg-4">
+                    <h4>Address</h4>
+                    <p>{{ item5.address }}</p>
+                    <p>{{ item5.city }}</p>
+                    <p>{{ item5.pin }}</p>
+
+                    </div>
+                <div class="col-lg-4">
+                    <h4>Phone Number</h4>
+                    <p>{{ item5.phone }}</p>
+                    </div>
+                <div class="col-lg-4">
+                    <h4>Email ID</h4>
+                    <p>{{ item5.email }}</p>
                     <p>Website : {{ item5.website }}</p>
+                    </div>
 
                 </div>
 
@@ -162,27 +184,7 @@
 
 
 
-    <script src="/static/js/jquery-2.1.1.js"></script>
-    <script src="/static/js/plugin.js"></script>
-    <script src="/static/js/search_colg.js"></script>
-    {% comment %} <script src="/static/js/easing.js"></script>
-     <script src="/static/js/scrolling.js"></script>{% endcomment %}
-    <script src="/static/js/cust.js"></script>
-    <script>
-        $(function() {
-            $('a[href*=#]:not([href=#])').click(function() {
-                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-                    var target = $(this.hash);
-                    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-                    if (target.length) {
-                        $('html,body').animate({
-                            scrollTop: target.offset().top-0
 
-                        }, 1000);
-                        return false;
-                    }
-                }
-            });
-        })
-    </script>
+
+
 {% endblock %}
